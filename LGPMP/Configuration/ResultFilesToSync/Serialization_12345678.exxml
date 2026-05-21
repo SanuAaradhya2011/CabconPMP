@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableEntityExecutionResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MeterID>12345678</MeterID>
+  <PCBAID>TEST000000000</PCBAID>
+  <ExecutionMeterType>SM110-1PH-Smart Meter</ExecutionMeterType>
+  <ExecutionProcedureType>Serialization</ExecutionProcedureType>
+  <ExecutionTestID>SM110STTEST</ExecutionTestID>
+  <ExecutionProgramName>PMPSM110</ExecutionProgramName>
+  <ExecutionDate>2020-08-18T17:57:08.7938431+05:30</ExecutionDate>
+  <ExecutionStatusStart>0001-01-01T00:00:00</ExecutionStatusStart>
+  <ExecutionstatusEnd>0001-01-01T00:00:00</ExecutionstatusEnd>
+  <CustomerName>SM110STTEST</CustomerName>
+  <FinalResult>PASS</FinalResult>
+  <LogedUserID>indel7063</LogedUserID>
+  <LatestStatus>0</LatestStatus>
+</SerializableEntityExecutionResult>
+
+
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Table" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="MeterID" type="xs:string" minOccurs="0" />
+                <xs:element name="PCBAID" type="xs:string" minOccurs="0" />
+                <xs:element name="MeterType" type="xs:string" minOccurs="0" />
+                <xs:element name="ProcedureType" type="xs:string" minOccurs="0" />
+                <xs:element name="TestID" type="xs:string" minOccurs="0" />
+                <xs:element name="ProgramName" type="xs:string" minOccurs="0" />
+                <xs:element name="ParametersName" type="xs:string" minOccurs="0" />
+                <xs:element name="ParaDefaultValue" type="xs:string" minOccurs="0" />
+                <xs:element name="ParaMinValue" type="xs:string" minOccurs="0" />
+                <xs:element name="ParaMaxValue" type="xs:string" minOccurs="0" />
+                <xs:element name="ExecutionRemarks" type="xs:string" minOccurs="0" />
+                <xs:element name="ExecutionStatus" type="xs:string" minOccurs="0" />
+                <xs:element name="executionDate" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="CustomerName" type="xs:string" minOccurs="0" />
+                <xs:element name="FinalStatus" type="xs:string" minOccurs="0" />
+                <xs:element name="UpdateStatus" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="WorkStationID" type="xs:string" minOccurs="0" />
+                <xs:element name="LogedUserID" type="xs:string" minOccurs="0" />
+                <xs:element name="LatestStatus" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table>
+    <MeterID>12345678</MeterID>
+    <PCBAID>TEST000000000</PCBAID>
+    <MeterType>SM110-1PH-Smart Meter</MeterType>
+    <ProcedureType>Serialization</ProcedureType>
+    <TestID>SM110STTEST</TestID>
+    <ProgramName>PMPSM110</ProgramName>
+    <ParametersName>VERIFY DLMS FW VERSION</ParametersName>
+    <ParaDefaultValue>101</ParaDefaultValue>
+    <ParaMinValue />
+    <ParaMaxValue />
+    <ExecutionRemarks>DLMS FW Version is =101</ExecutionRemarks>
+    <ExecutionStatus>Pass</ExecutionStatus>
+    <executionDate>2020-08-18T17:57:08.7938431+05:30</executionDate>
+    <CustomerName>SM110STTEST</CustomerName>
+    <FinalStatus>PASS</FinalStatus>
+    <UpdateStatus>2020-08-18T17:57:08.7938431+05:30</UpdateStatus>
+    <WorkStationID>INDELNB688</WorkStationID>
+    <LogedUserID>indel7063</LogedUserID>
+    <LatestStatus>1</LatestStatus>
+  </Table>
+  <Table>
+    <MeterID>12345678</MeterID>
+    <PCBAID>TEST000000000</PCBAID>
+    <MeterType>SM110-1PH-Smart Meter</MeterType>
+    <ProcedureType>Serialization</ProcedureType>
+    <TestID>SM110STTEST</TestID>
+    <ProgramName>PMPSM110</ProgramName>
+    <ParametersName>READ PCBA ID</ParametersName>
+    <ParaDefaultValue />
+    <ParaMinValue />
+    <ParaMaxValue />
+    <ExecutionRemarks>TEST000000000</ExecutionRemarks>
+    <ExecutionStatus>Pass</ExecutionStatus>
+    <executionDate>2020-08-18T17:57:08.7938431+05:30</executionDate>
+    <CustomerName>SM110STTEST</CustomerName>
+    <FinalStatus>PASS</FinalStatus>
+    <UpdateStatus>2020-08-18T17:57:08.7938431+05:30</UpdateStatus>
+    <WorkStationID>INDELNB688</WorkStationID>
+    <LogedUserID>indel7063</LogedUserID>
+    <LatestStatus>2</LatestStatus>
+  </Table>
+  <Table>
+    <MeterID>12345678</MeterID>
+    <PCBAID>TEST000000000</PCBAID>
+    <MeterType>SM110-1PH-Smart Meter</MeterType>
+    <ProcedureType>Serialization</ProcedureType>
+    <TestID>SM110STTEST</TestID>
+    <ProgramName>PMPSM110</ProgramName>
+    <ParametersName>RTC DRIFT TEST</ParametersName>
+    <ParaDefaultValue />
+    <ParaMinValue>-15</ParaMinValue>
+    <ParaMaxValue>15</ParaMaxValue>
+    <ExecutionRemarks>Meter Drift (Sec.) = 0,  Meter Stamp =18/08/2020 17:57:09,  System Stamp =18/08/2020 17:57:08</ExecutionRemarks>
+    <ExecutionStatus>Pass</ExecutionStatus>
+    <executionDate>2020-08-18T17:57:08.7938431+05:30</executionDate>
+    <CustomerName>SM110STTEST</CustomerName>
+    <FinalStatus>PASS</FinalStatus>
+    <UpdateStatus>2020-08-18T17:57:08.7938431+05:30</UpdateStatus>
+    <WorkStationID>INDELNB688</WorkStationID>
+    <LogedUserID>indel7063</LogedUserID>
+    <LatestStatus>3</LatestStatus>
+  </Table>
+</NewDataSet>

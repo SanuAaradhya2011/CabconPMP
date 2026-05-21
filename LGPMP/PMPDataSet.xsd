@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PMPDataSet" targetNamespace="http://tempuri.org/PMPDataSet.xsd" xmlns:mstns="http://tempuri.org/PMPDataSet.xsd" xmlns="http://tempuri.org/PMPDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PMPDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="PMPDataSet" msprop:Generator_UserDSName="PMPDataSet" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="RoutineTestReport" msprop:Generator_UserTableName="RoutineTestReport" msprop:Generator_RowDeletedName="RoutineTestReportRowDeleted" msprop:Generator_TableClassName="RoutineTestReportDataTable" msprop:Generator_RowChangedName="RoutineTestReportRowChanged" msprop:Generator_RowClassName="RoutineTestReportRow" msprop:Generator_RowChangingName="RoutineTestReportRowChanging" msprop:Generator_RowEvArgName="RoutineTestReportRowChangeEvent" msprop:Generator_RowEvHandlerName="RoutineTestReportRowChangeEventHandler" msprop:Generator_TablePropName="RoutineTestReport" msprop:Generator_TableVarName="tableRoutineTestReport" msprop:Generator_RowDeletingName="RoutineTestReportRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CustomerName" msprop:Generator_UserColumnName="CustomerName" msprop:Generator_ColumnPropNameInRow="CustomerName" msprop:Generator_ColumnVarNameInTable="columnCustomerName" msprop:Generator_ColumnPropNameInTable="CustomerNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="OrderNo" msprop:Generator_UserColumnName="OrderNo" msprop:Generator_ColumnPropNameInRow="OrderNo" msprop:Generator_ColumnVarNameInTable="columnOrderNo" msprop:Generator_ColumnPropNameInTable="OrderNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MeterRating" msprop:Generator_UserColumnName="MeterRating" msprop:Generator_ColumnPropNameInRow="MeterRating" msprop:Generator_ColumnVarNameInTable="columnMeterRating" msprop:Generator_ColumnPropNameInTable="MeterRatingColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Standard" msprop:Generator_UserColumnName="Standard" msprop:Generator_ColumnPropNameInRow="Standard" msprop:Generator_ColumnVarNameInTable="columnStandard" msprop:Generator_ColumnPropNameInTable="StandardColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MeterType" msprop:Generator_UserColumnName="MeterType" msprop:Generator_ColumnPropNameInRow="MeterType" msprop:Generator_ColumnVarNameInTable="columnMeterType" msprop:Generator_ColumnPropNameInTable="MeterTypeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Class" msprop:Generator_UserColumnName="Class" msprop:Generator_ColumnPropNameInRow="Class" msprop:Generator_ColumnVarNameInTable="columnClass" msprop:Generator_ColumnPropNameInTable="ClassColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MeterNo" msprop:Generator_UserColumnName="MeterNo" msprop:Generator_ColumnPropNameInRow="MeterNo" msprop:Generator_ColumnVarNameInTable="columnMeterNo" msprop:Generator_ColumnPropNameInTable="MeterNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TestPoint1" msprop:Generator_UserColumnName="TestPoint1" msprop:Generator_ColumnPropNameInRow="TestPoint1" msprop:Generator_ColumnVarNameInTable="columnTestPoint1" msprop:Generator_ColumnPropNameInTable="TestPoint1Column" type="xs:string" minOccurs="0" />
+              <xs:element name="TestPoint2" msprop:Generator_UserColumnName="TestPoint2" msprop:Generator_ColumnPropNameInRow="TestPoint2" msprop:Generator_ColumnVarNameInTable="columnTestPoint2" msprop:Generator_ColumnPropNameInTable="TestPoint2Column" type="xs:string" minOccurs="0" />
+              <xs:element name="TestPoint3" msprop:Generator_UserColumnName="TestPoint3" msprop:Generator_ColumnPropNameInRow="TestPoint3" msprop:Generator_ColumnVarNameInTable="columnTestPoint3" msprop:Generator_ColumnPropNameInTable="TestPoint3Column" type="xs:string" minOccurs="0" />
+              <xs:element name="TestPoint4" msprop:Generator_UserColumnName="TestPoint4" msprop:Generator_ColumnPropNameInRow="TestPoint4" msprop:Generator_ColumnVarNameInTable="columnTestPoint4" msprop:Generator_ColumnPropNameInTable="TestPoint4Column" type="xs:string" minOccurs="0" />
+              <xs:element name="TestPoint5" msprop:Generator_UserColumnName="TestPoint5" msprop:Generator_ColumnPropNameInRow="TestPoint5" msprop:Generator_ColumnVarNameInTable="columnTestPoint5" msprop:Generator_ColumnPropNameInTable="TestPoint5Column" type="xs:string" minOccurs="0" />
+              <xs:element name="TestPoint6" msprop:Generator_UserColumnName="TestPoint6" msprop:Generator_ColumnPropNameInRow="TestPoint6" msprop:Generator_ColumnVarNameInTable="columnTestPoint6" msprop:Generator_ColumnPropNameInTable="TestPoint6Column" type="xs:string" minOccurs="0" />
+              <xs:element name="TestPoint7" msprop:Generator_UserColumnName="TestPoint7" msprop:Generator_ColumnPropNameInRow="TestPoint7" msprop:Generator_ColumnVarNameInTable="columnTestPoint7" msprop:Generator_ColumnPropNameInTable="TestPoint7Column" type="xs:string" minOccurs="0" />
+              <xs:element name="TestPoint8" msprop:Generator_UserColumnName="TestPoint8" msprop:Generator_ColumnPropNameInRow="TestPoint8" msprop:Generator_ColumnVarNameInTable="columnTestPoint8" msprop:Generator_ColumnPropNameInTable="TestPoint8Column" type="xs:string" minOccurs="0" />
+              <xs:element name="TestPoint9" msprop:Generator_UserColumnName="TestPoint9" msprop:Generator_ColumnPropNameInRow="TestPoint9" msprop:Generator_ColumnVarNameInTable="columnTestPoint9" msprop:Generator_ColumnPropNameInTable="TestPoint9Column" type="xs:string" minOccurs="0" />
+              <xs:element name="TestPoint10" msprop:Generator_UserColumnName="TestPoint10" msprop:Generator_ColumnPropNameInRow="TestPoint10" msprop:Generator_ColumnVarNameInTable="columnTestPoint10" msprop:Generator_ColumnPropNameInTable="TestPoint10Column" type="xs:string" minOccurs="0" />
+              <xs:element name="TestPoint11" msprop:Generator_UserColumnName="TestPoint11" msprop:Generator_ColumnPropNameInRow="TestPoint11" msprop:Generator_ColumnVarNameInTable="columnTestPoint11" msprop:Generator_ColumnPropNameInTable="TestPoint11Column" type="xs:string" minOccurs="0" />
+              <xs:element name="TestPoint12" msprop:Generator_UserColumnName="TestPoint12" msprop:Generator_ColumnPropNameInRow="TestPoint12" msprop:Generator_ColumnVarNameInTable="columnTestPoint12" msprop:Generator_ColumnPropNameInTable="TestPoint12Column" type="xs:string" minOccurs="0" />
+              <xs:element name="TestPoint13" msprop:Generator_UserColumnName="TestPoint13" msprop:Generator_ColumnPropNameInRow="TestPoint13" msprop:Generator_ColumnVarNameInTable="columnTestPoint13" msprop:Generator_ColumnPropNameInTable="TestPoint13Column" type="xs:string" minOccurs="0" />
+              <xs:element name="TestPoint14" msprop:Generator_UserColumnName="TestPoint14" msprop:Generator_ColumnPropNameInRow="TestPoint14" msprop:Generator_ColumnVarNameInTable="columnTestPoint14" msprop:Generator_ColumnPropNameInTable="TestPoint14Column" type="xs:string" minOccurs="0" />
+              <xs:element name="TestPoint15" msprop:Generator_UserColumnName="TestPoint15" msprop:Generator_ColumnPropNameInRow="TestPoint15" msprop:Generator_ColumnVarNameInTable="columnTestPoint15" msprop:Generator_ColumnPropNameInTable="TestPoint15Column" type="xs:string" minOccurs="0" />
+              <xs:element name="TestPoint16" msprop:Generator_UserColumnName="TestPoint16" msprop:Generator_ColumnPropNameInRow="TestPoint16" msprop:Generator_ColumnVarNameInTable="columnTestPoint16" msprop:Generator_ColumnPropNameInTable="TestPoint16Column" type="xs:string" minOccurs="0" />
+              <xs:element name="TestPoint17" msprop:Generator_UserColumnName="TestPoint17" msprop:Generator_ColumnPropNameInRow="TestPoint17" msprop:Generator_ColumnVarNameInTable="columnTestPoint17" msprop:Generator_ColumnPropNameInTable="TestPoint17Column" type="xs:string" minOccurs="0" />
+              <xs:element name="TestPoint18" msprop:Generator_UserColumnName="TestPoint18" msprop:Generator_ColumnPropNameInRow="TestPoint18" msprop:Generator_ColumnVarNameInTable="columnTestPoint18" msprop:Generator_ColumnPropNameInTable="TestPoint18Column" type="xs:string" minOccurs="0" />
+              <xs:element name="TestPoint19" msprop:Generator_UserColumnName="TestPoint19" msprop:Generator_ColumnPropNameInRow="TestPoint19" msprop:Generator_ColumnVarNameInTable="columnTestPoint19" msprop:Generator_ColumnPropNameInTable="TestPoint19Column" type="xs:string" minOccurs="0" />
+              <xs:element name="TestPoint20" msprop:Generator_UserColumnName="TestPoint20" msprop:Generator_ColumnPropNameInRow="TestPoint20" msprop:Generator_ColumnVarNameInTable="columnTestPoint20" msprop:Generator_ColumnPropNameInTable="TestPoint20Column" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

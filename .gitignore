@@ -1,0 +1,15 @@
+.vs/
+ipch/
+Debug/
+Release/
+bin/
+obj/
+x64/
+
+*.ipch
+*.VC.db
+*.sdf
+*.opensdf
+*.pdb
+*.exe
+*.mdb
