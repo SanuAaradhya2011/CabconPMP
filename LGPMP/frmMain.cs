@@ -14,8 +14,8 @@ using COMMONENTITY;
 using System.Globalization;
 using BALLAYER;
 using SystemSecurityLibrary;
-using LGPMPREJECTIONTOOL;
-using LGPMPSYNCSERVICE;
+using CabconPMPREJECTIONTOOL;
+using CabconPMPSYNCSERVICE;
 namespace CabconPMP
 {
     public partial class frmMain : Form
@@ -610,7 +610,7 @@ namespace CabconPMP
 
         private void toolStripLabelError_Click(object sender, EventArgs e)
         {
-            LGPMPREJECTIONTOOL.AccessPassword frmobj = new LGPMPREJECTIONTOOL.AccessPassword(objetyusermgt);
+            CabconPMPREJECTIONTOOL.AccessPassword frmobj = new CabconPMPREJECTIONTOOL.AccessPassword(objetyusermgt);
             frmobj.ShowDialog();
         }
 

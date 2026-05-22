@@ -9,7 +9,7 @@ using System.Collections;
 using System.Data.SqlClient;
 using System.IO;
 using System.Reflection;
-namespace LGRTL
+namespace CabconRTL
 {
     public class TestLogger
     {

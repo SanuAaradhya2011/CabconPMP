@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LGPMPREJECTIONTOOL.Properties {
+namespace CabconPMPREJECTIONTOOL.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace LGPMPREJECTIONTOOL.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("LGPMPREJECTIONTOOL.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CabconPMPREJECTIONTOOL.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

@@ -11,7 +11,7 @@ using COMMONENTITY;
 using BALLAYER;
 using System.Globalization;
 
-namespace LGPMPREJECTIONTOOL
+namespace CabconPMPREJECTIONTOOL
 {
     /// <summary>
     /// Class for entering Errors that cannot be auto captured through software.
@@ -293,7 +293,7 @@ namespace LGPMPREJECTIONTOOL
         {
             if (string.IsNullOrEmpty(txtNewErrorType.Text.Trim())) { MessageBox.Show("Error Type Cannot be Blank"); return; };
 
-            LGPMPREJECTIONTOOL.AccessPassword frmobj = new LGPMPREJECTIONTOOL.AccessPassword();
+            CabconPMPREJECTIONTOOL.AccessPassword frmobj = new CabconPMPREJECTIONTOOL.AccessPassword();
             EntityErrorType errorEntity = null;
             try
             {

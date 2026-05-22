@@ -12,7 +12,7 @@ using BALLAYER;
 using System.Windows.Forms;
 using ZipArchiveLibrary;
 
-namespace LGPMPSYNCSERVICE
+namespace CabconPMPSYNCSERVICE
 {
     partial class PMPExSyncService : ServiceBase
     {

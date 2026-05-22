@@ -14,7 +14,7 @@ using System.Xml.Serialization;
 using System.Reflection;
 using System.Text.RegularExpressions;
 
-namespace PDFLibraryLG
+namespace PDFLibraryCabcon
 {
    
     public class PDFUtility

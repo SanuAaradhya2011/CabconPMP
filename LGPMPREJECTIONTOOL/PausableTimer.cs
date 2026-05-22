@@ -5,7 +5,7 @@ using System.Text;
 using System.Timers;
 using System.Diagnostics;
 
-namespace LGPMPREJECTIONTOOL
+namespace CabconPMPREJECTIONTOOL
 {
     public class PausableTimer : Timer
     {

@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using COMMONENTITY;
 
-namespace LGPMPREJECTIONTOOL
+namespace CabconPMPREJECTIONTOOL
 {
     /// <summary>
     /// Class for passwords as well as entry for PCBAID.

@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{97593B6F-FA3C-4428-AB48-CAAF7AE16551}</ProjectGuid>
+    <ProjectGuid>{9452CD91-D6A1-496A-BE3A-B106D02EDB59}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BALLAYER</RootNamespace>
-    <AssemblyName>LGPMPBALLAYER</AssemblyName>
+    <RootNamespace>DALLAYER</RootNamespace>
+    <AssemblyName>CabconPMPDALLAYER</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
@@ -80,10 +80,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -92,29 +92,21 @@
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="SystemLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+    <Reference Include="Utilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\LGPMP\Dependencies\SystemLibrary.dll</HintPath>
+      <HintPath>..\LGPMP\Dependencies\Utilities.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BALErrorOperations.cs" />
-    <Compile Include="BALExecutionResults.cs" />
-    <Compile Include="BALProcedure.cs" />
-    <Compile Include="BALPrograms.cs" />
-    <Compile Include="BALDBConnectionTest.cs" />
-    <Compile Include="BALRoutineTestReport.cs" />
-    <Compile Include="BALUserManagement.cs" />
+    <Compile Include="ConnectionClass.cs" />
+    <Compile Include="DALErrorOperations.cs" />
+    <Compile Include="DALGolbalAdapter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\COMMONENTITY\LGPMPCOMMONENTITY.csproj">
+    <ProjectReference Include="..\COMMONENTITY\CabconPMPCOMMONENTITY.csproj">
       <Project>{D35FEE1D-2386-4F6F-B136-EDE9420FA6E3}</Project>
-      <Name>LGPMPCOMMONENTITY</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DALLAYER\LGPMPDALLAYER.csproj">
-      <Project>{9452CD91-D6A1-496A-BE3A-B106D02EDB59}</Project>
-      <Name>LGPMPDALLAYER</Name>
+      <Name>CabconPMPCOMMONENTITY</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

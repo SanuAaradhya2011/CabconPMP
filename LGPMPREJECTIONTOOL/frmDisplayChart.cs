@@ -16,7 +16,7 @@ using System.IO.Pipes;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Globalization;
 
-namespace LGPMPREJECTIONTOOL
+namespace CabconPMPREJECTIONTOOL
 {
 
     public partial class frmDisplayChart : Form

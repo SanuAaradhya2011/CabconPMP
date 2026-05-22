@@ -194,17 +194,17 @@
     <None Include="Resources\x.gif" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BALLAYER\LGPMPBALLAYER.csproj">
+    <ProjectReference Include="..\BALLAYER\CabconPMPBALLAYER.csproj">
       <Project>{97593B6F-FA3C-4428-AB48-CAAF7AE16551}</Project>
-      <Name>LGPMPBALLAYER</Name>
+      <Name>CabconPMPBALLAYER</Name>
     </ProjectReference>
-    <ProjectReference Include="..\COMMONENTITY\LGPMPCOMMONENTITY.csproj">
+    <ProjectReference Include="..\COMMONENTITY\CabconPMPCOMMONENTITY.csproj">
       <Project>{D35FEE1D-2386-4F6F-B136-EDE9420FA6E3}</Project>
-      <Name>LGPMPCOMMONENTITY</Name>
+      <Name>CabconPMPCOMMONENTITY</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DALLAYER\LGPMPDALLAYER.csproj">
+    <ProjectReference Include="..\DALLAYER\CabconPMPDALLAYER.csproj">
       <Project>{9452CD91-D6A1-496A-BE3A-B106D02EDB59}</Project>
-      <Name>LGPMPDALLAYER</Name>
+      <Name>CabconPMPDALLAYER</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

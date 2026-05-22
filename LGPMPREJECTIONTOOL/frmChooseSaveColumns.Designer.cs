@@ -1,4 +1,4 @@
-﻿namespace LGPMPREJECTIONTOOL
+﻿namespace CabconPMPREJECTIONTOOL
 {
     partial class frmChooseSaveColumns
     {

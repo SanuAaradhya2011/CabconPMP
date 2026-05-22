@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using COMMONENTITY;
 using BALLAYER;
 
-namespace LGPMPREJECTIONTOOL
+namespace CabconPMPREJECTIONTOOL
 {
     /// <summary>
     /// Class for Inserting/Updating Existing Rejection Entry.
@@ -281,7 +281,7 @@ namespace LGPMPREJECTIONTOOL
 
                 if (txtError_Name.ReadOnly == false && !String.IsNullOrEmpty(txtError_Name.Text.Trim()))
                 {
-                    LGPMPREJECTIONTOOL.AccessPassword frmobj = new LGPMPREJECTIONTOOL.AccessPassword();
+                    CabconPMPREJECTIONTOOL.AccessPassword frmobj = new CabconPMPREJECTIONTOOL.AccessPassword();
                     EntityErrorType errEntityType=null;
                     try
                     {

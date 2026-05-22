@@ -394,13 +394,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BALLAYER\LGPMPBALLAYER.csproj">
+    <ProjectReference Include="..\BALLAYER\CabconPMPBALLAYER.csproj">
       <Project>{97593B6F-FA3C-4428-AB48-CAAF7AE16551}</Project>
-      <Name>LGPMPBALLAYER</Name>
+      <Name>CabconPMPBALLAYER</Name>
     </ProjectReference>
-    <ProjectReference Include="..\COMMONENTITY\LGPMPCOMMONENTITY.csproj">
+    <ProjectReference Include="..\COMMONENTITY\CabconPMPCOMMONENTITY.csproj">
       <Project>{D35FEE1D-2386-4F6F-B136-EDE9420FA6E3}</Project>
-      <Name>LGPMPCOMMONENTITY</Name>
+      <Name>CabconPMPCOMMONENTITY</Name>
     </ProjectReference>
     <ProjectReference Include="..\E150ECOSTAR\PMPE150ECOSTAR.csproj">
       <Project>{C44188C6-3A2A-4561-AC4C-C2BBE0DA702B}</Project>
@@ -410,13 +410,13 @@
       <Project>{CBD37FD1-247B-4997-8531-893F80D2C7FA}</Project>
       <Name>PMPE150MICROSTAR</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LGPMPREJECTIONTOOL\LGPMPREJECTIONTOOL.csproj">
-      <Project>{A510EA58-5C33-41A0-901F-F0D94AE1AF2D}</Project>
-      <Name>LGPMPREJECTIONTOOL</Name>
+    <ProjectReference Include="..\LGPMPREJECTIONTOOL\CabconPMPREJECTIONTOOL.csproj">
+      <Project>{CE0A4184-62C7-4E95-8A0A-E2A02A472E23}</Project>
+      <Name>CabconPMPREJECTIONTOOL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LGPMPSYNCSERVICE\LGPMPSYNCSERVICE.csproj">
+    <ProjectReference Include="..\LGPMPSYNCSERVICE\CabconPMPSYNCSERVICE.csproj">
       <Project>{4F6A9151-6FCB-43E0-B6C1-CA5FB4A27DF9}</Project>
-      <Name>LGPMPSYNCSERVICE</Name>
+      <Name>CabconPMPSYNCSERVICE</Name>
     </ProjectReference>
     <ProjectReference Include="..\PMP3PHDLMS\PMP3PHDLMS.csproj">
       <Project>{51712A82-3150-4945-8C74-D5B539E85A72}</Project>

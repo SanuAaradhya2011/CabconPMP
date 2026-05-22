@@ -8,8 +8,8 @@
     <ProjectGuid>{2A8224B6-A2C3-4694-9B67-CB1FAD253F02}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PDFLibraryLG</RootNamespace>
-    <AssemblyName>PDFLibraryLG</AssemblyName>
+    <RootNamespace>PDFLibraryCabcon</RootNamespace>
+    <AssemblyName>PDFLibraryCabcon</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>

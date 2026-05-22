@@ -10,7 +10,7 @@ using BALLAYER;
 using COMMONENTITY;
 using Utilities;
 
-namespace LGPMPREJECTIONTOOL
+namespace CabconPMPREJECTIONTOOL
 {
     /// <summary>
     /// Class that shows record history of pcbaid.

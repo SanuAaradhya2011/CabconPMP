@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using COMMONENTITY;
 using BALLAYER;
-using PDFLibraryLG;
+using PDFLibraryCabcon;
 using System.Text.RegularExpressions;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Globalization;
@@ -17,7 +17,7 @@ using System.Reflection;
 using System.Diagnostics;
 using System.IO.Pipes;
 
-namespace LGPMPREJECTIONTOOL
+namespace CabconPMPREJECTIONTOOL
 {
    
 
@@ -1116,7 +1116,7 @@ namespace LGPMPREJECTIONTOOL
         /// <param name="e"></param>
         private void deleteRejectionRecordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LGPMPREJECTIONTOOL.AccessPassword frmobj = new LGPMPREJECTIONTOOL.AccessPassword();
+            CabconPMPREJECTIONTOOL.AccessPassword frmobj = new CabconPMPREJECTIONTOOL.AccessPassword();
             try
             {
                 string password = balerrorobj.GetPasswordsForEntryModification(ErrorUtility.KeywordDeleteEntry);

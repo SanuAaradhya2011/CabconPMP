@@ -5,7 +5,7 @@ using System.Text;
 using System.IO;
 using System.Windows.Forms;
 using System.Reflection;
-namespace LGRTL
+namespace CabconRTL
 {
     public class AESEncryption
     {

@@ -1,4 +1,4 @@
-﻿namespace LGPMPSYNCSERVICE
+﻿namespace CabconPMPSYNCSERVICE
 {
     partial class ProjectInstaller
     {

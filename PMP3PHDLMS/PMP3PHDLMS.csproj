@@ -170,13 +170,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BALLAYER\LGPMPBALLAYER.csproj">
+    <ProjectReference Include="..\BALLAYER\CabconPMPBALLAYER.csproj">
       <Project>{97593B6F-FA3C-4428-AB48-CAAF7AE16551}</Project>
-      <Name>LGPMPBALLAYER</Name>
+      <Name>CabconPMPBALLAYER</Name>
     </ProjectReference>
-    <ProjectReference Include="..\COMMONENTITY\LGPMPCOMMONENTITY.csproj">
+    <ProjectReference Include="..\COMMONENTITY\CabconPMPCOMMONENTITY.csproj">
       <Project>{D35FEE1D-2386-4F6F-B136-EDE9420FA6E3}</Project>
-      <Name>LGPMPCOMMONENTITY</Name>
+      <Name>CabconPMPCOMMONENTITY</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

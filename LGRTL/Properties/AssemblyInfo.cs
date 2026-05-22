@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("Routine Test Data Logger")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Landis+Gyr Limited")]
-[assembly: AssemblyProduct("LGRTL")]
+[assembly: AssemblyProduct("CabconRTL")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

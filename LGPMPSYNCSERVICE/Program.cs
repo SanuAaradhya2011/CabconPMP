@@ -5,7 +5,7 @@ using System.ServiceProcess;
 using System.Text;
 using System.Windows.Forms;
 
-namespace LGPMPSYNCSERVICE
+namespace CabconPMPSYNCSERVICE
 {
     static class Program
     {

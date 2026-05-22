@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace LGRTL
+namespace CabconRTL
 {
     public class CommonEntity
     {
@@ -18,7 +18,7 @@ namespace LGRTL
         public string ProcedureType { get; set; }
         // Procedure Name Created By AEMCAL
         public string TestID { get; set; }
-        // Defualt Exe Name : LGRTL.exe
+        // Defualt Exe Name : CabconRTL.exe
         public string ProgramName { get; set; }
         // Test point name details comma seperated
         public string ParametersName { get; set; }

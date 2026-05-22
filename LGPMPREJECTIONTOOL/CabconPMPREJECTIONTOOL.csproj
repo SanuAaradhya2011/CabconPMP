@@ -8,8 +8,8 @@
     <ProjectGuid>{CE0A4184-62C7-4E95-8A0A-E2A02A472E23}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LGPMPREJECTIONTOOL</RootNamespace>
-    <AssemblyName>LGPMPREJECTIONTOOL</AssemblyName>
+    <RootNamespace>CabconPMPREJECTIONTOOL</RootNamespace>
+    <AssemblyName>CabconPMPREJECTIONTOOL</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
@@ -212,21 +212,21 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BALLAYER\LGPMPBALLAYER.csproj">
+    <ProjectReference Include="..\BALLAYER\CabconPMPBALLAYER.csproj">
       <Project>{97593B6F-FA3C-4428-AB48-CAAF7AE16551}</Project>
-      <Name>LGPMPBALLAYER</Name>
+      <Name>CabconPMPBALLAYER</Name>
     </ProjectReference>
-    <ProjectReference Include="..\COMMONENTITY\LGPMPCOMMONENTITY.csproj">
+    <ProjectReference Include="..\COMMONENTITY\CabconPMPCOMMONENTITY.csproj">
       <Project>{D35FEE1D-2386-4F6F-B136-EDE9420FA6E3}</Project>
-      <Name>LGPMPCOMMONENTITY</Name>
+      <Name>CabconPMPCOMMONENTITY</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DALLAYER\LGPMPDALLAYER.csproj">
+    <ProjectReference Include="..\DALLAYER\CabconPMPDALLAYER.csproj">
       <Project>{9452CD91-D6A1-496A-BE3A-B106D02EDB59}</Project>
-      <Name>LGPMPDALLAYER</Name>
+      <Name>CabconPMPDALLAYER</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PDFLibrary\PDFLibraryLG.csproj">
+    <ProjectReference Include="..\PDFLibrary\PDFLibraryCabcon.csproj">
       <Project>{2A8224B6-A2C3-4694-9B67-CB1FAD253F02}</Project>
-      <Name>PDFLibraryLG</Name>
+      <Name>PDFLibraryCabcon</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

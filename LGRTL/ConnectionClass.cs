@@ -9,7 +9,7 @@ using System.Data.SqlClient;
  
 using System.Xml;
 
-namespace LGRTL
+namespace CabconRTL
 {
     public class ConnectionClass
     {
@@ -305,7 +305,7 @@ namespace LGRTL
         #endregion
 
          
-        public bool UploadRoutineTestResultd(LGRTL.CommonEntity objentitypro, DataTable dtexr, DataTable dtcal)
+        public bool UploadRoutineTestResultd(CabconRTL.CommonEntity objentitypro, DataTable dtexr, DataTable dtcal)
         {
             SqlParameter[] param ={             
             new SqlParameter("@CalibrationResult",dtcal),
