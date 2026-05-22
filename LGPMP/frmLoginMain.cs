@@ -27,7 +27,11 @@ namespace LGPMP
             BALUserManagement objum = new BALUserManagement();
             try
             {
-                objetyusermgt.LoginuserID = txtuserID.Text.Trim();
+                objetyusermgt.LogType = "aa";
+                  frmMain objmain = new frmMain(objetyusermgt);
+                objmain.Show();
+             
+                /*objetyusermgt.LoginuserID = txtuserID.Text.Trim();
                 objetyusermgt.Loginpassword = txtPassword.Text.Trim();
 
                 if (!objdbcon.IsDBFileExist())
@@ -61,8 +65,8 @@ namespace LGPMP
                         txtPassword.Focus();
                         return;
 
-                    }
-                
+                    }*/
+
             }
             catch (Exception ex)
             {
@@ -77,6 +81,9 @@ namespace LGPMP
 
         private void frmLoginMain_Load(object sender, EventArgs e)
         {
+            Point panelLoc = PanelLoginControl.Location;
+            PanelLoginControl.Parent = pictureBox1;
+            PanelLoginControl.Location = panelLoc;
             txtuserID.Focus();
         }
 
@@ -96,6 +103,14 @@ namespace LGPMP
             if (e.KeyChar == (char)Keys.Enter) { btnLogin_Click(this, e); }
         }
 
-        
+        private void txtuserID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

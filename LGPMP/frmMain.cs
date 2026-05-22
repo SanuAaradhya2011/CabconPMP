@@ -53,11 +53,11 @@ namespace LGPMP
         private void SM110frmMain_Load(object sender, EventArgs e)
         {
             System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
-            getUserIndex = StaticVariables.ApplicationUserType.IndexOf(objetyusermgt.LogType);
-            objetyusermgt.LoginTypeIndex = (byte)getUserIndex;
-            DisplayMainStatus();
-            SetUserPermission();
-			SetUserPermissionRejectionList();
+           // getUserIndex = StaticVariables.ApplicationUserType.IndexOf(objetyusermgt.LogType);
+           // objetyusermgt.LoginTypeIndex = (byte)getUserIndex;
+           // DisplayMainStatus();
+           // SetUserPermission();
+			//SetUserPermissionRejectionList();
         }
         public void DisplayMainStatus()
         {
@@ -278,7 +278,7 @@ namespace LGPMP
 
         private void SM110frmMain_Activated(object sender, EventArgs e)
         {
-            DisplayMainStatus();
+           // DisplayMainStatus();
 			FormCollection fc = Application.OpenForms;
             foreach (Form frm in fc)
             {

@@ -121,10 +121,10 @@ namespace LGPMP
         private DataSet ReadExcelFile(string FilePath)
         {
                string Path = FilePath;
-                
-                Excel.ApplicationClass app = new ApplicationClass();
+
+                Excel.Application app = new Excel.Application();
                 Excel.Workbook workBook = app.Workbooks.Open(Path, 0, true, 5, "", "", true, Excel.XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
-                Excel.Worksheet workSheet = (Excel.Worksheet)workBook.ActiveSheet;
+                Excel.Worksheet workSheet =  (Excel.Worksheet)workBook.ActiveSheet;
                 DataSet dsExcelData = new DataSet("XMLMeterID");
                 System.Data.DataTable dt1 = new System.Data.DataTable("MeterRangeMaster");
                 DataRow dr = dt1.NewRow();

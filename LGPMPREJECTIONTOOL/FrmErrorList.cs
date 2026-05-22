@@ -826,7 +826,7 @@ namespace LGPMPREJECTIONTOOL
         /// <param name="dataSet"></param>
         private void ExportDataSetToExcell(DataSet dataSet)
         {
-            Microsoft.Office.Interop.Excel.ApplicationClass ExcelApp = new Microsoft.Office.Interop.Excel.ApplicationClass();
+            Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
             Excel.Workbook xlWorkbook = ExcelApp.Workbooks.Add(Microsoft.Office.Interop.Excel.XlWBATemplate.xlWBATWorksheet);
 
             DataTableCollection collection = dataSet.Tables;

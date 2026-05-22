@@ -27,6 +27,16 @@ namespace LGPMP
             lblproductname.Text = Application.ProductName.ToString() + " (Product Management Program)";
             label1.Text = SystemInfo.CopyRightsDetail() + "  " + "All Rights Reserved.";
             lblliciencedto.Text = "This Product is Licensed To : " +  System.Environment.MachineName.ToString(); 
-        }       
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
