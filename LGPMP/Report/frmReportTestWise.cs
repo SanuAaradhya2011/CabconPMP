@@ -12,7 +12,7 @@ using COMMONENTITY;
 using BALLAYER;
 using Utilities;
 using SystemSecurityLibrary;
-namespace LGPMP
+namespace CabconPMP
 {
     public partial class frmReportTestWise : Form
     {

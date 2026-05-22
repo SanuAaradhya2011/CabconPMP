@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace LGPMP
+namespace CabconPMP
 {
     public partial class AccessPassword : Form
     {

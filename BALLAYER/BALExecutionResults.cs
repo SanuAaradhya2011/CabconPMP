@@ -16,7 +16,7 @@ namespace BALLAYER
     {
         CommonCommandMethods objccmdmethod = new CommonCommandMethods();
         DALGolbalAdapter objprodal = new DALGolbalAdapter();
-        FileVersionInfo PMPVersion = FileVersionInfo.GetVersionInfo(AppDomain.CurrentDomain.BaseDirectory + @"\LGPMP.exe");
+        FileVersionInfo PMPVersion = FileVersionInfo.GetVersionInfo(AppDomain.CurrentDomain.BaseDirectory + @"\CabconPMP.exe");
         public DataSet VerifyExecutionStatusInDatabase(EntityExecutionResult objexeresult)
         {
             DataSet ds = new DataSet();
@@ -72,7 +72,7 @@ namespace BALLAYER
                 dr["FinalStatus"] = objentityer.FinalResult;
                 dr["UpdateStatus"] = objentityer.ExecutionDate;
                 dr["WorkStationID"] = System.Environment.MachineName;
-                dr["LogedUserID"] = objentityer.LogedUserID + " ," + SystemInfo.ProductVersion() + " ," + PMPVersion.FileVersion; //--Logged user // Meter specefic exe version // LGPMP used version
+                dr["LogedUserID"] = objentityer.LogedUserID + " ," + SystemInfo.ProductVersion() + " ," + PMPVersion.FileVersion; //--Logged user // Meter specefic exe version // CabconPMP used version
                 dr["LatestStatus"] = recCount + 1;
 
                 if (DGVParaLists.Rows[recCount].Cells["colParaName"].Value == null) break;

@@ -27,7 +27,7 @@ using System.Windows.Forms;
 using Utilities;
 using SerialCommunication;
 using ApplicationInterface;
-namespace LGPMP
+namespace CabconPMP
 {
     public partial class Association : Form
     {

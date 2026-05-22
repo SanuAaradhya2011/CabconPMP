@@ -1,4 +1,4 @@
-﻿namespace LGPMP
+﻿namespace CabconPMP
 {
     partial class frmMain
     {
@@ -71,15 +71,25 @@
             this.dlmsCommStatusmsh2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblLoginInfo = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.ts_ico_New = new System.Windows.Forms.ToolStripLabel();
             this.tss_New = new System.Windows.Forms.ToolStripSeparator();
+            this.ts_ico_Open = new System.Windows.Forms.ToolStripLabel();
             this.tss_open = new System.Windows.Forms.ToolStripSeparator();
+            this.ts_ico_TestRun = new System.Windows.Forms.ToolStripLabel();
             this.tss_RunProcedure = new System.Windows.Forms.ToolStripSeparator();
+            this.ts_ico_report = new System.Windows.Forms.ToolStripLabel();
             this.tss_Report = new System.Windows.Forms.ToolStripSeparator();
+            this.ts_ico_Association = new System.Windows.Forms.ToolStripLabel();
             this.tss_Association = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabelSync = new System.Windows.Forms.ToolStripLabel();
             this.tss_Sync = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabelReject = new System.Windows.Forms.ToolStripLabel();
             this.tss_Reject = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabelError = new System.Windows.Forms.ToolStripLabel();
             this.tss_Error = new System.Windows.Forms.ToolStripSeparator();
+            this.ts_Help = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.ts_Exit = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.cms_Open = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cms_openProcedure = new System.Windows.Forms.ToolStripMenuItem();
@@ -90,16 +100,6 @@
             this.cms_CreateProgram = new System.Windows.Forms.ToolStripMenuItem();
             this.lblMainScreenMsg = new System.Windows.Forms.Label();
             this.pcbBackgroundImage = new System.Windows.Forms.PictureBox();
-            this.ts_ico_New = new System.Windows.Forms.ToolStripLabel();
-            this.ts_ico_Open = new System.Windows.Forms.ToolStripLabel();
-            this.ts_ico_TestRun = new System.Windows.Forms.ToolStripLabel();
-            this.ts_ico_report = new System.Windows.Forms.ToolStripLabel();
-            this.ts_ico_Association = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabelSync = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabelReject = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabelError = new System.Windows.Forms.ToolStripLabel();
-            this.ts_Help = new System.Windows.Forms.ToolStripLabel();
-            this.ts_Exit = new System.Windows.Forms.ToolStripLabel();
             this.menuStrip1.SuspendLayout();
             this.DLMSStas.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -111,7 +111,6 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.LightCyan;
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ts_file,
@@ -121,7 +120,7 @@
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1678, 35);
+            this.menuStrip1.Size = new System.Drawing.Size(2517, 54);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -135,7 +134,7 @@
             this.tsm_export,
             this.exitToolStripMenuItem1});
             this.ts_file.Name = "ts_file";
-            this.ts_file.Size = new System.Drawing.Size(54, 29);
+            this.ts_file.Size = new System.Drawing.Size(54, 48);
             this.ts_file.Text = "File";
             // 
             // tsm_New
@@ -382,7 +381,7 @@
             // 
             this.exitToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(55, 29);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(55, 48);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -465,57 +464,149 @@
             this.toolStripSeparator4,
             this.ts_Exit,
             this.toolStripSeparator3});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 35);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 81);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.toolStrip1.Size = new System.Drawing.Size(1678, 60);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // ts_ico_New
+            // 
+            this.ts_ico_New.Image = ((System.Drawing.Image)(resources.GetObject("ts_ico_New.Image")));
+            this.ts_ico_New.Name = "ts_ico_New";
+            this.ts_ico_New.Size = new System.Drawing.Size(87, 55);
+            this.ts_ico_New.Text = "    New    ";
+            this.ts_ico_New.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ts_ico_New.MouseUp += new System.Windows.Forms.MouseEventHandler(this.toolStripLabel1_MouseUp);
+            // 
             // tss_New
             // 
             this.tss_New.Name = "tss_New";
             this.tss_New.Size = new System.Drawing.Size(6, 60);
+            // 
+            // ts_ico_Open
+            // 
+            this.ts_ico_Open.Image = ((System.Drawing.Image)(resources.GetObject("ts_ico_Open.Image")));
+            this.ts_ico_Open.Name = "ts_ico_Open";
+            this.ts_ico_Open.Size = new System.Drawing.Size(96, 55);
+            this.ts_ico_Open.Text = "    Open    ";
+            this.ts_ico_Open.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ts_ico_Open.MouseUp += new System.Windows.Forms.MouseEventHandler(this.toolStripLabel2_MouseUp);
             // 
             // tss_open
             // 
             this.tss_open.Name = "tss_open";
             this.tss_open.Size = new System.Drawing.Size(6, 60);
             // 
+            // ts_ico_TestRun
+            // 
+            this.ts_ico_TestRun.Image = ((System.Drawing.Image)(resources.GetObject("ts_ico_TestRun.Image")));
+            this.ts_ico_TestRun.Name = "ts_ico_TestRun";
+            this.ts_ico_TestRun.Size = new System.Drawing.Size(118, 55);
+            this.ts_ico_TestRun.Text = "    Run Test    ";
+            this.ts_ico_TestRun.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ts_ico_TestRun.Click += new System.EventHandler(this.ts_FunctionalTest_Click);
+            // 
             // tss_RunProcedure
             // 
             this.tss_RunProcedure.Name = "tss_RunProcedure";
             this.tss_RunProcedure.Size = new System.Drawing.Size(6, 60);
+            // 
+            // ts_ico_report
+            // 
+            this.ts_ico_report.Image = ((System.Drawing.Image)(resources.GetObject("ts_ico_report.Image")));
+            this.ts_ico_report.Name = "ts_ico_report";
+            this.ts_ico_report.Size = new System.Drawing.Size(105, 55);
+            this.ts_ico_report.Text = "    Report    ";
+            this.ts_ico_report.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ts_ico_report.Click += new System.EventHandler(this.toolStripLabel3_Click);
             // 
             // tss_Report
             // 
             this.tss_Report.Name = "tss_Report";
             this.tss_Report.Size = new System.Drawing.Size(6, 60);
             // 
+            // ts_ico_Association
+            // 
+            this.ts_ico_Association.Image = ((System.Drawing.Image)(resources.GetObject("ts_ico_Association.Image")));
+            this.ts_ico_Association.Name = "ts_ico_Association";
+            this.ts_ico_Association.Size = new System.Drawing.Size(103, 55);
+            this.ts_ico_Association.Text = "Association";
+            this.ts_ico_Association.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ts_ico_Association.Click += new System.EventHandler(this.ts_Association_Click);
+            // 
             // tss_Association
             // 
             this.tss_Association.Name = "tss_Association";
             this.tss_Association.Size = new System.Drawing.Size(6, 60);
+            // 
+            // toolStripLabelSync
+            // 
+            this.toolStripLabelSync.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.toolStripLabelSync.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabelSync.Image")));
+            this.toolStripLabelSync.ImageTransparentColor = System.Drawing.Color.Transparent;
+            this.toolStripLabelSync.Name = "toolStripLabelSync";
+            this.toolStripLabelSync.Size = new System.Drawing.Size(116, 55);
+            this.toolStripLabelSync.Text = " Sync Details ";
+            this.toolStripLabelSync.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripLabelSync.Click += new System.EventHandler(this.toolStripLabelSync_Click);
             // 
             // tss_Sync
             // 
             this.tss_Sync.Name = "tss_Sync";
             this.tss_Sync.Size = new System.Drawing.Size(6, 60);
             // 
+            // toolStripLabelReject
+            // 
+            this.toolStripLabelReject.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabelReject.Image")));
+            this.toolStripLabelReject.Name = "toolStripLabelReject";
+            this.toolStripLabelReject.Size = new System.Drawing.Size(99, 55);
+            this.toolStripLabelReject.Text = " Reject List ";
+            this.toolStripLabelReject.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripLabelReject.Click += new System.EventHandler(this.toolStripLabelReject_Click);
+            // 
             // tss_Reject
             // 
             this.tss_Reject.Name = "tss_Reject";
             this.tss_Reject.Size = new System.Drawing.Size(6, 60);
+            // 
+            // toolStripLabelError
+            // 
+            this.toolStripLabelError.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabelError.Image")));
+            this.toolStripLabelError.Name = "toolStripLabelError";
+            this.toolStripLabelError.Size = new System.Drawing.Size(195, 55);
+            this.toolStripLabelError.Text = "     New Rework Entry   ";
+            this.toolStripLabelError.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripLabelError.Click += new System.EventHandler(this.toolStripLabelError_Click);
             // 
             // tss_Error
             // 
             this.tss_Error.Name = "tss_Error";
             this.tss_Error.Size = new System.Drawing.Size(6, 60);
             // 
+            // ts_Help
+            // 
+            this.ts_Help.Image = ((System.Drawing.Image)(resources.GetObject("ts_Help.Image")));
+            this.ts_Help.Name = "ts_Help";
+            this.ts_Help.Size = new System.Drawing.Size(114, 55);
+            this.ts_Help.Text = "       Help      ";
+            this.ts_Help.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ts_Help.Click += new System.EventHandler(this.ts_Help_Click);
+            // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 60);
+            // 
+            // ts_Exit
+            // 
+            this.ts_Exit.Image = ((System.Drawing.Image)(resources.GetObject("ts_Exit.Image")));
+            this.ts_Exit.Name = "ts_Exit";
+            this.ts_Exit.Size = new System.Drawing.Size(99, 55);
+            this.ts_Exit.Text = "      Exit      ";
+            this.ts_Exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ts_Exit.Click += new System.EventHandler(this.ts_Exit_Click);
             // 
             // toolStripSeparator3
             // 
@@ -591,106 +682,14 @@
             // 
             // pcbBackgroundImage
             // 
-            this.pcbBackgroundImage.BackgroundImage = global::LGPMP.Properties.Resources.mainpagetheme;
+            this.pcbBackgroundImage.BackgroundImage = global::CabconPMP.Properties.Resources.mainpagetheme;
             this.pcbBackgroundImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pcbBackgroundImage.Location = new System.Drawing.Point(0, 95);
+            this.pcbBackgroundImage.Location = new System.Drawing.Point(0, 171);
             this.pcbBackgroundImage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pcbBackgroundImage.Name = "pcbBackgroundImage";
-            this.pcbBackgroundImage.Size = new System.Drawing.Size(1678, 877);
+            this.pcbBackgroundImage.Size = new System.Drawing.Size(2517, 1287);
             this.pcbBackgroundImage.TabIndex = 19;
             this.pcbBackgroundImage.TabStop = false;
-            // 
-            // ts_ico_New
-            // 
-            this.ts_ico_New.Image = ((System.Drawing.Image)(resources.GetObject("ts_ico_New.Image")));
-            this.ts_ico_New.Name = "ts_ico_New";
-            this.ts_ico_New.Size = new System.Drawing.Size(87, 55);
-            this.ts_ico_New.Text = "    New    ";
-            this.ts_ico_New.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.ts_ico_New.MouseUp += new System.Windows.Forms.MouseEventHandler(this.toolStripLabel1_MouseUp);
-            // 
-            // ts_ico_Open
-            // 
-            this.ts_ico_Open.Image = ((System.Drawing.Image)(resources.GetObject("ts_ico_Open.Image")));
-            this.ts_ico_Open.Name = "ts_ico_Open";
-            this.ts_ico_Open.Size = new System.Drawing.Size(96, 55);
-            this.ts_ico_Open.Text = "    Open    ";
-            this.ts_ico_Open.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.ts_ico_Open.MouseUp += new System.Windows.Forms.MouseEventHandler(this.toolStripLabel2_MouseUp);
-            // 
-            // ts_ico_TestRun
-            // 
-            this.ts_ico_TestRun.Image = ((System.Drawing.Image)(resources.GetObject("ts_ico_TestRun.Image")));
-            this.ts_ico_TestRun.Name = "ts_ico_TestRun";
-            this.ts_ico_TestRun.Size = new System.Drawing.Size(118, 55);
-            this.ts_ico_TestRun.Text = "    Run Test    ";
-            this.ts_ico_TestRun.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.ts_ico_TestRun.Click += new System.EventHandler(this.ts_FunctionalTest_Click);
-            // 
-            // ts_ico_report
-            // 
-            this.ts_ico_report.Image = ((System.Drawing.Image)(resources.GetObject("ts_ico_report.Image")));
-            this.ts_ico_report.Name = "ts_ico_report";
-            this.ts_ico_report.Size = new System.Drawing.Size(105, 55);
-            this.ts_ico_report.Text = "    Report    ";
-            this.ts_ico_report.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.ts_ico_report.Click += new System.EventHandler(this.toolStripLabel3_Click);
-            // 
-            // ts_ico_Association
-            // 
-            this.ts_ico_Association.Image = ((System.Drawing.Image)(resources.GetObject("ts_ico_Association.Image")));
-            this.ts_ico_Association.Name = "ts_ico_Association";
-            this.ts_ico_Association.Size = new System.Drawing.Size(103, 55);
-            this.ts_ico_Association.Text = "Association";
-            this.ts_ico_Association.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.ts_ico_Association.Click += new System.EventHandler(this.ts_Association_Click);
-            // 
-            // toolStripLabelSync
-            // 
-            this.toolStripLabelSync.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.toolStripLabelSync.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabelSync.Image")));
-            this.toolStripLabelSync.ImageTransparentColor = System.Drawing.Color.Transparent;
-            this.toolStripLabelSync.Name = "toolStripLabelSync";
-            this.toolStripLabelSync.Size = new System.Drawing.Size(116, 55);
-            this.toolStripLabelSync.Text = " Sync Details ";
-            this.toolStripLabelSync.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripLabelSync.Click += new System.EventHandler(this.toolStripLabelSync_Click);
-            // 
-            // toolStripLabelReject
-            // 
-            this.toolStripLabelReject.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabelReject.Image")));
-            this.toolStripLabelReject.Name = "toolStripLabelReject";
-            this.toolStripLabelReject.Size = new System.Drawing.Size(99, 55);
-            this.toolStripLabelReject.Text = " Reject List ";
-            this.toolStripLabelReject.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripLabelReject.Click += new System.EventHandler(this.toolStripLabelReject_Click);
-            // 
-            // toolStripLabelError
-            // 
-            this.toolStripLabelError.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabelError.Image")));
-            this.toolStripLabelError.Name = "toolStripLabelError";
-            this.toolStripLabelError.Size = new System.Drawing.Size(195, 55);
-            this.toolStripLabelError.Text = "     New Rework Entry   ";
-            this.toolStripLabelError.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripLabelError.Click += new System.EventHandler(this.toolStripLabelError_Click);
-            // 
-            // ts_Help
-            // 
-            this.ts_Help.Image = ((System.Drawing.Image)(resources.GetObject("ts_Help.Image")));
-            this.ts_Help.Name = "ts_Help";
-            this.ts_Help.Size = new System.Drawing.Size(114, 55);
-            this.ts_Help.Text = "       Help      ";
-            this.ts_Help.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.ts_Help.Click += new System.EventHandler(this.ts_Help_Click);
-            // 
-            // ts_Exit
-            // 
-            this.ts_Exit.Image = ((System.Drawing.Image)(resources.GetObject("ts_Exit.Image")));
-            this.ts_Exit.Name = "ts_Exit";
-            this.ts_Exit.Size = new System.Drawing.Size(99, 55);
-            this.ts_Exit.Text = "      Exit      ";
-            this.ts_Exit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.ts_Exit.Click += new System.EventHandler(this.ts_Exit_Click);
             // 
             // frmMain
             // 

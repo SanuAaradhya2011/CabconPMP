@@ -1,4 +1,4 @@
-﻿namespace LGPMP
+﻿namespace CabconPMP
 {
     partial class frmProgramListOpen
     {

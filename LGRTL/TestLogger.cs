@@ -155,7 +155,7 @@ namespace LGRTL
 
                 }
                 int effectedRowsCount = dtexec.Rows.Count;
-                loggerMessage = dtcali.Rows[0]["ExecutionDate"] + "--->LGPMP:" + appversion.ToString() + ", Run ID: " + dtexec.Rows[0]["ParaDefaultValue"] + ", Work Station ID :" + dtexec.Rows[0]["WorkStationID"] + ", Uploaded Meter Counts :" + effectedRowsCount.ToString() + ", " + duplicatePCBAIDList;
+                loggerMessage = dtcali.Rows[0]["ExecutionDate"] + "--->CabconPMP:" + appversion.ToString() + ", Run ID: " + dtexec.Rows[0]["ParaDefaultValue"] + ", Work Station ID :" + dtexec.Rows[0]["WorkStationID"] + ", Uploaded Meter Counts :" + effectedRowsCount.ToString() + ", " + duplicatePCBAIDList;
                 System.Console.WriteLine("\n\nTotal Uploaded Meter Counts : " + effectedRowsCount.ToString());
                
                 //System.Threading.Thread.Sleep(2000);
@@ -165,7 +165,7 @@ namespace LGRTL
             catch (Exception Ex)
             {
                 string dattimeFormatted = DateTime.Now.Day.ToString("d2") + "/" + DateTime.Now.Month.ToString("d2") + "/" + DateTime.Now.Year.ToString("d2") + " " + DateTime.Now.Hour.ToString("d2") + ":" + DateTime.Now.Minute.ToString("d2") + ":" + DateTime.Now.Second.ToString("d2");
-                loggerMessage = dattimeFormatted + "--->LGPMP:" + appversion.ToString() + ", " + Ex.Message;
+                loggerMessage = dattimeFormatted + "--->CabconPMP:" + appversion.ToString() + ", " + Ex.Message;
                 System.Console.WriteLine("\n\nError : Unable To Upload Test Results To Server ! \n " + Ex.Message + "\nPress Any Key To Exit !");
                 System.Console.ReadKey();
             }
@@ -227,7 +227,7 @@ namespace LGRTL
             catch (Exception ex)
             {
                 string dattimeFormatted = DateTime.Now.Day.ToString("d2") + "/" + DateTime.Now.Month.ToString("d2") + "/" + DateTime.Now.Year.ToString("d2") + " " + DateTime.Now.Hour.ToString("d2") + ":" + DateTime.Now.Minute.ToString("d2") + ":" + DateTime.Now.Second.ToString("d2");
-                string loggerMessage = dattimeFormatted + "--->LGPMP:" + appversion.ToString() + ", " + ex.Message;
+                string loggerMessage = dattimeFormatted + "--->CabconPMP:" + appversion.ToString() + ", " + ex.Message;
                 WriteTextLog(loggerMessage);
                 System.Console.WriteLine(ex.Message);
                 //System.Console.ReadKey();
@@ -326,7 +326,7 @@ namespace LGRTL
             catch (Exception ex)
             {
                 string dattimeFormatted = DateTime.Now.Day.ToString("d2") + "/" + DateTime.Now.Month.ToString("d2") + "/" + DateTime.Now.Year.ToString("d2") + " " + DateTime.Now.Hour.ToString("d2") + ":" + DateTime.Now.Minute.ToString("d2") + ":" + DateTime.Now.Second.ToString("d2");
-                string loggerMessage = dattimeFormatted + "--->LGPMP:" + appversion.ToString() + ", " + ex.Message;
+                string loggerMessage = dattimeFormatted + "--->CabconPMP:" + appversion.ToString() + ", " + ex.Message;
                 WriteTextLog(loggerMessage);
                 System.Console.WriteLine(ex.Message);
                 //System.Console.ReadKey();
@@ -356,7 +356,7 @@ namespace LGRTL
             catch (Exception ex)
             {
                 string dattimeFormatted = DateTime.Now.Day.ToString("d2") + "/" + DateTime.Now.Month.ToString("d2") + "/" + DateTime.Now.Year.ToString("d2") + " " + DateTime.Now.Hour.ToString("d2") + ":" + DateTime.Now.Minute.ToString("d2") + ":" + DateTime.Now.Second.ToString("d2");
-                string loggerMessage = dattimeFormatted + "--->LGPMP:" + appversion.ToString() + ", " + ex.Message;
+                string loggerMessage = dattimeFormatted + "--->CabconPMP:" + appversion.ToString() + ", " + ex.Message;
                 WriteTextLog(loggerMessage);
                 System.Console.WriteLine(ex.Message);
                 //System.Console.ReadKey();
@@ -420,7 +420,7 @@ namespace LGRTL
             catch (Exception ex)
             {
                 string dattimeFormatted = DateTime.Now.Day.ToString("d2") + "/" + DateTime.Now.Month.ToString("d2") + "/" + DateTime.Now.Year.ToString("d2") + " " + DateTime.Now.Hour.ToString("d2") + ":" + DateTime.Now.Minute.ToString("d2") + ":" + DateTime.Now.Second.ToString("d2");
-                string loggerMessage = dattimeFormatted + "--->LGPMP:" + appversion.ToString() + ", " + ex.Message;
+                string loggerMessage = dattimeFormatted + "--->CabconPMP:" + appversion.ToString() + ", " + ex.Message;
                 WriteTextLog(loggerMessage);
                 System.Console.WriteLine(ex.Message);
                 //System.Console.ReadKey();
@@ -486,7 +486,7 @@ namespace LGRTL
             catch (Exception ex)
             {
                 string dattimeFormatted = DateTime.Now.Day.ToString("d2") + "/" + DateTime.Now.Month.ToString("d2") + "/" + DateTime.Now.Year.ToString("d2") + " " + DateTime.Now.Hour.ToString("d2") + ":" + DateTime.Now.Minute.ToString("d2") + ":" + DateTime.Now.Second.ToString("d2");
-                string loggerMessage = dattimeFormatted + "--->LGPMP:" + appversion.ToString() + ", " + ex.Message;
+                string loggerMessage = dattimeFormatted + "--->CabconPMP:" + appversion.ToString() + ", " + ex.Message;
                 WriteTextLog(loggerMessage);
                 System.Console.WriteLine("\nError: " + ex.Message + "!");
                 System.Console.WriteLine("Unable To Connect To Server !");
@@ -545,7 +545,7 @@ namespace LGRTL
             catch (Exception ex)
             {
                 string dattimeFormatted = DateTime.Now.Day.ToString("d2") + "/" + DateTime.Now.Month.ToString("d2") + "/" + DateTime.Now.Year.ToString("d2") + " " + DateTime.Now.Hour.ToString("d2") + ":" + DateTime.Now.Minute.ToString("d2") + ":" + DateTime.Now.Second.ToString("d2");
-                string loggerMessage = dattimeFormatted + "--->LGPMP:" + appversion.ToString() + ", " + ex.Message;
+                string loggerMessage = dattimeFormatted + "--->CabconPMP:" + appversion.ToString() + ", " + ex.Message;
                 WriteTextLog(loggerMessage);
                 System.Console.WriteLine("\nError: " + ex.Message + "!");
                 System.Console.WriteLine("Unable To Connect To Server !");
@@ -572,7 +572,7 @@ namespace LGRTL
             catch (Exception ex)
             {
                 string dattimeFormatted = DateTime.Now.Day.ToString("d2") + "/" + DateTime.Now.Month.ToString("d2") + "/" + DateTime.Now.Year.ToString("d2") + " " + DateTime.Now.Hour.ToString("d2") + ":" + DateTime.Now.Minute.ToString("d2") + ":" + DateTime.Now.Second.ToString("d2");
-                string loggerMessage = dattimeFormatted + "--->LGPMP:" + appversion.ToString() + ", " + ex.Message;
+                string loggerMessage = dattimeFormatted + "--->CabconPMP:" + appversion.ToString() + ", " + ex.Message;
                 WriteTextLog(loggerMessage);
                 System.Console.WriteLine(ex.Message);
                 //System.Console.ReadKey();

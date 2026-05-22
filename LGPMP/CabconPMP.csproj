@@ -8,8 +8,8 @@
     <ProjectGuid>{4AF7DBAD-8492-47C7-A52C-320CEB493A9A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LGPMP</RootNamespace>
-    <AssemblyName>LGPMP</AssemblyName>
+    <RootNamespace>CabconPMP</RootNamespace>
+    <AssemblyName>CabconPMP</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ApplicationIcon>SMPMP_ICO.ico</ApplicationIcon>

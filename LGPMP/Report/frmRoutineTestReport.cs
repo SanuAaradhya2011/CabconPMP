@@ -14,7 +14,7 @@ using Excel = Microsoft.Office.Interop.Excel;
 using Utilities;
 using COMMONENTITY;
 
-namespace LGPMP.Report
+namespace CabconPMP.Report
 {
     public partial class frmRoutineTestReport : Form
     {
@@ -160,7 +160,7 @@ namespace LGPMP.Report
                     MessageBox.Show("No Data To Generate The Report !", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     return;
                 }
-                LGPMP.PMPDataSet _dataset = new PMPDataSet();
+                CabconPMP.PMPDataSet _dataset = new PMPDataSet();
 
                 for (int icount = 0; icount < routinetestentity.mdatalist.Count; icount++)
                 {

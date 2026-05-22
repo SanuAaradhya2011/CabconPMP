@@ -1,4 +1,4 @@
-﻿namespace LGPMP.Report
+﻿namespace CabconPMP.Report
 {
     partial class frmRoutineTestReport
     {

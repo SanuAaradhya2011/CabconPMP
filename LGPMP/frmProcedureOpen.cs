@@ -14,7 +14,7 @@ using PMPSM110;
 using System.IO;
 using System.Diagnostics;
 using SystemSecurityLibrary;
-namespace LGPMP
+namespace CabconPMP
 {
     public partial class frmProcedureOpen : Form
     {
@@ -187,7 +187,7 @@ namespace LGPMP
                     procedureType = procedureType.Replace(" ", "");
                     assList = assList + "," + objentyUM.LoginTypeIndex.ToString();
                     assList = assList + "," + AppDomain.CurrentDomain.BaseDirectory + "\\" + progNme;
-                    //Serialization,Falcon2SM110SerializationTEST,COM1,None,8,1,9600,2500,3500,128,1,2,1,9999,9999,5,126,1,256,6,1,2,00000000,000102030405060708090A0B0C0D0E0F,9999,1CFF3F,9600,12345678,32,000102030405060708090A0B0C0D0E0F,0,000102030405060708090A0B0C0D0E0F,indel7063,5,D:\TFS\AMP\India\1P & 3P Common Tools\LGPMP\DEV\LGPMP-DEV\SRC\LGPMP\bin\x86\Release\\PMPSM110
+                    //Serialization,Falcon2SM110SerializationTEST,COM1,None,8,1,9600,2500,3500,128,1,2,1,9999,9999,5,126,1,256,6,1,2,00000000,000102030405060708090A0B0C0D0E0F,9999,1CFF3F,9600,12345678,32,000102030405060708090A0B0C0D0E0F,0,000102030405060708090A0B0C0D0E0F,indel7063,5,D:\TFS\AMP\India\1P & 3P Common Tools\CabconPMP\DEV\CabconPMP-DEV\SRC\CabconPMP\bin\x86\Release\\PMPSM110
                     System.Diagnostics.Process.Start(AppDomain.CurrentDomain.BaseDirectory + "\\" + progNme, procedureType + "," + xmlFileName + "," + assList);
                 }
             }

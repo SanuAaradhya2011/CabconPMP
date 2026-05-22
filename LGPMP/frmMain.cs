@@ -16,7 +16,7 @@ using BALLAYER;
 using SystemSecurityLibrary;
 using LGPMPREJECTIONTOOL;
 using LGPMPSYNCSERVICE;
-namespace LGPMP
+namespace CabconPMP
 {
     public partial class frmMain : Form
     {
@@ -83,7 +83,7 @@ namespace LGPMP
 
                 string Communication = string.Empty;
                 string Company_Profile = string.Empty;
-                string filename = AppDomain.CurrentDomain.BaseDirectory + @"\LGPMP.exe";
+                string filename = AppDomain.CurrentDomain.BaseDirectory + @"\CabconPMP.exe";
                 string strbuilton = "Built On: " + File.GetCreationTime(filename).Day.ToString("00") + "/" + File.GetCreationTime(filename).Month.ToString("00") + "/" + File.GetCreationTime(filename).Year.ToString("00");
 
                 string strtemp = "";
@@ -104,7 +104,7 @@ namespace LGPMP
 
                 }
                 string Prduct_Version = SystemInfo.ProductVersion();                 
-                string strpath = AppDomain.CurrentDomain.BaseDirectory + "LGPMP.exe";
+                string strpath = AppDomain.CurrentDomain.BaseDirectory + "CabconPMP.exe";
                 Company_Profile = SystemInfo.CopyRightsDetail();
                 lblMainScreenMsg.Text = "L+G  Product Management Program Ver. " + Prduct_Version +  "\n" + "            " + connectionString;
                 Prduct_Version = Application.ProductName.ToString() + " Ver. " + Prduct_Version;
@@ -560,7 +560,7 @@ namespace LGPMP
 
         private void routineTestReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Report.frmRoutineTestReport objroutinetest = new LGPMP.Report.frmRoutineTestReport(objetyusermgt);
+            Report.frmRoutineTestReport objroutinetest = new CabconPMP.Report.frmRoutineTestReport(objetyusermgt);
             objroutinetest.ShowDialog();
         }
 

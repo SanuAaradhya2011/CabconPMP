@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using COMMONENTITY;
-namespace LGPMP
+namespace CabconPMP
 {
     public partial class frmMeterExecutionState : Form
     {
@@ -25,10 +25,10 @@ namespace LGPMP
         private void frmMeterExecutionState_Load(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
-            pbEMSTst.Image = LGPMP.Properties.Resources.StateUnknown;
-            pbFT.Image = LGPMP.Properties.Resources.StateUnknown;
-            pbCalibration.Image = LGPMP.Properties.Resources.StateUnknown;
-            pbSerialization.Image = LGPMP.Properties.Resources.StateUnknown;
+            pbEMSTst.Image = CabconPMP.Properties.Resources.StateUnknown;
+            pbFT.Image = CabconPMP.Properties.Resources.StateUnknown;
+            pbCalibration.Image = CabconPMP.Properties.Resources.StateUnknown;
+            pbSerialization.Image = CabconPMP.Properties.Resources.StateUnknown;
             int stateCount=0;
             PictureBox objpb = new PictureBox();
             bool status = false;
@@ -54,14 +54,14 @@ namespace LGPMP
                        status = FinalStatusList[stateCount];
                        break;
                }
-                if (status) objpb.Image = LGPMP.Properties.Resources.StatePass;
-                else { objpb.Image = LGPMP.Properties.Resources.StateFail; finalstate++; }
+                if (status) objpb.Image = CabconPMP.Properties.Resources.StatePass;
+                else { objpb.Image = CabconPMP.Properties.Resources.StateFail; finalstate++; }
                 stateCount++;
              }
-            if( pbEMSTst.Image == LGPMP.Properties.Resources.StatePass &&
-                pbFT.Image == LGPMP.Properties.Resources.StatePass &&
-                pbCalibration.Image == LGPMP.Properties.Resources.StatePass &&
-                pbSerialization.Image == LGPMP.Properties.Resources.StatePass
+            if( pbEMSTst.Image == CabconPMP.Properties.Resources.StatePass &&
+                pbFT.Image == CabconPMP.Properties.Resources.StatePass &&
+                pbCalibration.Image == CabconPMP.Properties.Resources.StatePass &&
+                pbSerialization.Image == CabconPMP.Properties.Resources.StatePass
                )
             {
                 lblFinalmsg.Text = "Meter PCBA =" + lblFinalmsg.Text + " : is PASSED All the Production Stage";

@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using Utilities;
 using SystemSecurityLibrary;
-namespace LGPMP
+namespace CabconPMP
 {
     public partial class AboutLGPMP : Form
     {

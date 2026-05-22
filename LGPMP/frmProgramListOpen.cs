@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using BALLAYER;
 using COMMONENTITY;
-namespace LGPMP
+namespace CabconPMP
 {
     public partial class frmProgramListOpen : Form
     {

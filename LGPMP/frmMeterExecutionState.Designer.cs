@@ -1,4 +1,4 @@
-﻿namespace LGPMP
+﻿namespace CabconPMP
 {
     partial class frmMeterExecutionState
     {
@@ -145,7 +145,7 @@
             // 
             // pbSerialization
             // 
-            this.pbSerialization.Image = global::LGPMP.Properties.Resources.StatePass;
+            this.pbSerialization.Image = global::CabconPMP.Properties.Resources.StatePass;
             this.pbSerialization.Location = new System.Drawing.Point(592, 74);
             this.pbSerialization.Name = "pbSerialization";
             this.pbSerialization.Size = new System.Drawing.Size(65, 63);

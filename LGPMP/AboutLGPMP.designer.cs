@@ -1,4 +1,4 @@
-﻿namespace LGPMP
+﻿namespace CabconPMP
 {
     partial class AboutLGPMP
     {
@@ -91,7 +91,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::LGPMP.Properties.Resources.aboutpmp;
+            this.pictureBox1.BackgroundImage = global::CabconPMP.Properties.Resources.aboutpmp;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.ImageLocation = "";
@@ -105,7 +105,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackgroundImage = global::LGPMP.Properties.Resources.Background1;
+            this.groupBox1.BackgroundImage = global::CabconPMP.Properties.Resources.Background1;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lblProductVersion);

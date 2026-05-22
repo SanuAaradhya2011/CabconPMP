@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace LGPMP.Report
+namespace CabconPMP.Report
 {
     public partial class frmRoutineTestPointselection : Form
     {

@@ -21,7 +21,7 @@ using Excel = Microsoft.Office.Interop.Excel;
 using Microsoft.Office.Interop.Excel;
 using System.Data.OleDb;
 using COMMONENTITY;
-namespace LGPMP
+namespace CabconPMP
 {
     public partial class frmMeterRange : Form
     {

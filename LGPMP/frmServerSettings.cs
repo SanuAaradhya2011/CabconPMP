@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using COMMONENTITY;
 using Utilities;
 using SystemSecurityLibrary;
-namespace LGPMP
+namespace CabconPMP
 {
     public partial class frmServerSettings : Form
     {

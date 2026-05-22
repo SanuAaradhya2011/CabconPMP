@@ -14,7 +14,7 @@ using SerialCommunication;
 using COMMONENTITY;
 using BALLAYER;
 using SystemSecurityLibrary;
-namespace LGPMP
+namespace CabconPMP
 {
 
     public partial class frmProcedure : Form

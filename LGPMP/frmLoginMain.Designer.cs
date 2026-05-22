@@ -1,4 +1,4 @@
-﻿namespace LGPMP
+﻿namespace CabconPMP
 {
     partial class frmLoginMain
     {
@@ -44,7 +44,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.BackgroundImage = global::LGPMP.Properties.Resources.login_page;
+            this.pictureBox1.BackgroundImage = global::CabconPMP.Properties.Resources.login_page;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.ErrorImage = null;
@@ -58,7 +58,7 @@
             // PanelLoginControl
             // 
             this.PanelLoginControl.BackColor = System.Drawing.Color.White;
-            this.PanelLoginControl.BackgroundImage = global::LGPMP.Properties.Resources.Background;
+            this.PanelLoginControl.BackgroundImage = global::CabconPMP.Properties.Resources.Background;
             this.PanelLoginControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PanelLoginControl.Controls.Add(this.txtuserID);
             this.PanelLoginControl.Controls.Add(this.btnLogin);

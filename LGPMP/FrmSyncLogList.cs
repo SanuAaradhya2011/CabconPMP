@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using COMMONENTITY;
 
-namespace LGPMP
+namespace CabconPMP
 {
     public partial class FrmSyncLogList : Form
     {
