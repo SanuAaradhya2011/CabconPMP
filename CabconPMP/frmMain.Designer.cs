@@ -530,7 +530,7 @@
             // 
             // ts_ico_Association
             // 
-            this.ts_ico_Association.Image = ((System.Drawing.Image)(resources.GetObject("ts_ico_Association.Image")));
+            this.ts_ico_Association.Image = global::CabconPMP.Properties.Resources.alliance;
             this.ts_ico_Association.Name = "ts_ico_Association";
             this.ts_ico_Association.Size = new System.Drawing.Size(103, 55);
             this.ts_ico_Association.Text = "Association";
@@ -684,6 +684,7 @@
             // pcbBackgroundImage
             // 
             this.pcbBackgroundImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pcbBackgroundImage.BackgroundImage")));
+            this.pcbBackgroundImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pcbBackgroundImage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pcbBackgroundImage.Location = new System.Drawing.Point(0, 93);
             this.pcbBackgroundImage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -691,6 +692,7 @@
             this.pcbBackgroundImage.Size = new System.Drawing.Size(1678, 879);
             this.pcbBackgroundImage.TabIndex = 19;
             this.pcbBackgroundImage.TabStop = false;
+            this.pcbBackgroundImage.Click += new System.EventHandler(this.pcbBackgroundImage_Click);
             // 
             // frmMain
             // 

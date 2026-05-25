@@ -22,6 +22,13 @@ namespace CabconPMP
         public AccessPassword()
         {
             InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
+
+            // Modern lock icon
+            picLock.Image = SystemIcons.Shield.ToBitmap();
+
+            // Rounded buttons
+            btnOK.FlatAppearance.MouseOverBackColor = Color.FromArgb(29, 78, 216);
+            btnCancel.FlatAppearance.MouseOverBackColor = Color.Gainsboro;
         }
 
         private void btnOK_Click(object sender, EventArgs e)

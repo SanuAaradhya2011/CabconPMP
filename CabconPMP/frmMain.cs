@@ -629,5 +629,10 @@ namespace CabconPMP
         {
             toolStripLabelError_Click(new object(), EventArgs.Empty);
         }
+
+        private void pcbBackgroundImage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

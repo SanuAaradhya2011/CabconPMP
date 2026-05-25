@@ -144,9 +144,11 @@
             this.groupBox6.Controls.Add(this.txtConformanceBlock);
             this.groupBox6.Controls.Add(this.label8);
             this.groupBox6.Controls.Add(this.label9);
-            this.groupBox6.Location = new System.Drawing.Point(259, 534);
+            this.groupBox6.Location = new System.Drawing.Point(388, 822);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(334, 109);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox6.Size = new System.Drawing.Size(501, 168);
             this.groupBox6.TabIndex = 1;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "User Information Field";
@@ -155,45 +157,50 @@
             // txtPDUSize
             // 
             this.txtPDUSize.Enabled = false;
-            this.txtPDUSize.Location = new System.Drawing.Point(178, 64);
+            this.txtPDUSize.Location = new System.Drawing.Point(267, 98);
+            this.txtPDUSize.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPDUSize.Name = "txtPDUSize";
-            this.txtPDUSize.Size = new System.Drawing.Size(88, 20);
+            this.txtPDUSize.Size = new System.Drawing.Size(130, 26);
             this.txtPDUSize.TabIndex = 5;
             this.txtPDUSize.Text = "9999";
             // 
             // txtConformanceBlock
             // 
             this.txtConformanceBlock.Enabled = false;
-            this.txtConformanceBlock.Location = new System.Drawing.Point(178, 33);
+            this.txtConformanceBlock.Location = new System.Drawing.Point(267, 51);
+            this.txtConformanceBlock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtConformanceBlock.Name = "txtConformanceBlock";
-            this.txtConformanceBlock.Size = new System.Drawing.Size(88, 20);
+            this.txtConformanceBlock.Size = new System.Drawing.Size(130, 26);
             this.txtConformanceBlock.TabIndex = 4;
             this.txtConformanceBlock.Text = "00142C";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(43, 67);
+            this.label8.Location = new System.Drawing.Point(64, 103);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 13);
+            this.label8.Size = new System.Drawing.Size(78, 20);
             this.label8.TabIndex = 1;
             this.label8.Text = "PDU Size";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(43, 36);
+            this.label9.Location = new System.Drawing.Point(64, 55);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 13);
+            this.label9.Size = new System.Drawing.Size(148, 20);
             this.label9.TabIndex = 0;
             this.label9.Text = "Conformance Block";
             // 
             // button1
             // 
             this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(512, 627);
+            this.button1.Location = new System.Drawing.Point(768, 965);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 35);
+            this.button1.Size = new System.Drawing.Size(117, 54);
             this.button1.TabIndex = 6;
             this.button1.Text = "Set Conformance";
             this.button1.UseVisualStyleBackColor = true;
@@ -201,9 +208,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(338, 409);
+            this.button3.Location = new System.Drawing.Point(507, 629);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 28);
+            this.button3.Size = new System.Drawing.Size(112, 43);
             this.button3.TabIndex = 3;
             this.button3.Text = "&Cancel";
             this.button3.UseVisualStyleBackColor = true;
@@ -211,9 +219,10 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(257, 409);
+            this.btnOK.Location = new System.Drawing.Point(386, 629);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 28);
+            this.btnOK.Size = new System.Drawing.Size(112, 43);
             this.btnOK.TabIndex = 2;
             this.btnOK.Text = "&OK";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -226,10 +235,11 @@
             this.tabControl1.Controls.Add(this.tabHDLC);
             this.tabControl1.Controls.Add(this.tabAssociation);
             this.tabControl1.Controls.Add(this.tabconformanceBlock);
-            this.tabControl1.Location = new System.Drawing.Point(1, 1);
+            this.tabControl1.Location = new System.Drawing.Point(2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(432, 402);
+            this.tabControl1.Size = new System.Drawing.Size(648, 618);
             this.tabControl1.TabIndex = 22;
             // 
             // tabSerialPort
@@ -238,10 +248,11 @@
             this.tabSerialPort.Controls.Add(this.label2);
             this.tabSerialPort.Controls.Add(this.cmbSettingCategory);
             this.tabSerialPort.Controls.Add(this.groupBox10);
-            this.tabSerialPort.Location = new System.Drawing.Point(4, 25);
+            this.tabSerialPort.Location = new System.Drawing.Point(4, 32);
+            this.tabSerialPort.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabSerialPort.Name = "tabSerialPort";
-            this.tabSerialPort.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSerialPort.Size = new System.Drawing.Size(424, 373);
+            this.tabSerialPort.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabSerialPort.Size = new System.Drawing.Size(640, 582);
             this.tabSerialPort.TabIndex = 0;
             this.tabSerialPort.Text = "Port Settings";
             this.tabSerialPort.UseVisualStyleBackColor = true;
@@ -251,9 +262,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(90, 41);
+            this.label2.Location = new System.Drawing.Point(135, 63);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 13);
+            this.label2.Size = new System.Drawing.Size(149, 20);
             this.label2.TabIndex = 11;
             this.label2.Text = "Setting Category";
             // 
@@ -265,9 +277,10 @@
             this.cmbSettingCategory.Items.AddRange(new object[] {
             "IEC Default",
             "DLMS & IEC @ 9600"});
-            this.cmbSettingCategory.Location = new System.Drawing.Point(200, 38);
+            this.cmbSettingCategory.Location = new System.Drawing.Point(300, 58);
+            this.cmbSettingCategory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbSettingCategory.Name = "cmbSettingCategory";
-            this.cmbSettingCategory.Size = new System.Drawing.Size(150, 21);
+            this.cmbSettingCategory.Size = new System.Drawing.Size(223, 28);
             this.cmbSettingCategory.TabIndex = 10;
             this.cmbSettingCategory.SelectedIndexChanged += new System.EventHandler(this.cmbSettingCategory_SelectedIndexChanged);
             // 
@@ -291,9 +304,11 @@
             this.groupBox10.Controls.Add(this.cmbPort);
             this.groupBox10.Controls.Add(this.label22);
             this.groupBox10.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox10.Location = new System.Drawing.Point(37, 65);
+            this.groupBox10.Location = new System.Drawing.Point(56, 100);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(331, 245);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox10.Size = new System.Drawing.Size(496, 377);
             this.groupBox10.TabIndex = 0;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Serial Port Setting";
@@ -305,26 +320,29 @@
             this.cmbSignonBaudRate.Items.AddRange(new object[] {
             "300",
             "9600"});
-            this.cmbSignonBaudRate.Location = new System.Drawing.Point(198, 73);
+            this.cmbSignonBaudRate.Location = new System.Drawing.Point(297, 112);
+            this.cmbSignonBaudRate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbSignonBaudRate.Name = "cmbSignonBaudRate";
-            this.cmbSignonBaudRate.Size = new System.Drawing.Size(121, 21);
+            this.cmbSignonBaudRate.Size = new System.Drawing.Size(180, 28);
             this.cmbSignonBaudRate.TabIndex = 22;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 73);
+            this.label1.Location = new System.Drawing.Point(21, 112);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 13);
+            this.label1.Size = new System.Drawing.Size(266, 20);
             this.label1.TabIndex = 21;
             this.label1.Text = "Signon Baud Rate (For NON-DLMS)";
             // 
             // txtInterFrameTimeout
             // 
-            this.txtInterFrameTimeout.Location = new System.Drawing.Point(198, 209);
+            this.txtInterFrameTimeout.Location = new System.Drawing.Point(297, 322);
+            this.txtInterFrameTimeout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtInterFrameTimeout.MaxLength = 5;
             this.txtInterFrameTimeout.Name = "txtInterFrameTimeout";
-            this.txtInterFrameTimeout.Size = new System.Drawing.Size(121, 20);
+            this.txtInterFrameTimeout.Size = new System.Drawing.Size(180, 26);
             this.txtInterFrameTimeout.TabIndex = 20;
             // 
             // cmbParity
@@ -335,52 +353,58 @@
             "None",
             "Even",
             "Odd"});
-            this.cmbParity.Location = new System.Drawing.Point(198, 127);
+            this.cmbParity.Location = new System.Drawing.Point(297, 195);
+            this.cmbParity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbParity.Name = "cmbParity";
-            this.cmbParity.Size = new System.Drawing.Size(121, 21);
+            this.cmbParity.Size = new System.Drawing.Size(180, 28);
             this.cmbParity.TabIndex = 3;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(14, 127);
+            this.label23.Location = new System.Drawing.Point(21, 195);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(33, 13);
+            this.label23.Size = new System.Drawing.Size(48, 20);
             this.label23.TabIndex = 2;
             this.label23.Text = "Parity";
             // 
             // txtResponsTimeout
             // 
-            this.txtResponsTimeout.Location = new System.Drawing.Point(198, 183);
+            this.txtResponsTimeout.Location = new System.Drawing.Point(297, 282);
+            this.txtResponsTimeout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtResponsTimeout.MaxLength = 5;
             this.txtResponsTimeout.Name = "txtResponsTimeout";
-            this.txtResponsTimeout.Size = new System.Drawing.Size(121, 20);
+            this.txtResponsTimeout.Size = new System.Drawing.Size(180, 26);
             this.txtResponsTimeout.TabIndex = 19;
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(14, 209);
+            this.label30.Location = new System.Drawing.Point(21, 322);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(123, 13);
+            this.label30.Size = new System.Drawing.Size(188, 20);
             this.label30.TabIndex = 16;
             this.label30.Text = "Inter Farme Timeout (ms)";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(14, 100);
+            this.label24.Location = new System.Drawing.Point(21, 154);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(50, 13);
+            this.label24.Size = new System.Drawing.Size(75, 20);
             this.label24.TabIndex = 4;
             this.label24.Text = "Data Bits";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(14, 183);
+            this.label26.Location = new System.Drawing.Point(21, 282);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(118, 13);
+            this.label26.Size = new System.Drawing.Size(178, 20);
             this.label26.TabIndex = 14;
             this.label26.Text = "Response Timeout (ms)";
             // 
@@ -391,9 +415,10 @@
             this.cmbDatabits.Items.AddRange(new object[] {
             "7",
             "8"});
-            this.cmbDatabits.Location = new System.Drawing.Point(198, 100);
+            this.cmbDatabits.Location = new System.Drawing.Point(297, 154);
+            this.cmbDatabits.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbDatabits.Name = "cmbDatabits";
-            this.cmbDatabits.Size = new System.Drawing.Size(121, 21);
+            this.cmbDatabits.Size = new System.Drawing.Size(180, 28);
             this.cmbDatabits.TabIndex = 5;
             // 
             // cmbStopBits
@@ -403,17 +428,19 @@
             this.cmbStopBits.Items.AddRange(new object[] {
             "1",
             "2"});
-            this.cmbStopBits.Location = new System.Drawing.Point(198, 156);
+            this.cmbStopBits.Location = new System.Drawing.Point(297, 240);
+            this.cmbStopBits.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbStopBits.Name = "cmbStopBits";
-            this.cmbStopBits.Size = new System.Drawing.Size(121, 21);
+            this.cmbStopBits.Size = new System.Drawing.Size(180, 28);
             this.cmbStopBits.TabIndex = 9;
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(14, 156);
+            this.label29.Location = new System.Drawing.Point(21, 240);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(49, 13);
+            this.label29.Size = new System.Drawing.Size(74, 20);
             this.label29.TabIndex = 8;
             this.label29.Text = "Stop Bits";
             // 
@@ -435,17 +462,19 @@
             "230400",
             "460800",
             "921600"});
-            this.cmbBaudRate.Location = new System.Drawing.Point(198, 46);
+            this.cmbBaudRate.Location = new System.Drawing.Point(297, 71);
+            this.cmbBaudRate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbBaudRate.Name = "cmbBaudRate";
-            this.cmbBaudRate.Size = new System.Drawing.Size(121, 21);
+            this.cmbBaudRate.Size = new System.Drawing.Size(180, 28);
             this.cmbBaudRate.TabIndex = 7;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(14, 46);
+            this.label25.Location = new System.Drawing.Point(21, 71);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(133, 13);
+            this.label25.Size = new System.Drawing.Size(200, 20);
             this.label25.TabIndex = 6;
             this.label25.Text = "Communication Baud Rate";
             // 
@@ -453,18 +482,20 @@
             // 
             this.cmbPort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPort.FormattingEnabled = true;
-            this.cmbPort.Location = new System.Drawing.Point(198, 19);
+            this.cmbPort.Location = new System.Drawing.Point(297, 29);
+            this.cmbPort.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbPort.Name = "cmbPort";
-            this.cmbPort.Size = new System.Drawing.Size(121, 21);
+            this.cmbPort.Size = new System.Drawing.Size(180, 28);
             this.cmbPort.TabIndex = 1;
             this.cmbPort.Click += new System.EventHandler(this.cmbPort_Click);
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(14, 19);
+            this.label22.Location = new System.Drawing.Point(21, 29);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(101, 13);
+            this.label22.Size = new System.Drawing.Size(152, 20);
             this.label22.TabIndex = 0;
             this.label22.Text = "Communication Port";
             // 
@@ -472,10 +503,11 @@
             // 
             this.tabHDLC.BackColor = System.Drawing.SystemColors.Control;
             this.tabHDLC.Controls.Add(this.groupBox11);
-            this.tabHDLC.Location = new System.Drawing.Point(4, 25);
+            this.tabHDLC.Location = new System.Drawing.Point(4, 32);
+            this.tabHDLC.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabHDLC.Name = "tabHDLC";
-            this.tabHDLC.Padding = new System.Windows.Forms.Padding(3);
-            this.tabHDLC.Size = new System.Drawing.Size(424, 373);
+            this.tabHDLC.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabHDLC.Size = new System.Drawing.Size(640, 582);
             this.tabHDLC.TabIndex = 1;
             this.tabHDLC.Text = "HDLC Settings";
             this.tabHDLC.UseVisualStyleBackColor = true;
@@ -495,44 +527,50 @@
             this.groupBox11.Controls.Add(this.label37);
             this.groupBox11.Controls.Add(this.label38);
             this.groupBox11.Controls.Add(this.label39);
-            this.groupBox11.Location = new System.Drawing.Point(54, 62);
+            this.groupBox11.Location = new System.Drawing.Point(81, 95);
+            this.groupBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(311, 206);
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox11.Size = new System.Drawing.Size(466, 317);
             this.groupBox11.TabIndex = 1;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "HDLC Settings";
             // 
             // txtDLLBufferSize
             // 
-            this.txtDLLBufferSize.Location = new System.Drawing.Point(172, 150);
+            this.txtDLLBufferSize.Location = new System.Drawing.Point(258, 231);
+            this.txtDLLBufferSize.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDLLBufferSize.MaxLength = 4;
             this.txtDLLBufferSize.Name = "txtDLLBufferSize";
-            this.txtDLLBufferSize.Size = new System.Drawing.Size(121, 20);
+            this.txtDLLBufferSize.Size = new System.Drawing.Size(180, 26);
             this.txtDLLBufferSize.TabIndex = 23;
             // 
             // txtCosemBufferSize
             // 
-            this.txtCosemBufferSize.Location = new System.Drawing.Point(172, 126);
+            this.txtCosemBufferSize.Location = new System.Drawing.Point(258, 194);
+            this.txtCosemBufferSize.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCosemBufferSize.MaxLength = 4;
             this.txtCosemBufferSize.Name = "txtCosemBufferSize";
-            this.txtCosemBufferSize.Size = new System.Drawing.Size(121, 20);
+            this.txtCosemBufferSize.Size = new System.Drawing.Size(180, 26);
             this.txtCosemBufferSize.TabIndex = 22;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(37, 153);
+            this.label27.Location = new System.Drawing.Point(56, 235);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(81, 13);
+            this.label27.Size = new System.Drawing.Size(122, 20);
             this.label27.TabIndex = 21;
             this.label27.Text = "DLL Buffer Size";
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(37, 129);
+            this.label28.Location = new System.Drawing.Point(56, 198);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(93, 13);
+            this.label28.Size = new System.Drawing.Size(142, 20);
             this.label28.TabIndex = 20;
             this.label28.Text = "Cosem Buffer Size";
             // 
@@ -548,33 +586,37 @@
             "5",
             "6",
             "7"});
-            this.cmbWindowSize.Location = new System.Drawing.Point(172, 46);
+            this.cmbWindowSize.Location = new System.Drawing.Point(258, 71);
+            this.cmbWindowSize.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbWindowSize.Name = "cmbWindowSize";
-            this.cmbWindowSize.Size = new System.Drawing.Size(121, 21);
+            this.cmbWindowSize.Size = new System.Drawing.Size(180, 28);
             this.cmbWindowSize.TabIndex = 19;
             // 
             // txtInformationSize
             // 
-            this.txtInformationSize.Location = new System.Drawing.Point(172, 21);
+            this.txtInformationSize.Location = new System.Drawing.Point(258, 32);
+            this.txtInformationSize.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtInformationSize.MaxLength = 3;
             this.txtInformationSize.Name = "txtInformationSize";
-            this.txtInformationSize.Size = new System.Drawing.Size(121, 20);
+            this.txtInformationSize.Size = new System.Drawing.Size(180, 26);
             this.txtInformationSize.TabIndex = 18;
             // 
             // txtPhysicalID
             // 
-            this.txtPhysicalID.Location = new System.Drawing.Point(172, 100);
+            this.txtPhysicalID.Location = new System.Drawing.Point(258, 154);
+            this.txtPhysicalID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPhysicalID.MaxLength = 8;
             this.txtPhysicalID.Name = "txtPhysicalID";
-            this.txtPhysicalID.Size = new System.Drawing.Size(121, 20);
+            this.txtPhysicalID.Size = new System.Drawing.Size(180, 26);
             this.txtPhysicalID.TabIndex = 17;
             // 
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(37, 103);
+            this.label36.Location = new System.Drawing.Point(56, 158);
+            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(94, 13);
+            this.label36.Size = new System.Drawing.Size(137, 20);
             this.label36.TabIndex = 6;
             this.label36.Text = "Server Physical ID";
             // 
@@ -586,36 +628,40 @@
             "1 Byte",
             "2 Byte",
             "4 Byte"});
-            this.cmbHDLCAddressing.Location = new System.Drawing.Point(172, 73);
+            this.cmbHDLCAddressing.Location = new System.Drawing.Point(258, 112);
+            this.cmbHDLCAddressing.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbHDLCAddressing.Name = "cmbHDLCAddressing";
-            this.cmbHDLCAddressing.Size = new System.Drawing.Size(121, 21);
+            this.cmbHDLCAddressing.Size = new System.Drawing.Size(180, 28);
             this.cmbHDLCAddressing.TabIndex = 5;
             this.cmbHDLCAddressing.SelectedIndexChanged += new System.EventHandler(this.cmbHDLCAddressing_SelectedIndexChanged);
             // 
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(36, 76);
+            this.label37.Location = new System.Drawing.Point(54, 117);
+            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(127, 13);
+            this.label37.Size = new System.Drawing.Size(191, 20);
             this.label37.TabIndex = 4;
             this.label37.Text = "HDLC Addressing Schem";
             // 
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(37, 49);
+            this.label38.Location = new System.Drawing.Point(56, 75);
+            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(69, 13);
+            this.label38.Size = new System.Drawing.Size(100, 20);
             this.label38.TabIndex = 2;
             this.label38.Text = "Window Size";
             // 
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(36, 24);
+            this.label39.Location = new System.Drawing.Point(54, 37);
+            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(82, 13);
+            this.label39.Size = new System.Drawing.Size(125, 20);
             this.label39.TabIndex = 0;
             this.label39.Text = "Information Size";
             // 
@@ -623,9 +669,10 @@
             // 
             this.tabAssociation.BackColor = System.Drawing.SystemColors.Control;
             this.tabAssociation.Controls.Add(this.groupBox12);
-            this.tabAssociation.Location = new System.Drawing.Point(4, 25);
+            this.tabAssociation.Location = new System.Drawing.Point(4, 32);
+            this.tabAssociation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabAssociation.Name = "tabAssociation";
-            this.tabAssociation.Size = new System.Drawing.Size(424, 373);
+            this.tabAssociation.Size = new System.Drawing.Size(640, 582);
             this.tabAssociation.TabIndex = 2;
             this.tabAssociation.Text = "Association Settings";
             this.tabAssociation.UseVisualStyleBackColor = true;
@@ -659,27 +706,31 @@
             this.groupBox12.Controls.Add(this.cmbApplicationContext);
             this.groupBox12.Controls.Add(this.label40);
             this.groupBox12.Controls.Add(this.label41);
-            this.groupBox12.Location = new System.Drawing.Point(37, 2);
+            this.groupBox12.Location = new System.Drawing.Point(56, 3);
+            this.groupBox12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(380, 368);
+            this.groupBox12.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox12.Size = new System.Drawing.Size(570, 566);
             this.groupBox12.TabIndex = 1;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "  ";
             // 
             // txtAuthentication
             // 
-            this.txtAuthentication.Location = new System.Drawing.Point(161, 294);
+            this.txtAuthentication.Location = new System.Drawing.Point(242, 452);
+            this.txtAuthentication.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAuthentication.MaxLength = 32;
             this.txtAuthentication.Name = "txtAuthentication";
-            this.txtAuthentication.Size = new System.Drawing.Size(210, 20);
+            this.txtAuthentication.Size = new System.Drawing.Size(313, 26);
             this.txtAuthentication.TabIndex = 43;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(26, 297);
+            this.label7.Location = new System.Drawing.Point(39, 457);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 13);
+            this.label7.Size = new System.Drawing.Size(142, 20);
             this.label7.TabIndex = 42;
             this.label7.Text = "Authentication Key";
             // 
@@ -690,34 +741,38 @@
             this.cmbDedicatedKey.Items.AddRange(new object[] {
             "True",
             "False"});
-            this.cmbDedicatedKey.Location = new System.Drawing.Point(161, 317);
+            this.cmbDedicatedKey.Location = new System.Drawing.Point(242, 488);
+            this.cmbDedicatedKey.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbDedicatedKey.Name = "cmbDedicatedKey";
-            this.cmbDedicatedKey.Size = new System.Drawing.Size(210, 21);
+            this.cmbDedicatedKey.Size = new System.Drawing.Size(313, 28);
             this.cmbDedicatedKey.TabIndex = 41;
             // 
             // lbldedication
             // 
             this.lbldedication.AutoSize = true;
-            this.lbldedication.Location = new System.Drawing.Point(27, 319);
+            this.lbldedication.Location = new System.Drawing.Point(40, 491);
+            this.lbldedication.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbldedication.Name = "lbldedication";
-            this.lbldedication.Size = new System.Drawing.Size(77, 13);
+            this.lbldedication.Size = new System.Drawing.Size(112, 20);
             this.lbldedication.TabIndex = 40;
             this.lbldedication.Text = "Dedicated Key";
             // 
             // txtEncryKey
             // 
-            this.txtEncryKey.Location = new System.Drawing.Point(161, 269);
+            this.txtEncryKey.Location = new System.Drawing.Point(242, 414);
+            this.txtEncryKey.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEncryKey.MaxLength = 32;
             this.txtEncryKey.Name = "txtEncryKey";
-            this.txtEncryKey.Size = new System.Drawing.Size(210, 20);
+            this.txtEncryKey.Size = new System.Drawing.Size(313, 26);
             this.txtEncryKey.TabIndex = 37;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(26, 272);
+            this.label6.Location = new System.Drawing.Point(39, 418);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 13);
+            this.label6.Size = new System.Drawing.Size(164, 20);
             this.label6.TabIndex = 36;
             this.label6.Text = "Global Encryption Key";
             // 
@@ -729,34 +784,38 @@
             "Authentication Only",
             "Encryption Only",
             "Encryption + Authentication "});
-            this.cmbSecuritysuit.Location = new System.Drawing.Point(161, 242);
+            this.cmbSecuritysuit.Location = new System.Drawing.Point(242, 372);
+            this.cmbSecuritysuit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbSecuritysuit.Name = "cmbSecuritysuit";
-            this.cmbSecuritysuit.Size = new System.Drawing.Size(210, 21);
+            this.cmbSecuritysuit.Size = new System.Drawing.Size(313, 28);
             this.cmbSecuritysuit.TabIndex = 35;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 246);
+            this.label5.Location = new System.Drawing.Point(39, 378);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 13);
+            this.label5.Size = new System.Drawing.Size(98, 20);
             this.label5.TabIndex = 34;
             this.label5.Text = "Security Suit";
             // 
             // txtClientSystem
             // 
-            this.txtClientSystem.Location = new System.Drawing.Point(161, 217);
+            this.txtClientSystem.Location = new System.Drawing.Point(242, 334);
+            this.txtClientSystem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtClientSystem.MaxLength = 8;
             this.txtClientSystem.Name = "txtClientSystem";
-            this.txtClientSystem.Size = new System.Drawing.Size(208, 20);
+            this.txtClientSystem.Size = new System.Drawing.Size(310, 26);
             this.txtClientSystem.TabIndex = 33;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 220);
+            this.label4.Location = new System.Drawing.Point(40, 338);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 13);
+            this.label4.Size = new System.Drawing.Size(139, 20);
             this.label4.TabIndex = 32;
             this.label4.Text = "Client System Title";
             // 
@@ -770,94 +829,105 @@
             " US ",
             " FS ",
             " FU"});
-            this.cmbClientType.Location = new System.Drawing.Point(161, 22);
+            this.cmbClientType.Location = new System.Drawing.Point(242, 34);
+            this.cmbClientType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbClientType.Name = "cmbClientType";
-            this.cmbClientType.Size = new System.Drawing.Size(210, 21);
+            this.cmbClientType.Size = new System.Drawing.Size(313, 28);
             this.cmbClientType.TabIndex = 29;
             this.cmbClientType.SelectedIndexChanged += new System.EventHandler(this.cmbClientType_SelectedIndexChanged);
             // 
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(24, 24);
+            this.label45.Location = new System.Drawing.Point(36, 37);
+            this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(60, 13);
+            this.label45.Size = new System.Drawing.Size(87, 20);
             this.label45.TabIndex = 28;
             this.label45.Text = "Client Type";
             // 
             // txtServerLAddress
             // 
-            this.txtServerLAddress.Location = new System.Drawing.Point(161, 68);
+            this.txtServerLAddress.Location = new System.Drawing.Point(242, 105);
+            this.txtServerLAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtServerLAddress.MaxLength = 5;
             this.txtServerLAddress.Name = "txtServerLAddress";
-            this.txtServerLAddress.Size = new System.Drawing.Size(210, 20);
+            this.txtServerLAddress.Size = new System.Drawing.Size(313, 26);
             this.txtServerLAddress.TabIndex = 27;
             // 
             // txtServerUAddress
             // 
-            this.txtServerUAddress.Location = new System.Drawing.Point(161, 46);
+            this.txtServerUAddress.Location = new System.Drawing.Point(242, 71);
+            this.txtServerUAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtServerUAddress.MaxLength = 1;
             this.txtServerUAddress.Name = "txtServerUAddress";
-            this.txtServerUAddress.Size = new System.Drawing.Size(210, 20);
+            this.txtServerUAddress.Size = new System.Drawing.Size(313, 26);
             this.txtServerUAddress.TabIndex = 26;
             // 
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(23, 71);
+            this.label42.Location = new System.Drawing.Point(34, 109);
+            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(111, 13);
+            this.label42.Size = new System.Drawing.Size(165, 20);
             this.label42.TabIndex = 25;
             this.label42.Text = "Server Lower Address";
             // 
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(22, 48);
+            this.label44.Location = new System.Drawing.Point(33, 74);
+            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(111, 13);
+            this.label44.Size = new System.Drawing.Size(166, 20);
             this.label44.TabIndex = 24;
             this.label44.Text = "Server Upper Address";
             // 
             // txtDLMSVersion
             // 
-            this.txtDLMSVersion.Location = new System.Drawing.Point(161, 93);
+            this.txtDLMSVersion.Location = new System.Drawing.Point(242, 143);
+            this.txtDLMSVersion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDLMSVersion.MaxLength = 1;
             this.txtDLMSVersion.Name = "txtDLMSVersion";
-            this.txtDLMSVersion.Size = new System.Drawing.Size(208, 20);
+            this.txtDLMSVersion.Size = new System.Drawing.Size(310, 26);
             this.txtDLMSVersion.TabIndex = 23;
             // 
             // txtMaxPDUSize
             // 
-            this.txtMaxPDUSize.Location = new System.Drawing.Point(161, 193);
+            this.txtMaxPDUSize.Location = new System.Drawing.Point(242, 297);
+            this.txtMaxPDUSize.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMaxPDUSize.MaxLength = 4;
             this.txtMaxPDUSize.Name = "txtMaxPDUSize";
-            this.txtMaxPDUSize.Size = new System.Drawing.Size(208, 20);
+            this.txtMaxPDUSize.Size = new System.Drawing.Size(310, 26);
             this.txtMaxPDUSize.TabIndex = 18;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(161, 168);
+            this.txtPassword.Location = new System.Drawing.Point(242, 258);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.MaxLength = 8;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(208, 20);
+            this.txtPassword.Size = new System.Drawing.Size(310, 26);
             this.txtPassword.TabIndex = 17;
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(25, 196);
+            this.label33.Location = new System.Drawing.Point(38, 302);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(105, 13);
+            this.label33.Size = new System.Drawing.Size(155, 20);
             this.label33.TabIndex = 12;
             this.label33.Text = "Client Max PDU Size";
             // 
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(25, 171);
+            this.label34.Location = new System.Drawing.Point(38, 263);
+            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(53, 13);
+            this.label34.Size = new System.Drawing.Size(78, 20);
             this.label34.TabIndex = 10;
             this.label34.Text = "Password";
             // 
@@ -869,18 +939,20 @@
             "No - Security",
             "Low - Level",
             "High - Level"});
-            this.cmbAuthenticationLevel.Location = new System.Drawing.Point(161, 143);
+            this.cmbAuthenticationLevel.Location = new System.Drawing.Point(242, 220);
+            this.cmbAuthenticationLevel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbAuthenticationLevel.Name = "cmbAuthenticationLevel";
-            this.cmbAuthenticationLevel.Size = new System.Drawing.Size(208, 21);
+            this.cmbAuthenticationLevel.Size = new System.Drawing.Size(310, 28);
             this.cmbAuthenticationLevel.TabIndex = 9;
             this.cmbAuthenticationLevel.SelectedIndexChanged += new System.EventHandler(this.cmbAuthenticationLevel_SelectedIndexChanged);
             // 
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(24, 146);
+            this.label35.Location = new System.Drawing.Point(36, 225);
+            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(104, 13);
+            this.label35.Size = new System.Drawing.Size(153, 20);
             this.label35.TabIndex = 8;
             this.label35.Text = "Authentication Level";
             // 
@@ -892,27 +964,30 @@
             "Short Name without ciphering",
             "Logical Name without ciphering",
             "Logical Name with ciphering"});
-            this.cmbApplicationContext.Location = new System.Drawing.Point(161, 118);
+            this.cmbApplicationContext.Location = new System.Drawing.Point(242, 182);
+            this.cmbApplicationContext.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbApplicationContext.Name = "cmbApplicationContext";
-            this.cmbApplicationContext.Size = new System.Drawing.Size(208, 21);
+            this.cmbApplicationContext.Size = new System.Drawing.Size(310, 28);
             this.cmbApplicationContext.TabIndex = 7;
             this.cmbApplicationContext.SelectedIndexChanged += new System.EventHandler(this.cmbApplicationContext_SelectedIndexChanged);
             // 
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(24, 121);
+            this.label40.Location = new System.Drawing.Point(36, 186);
+            this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(98, 13);
+            this.label40.Size = new System.Drawing.Size(146, 20);
             this.label40.TabIndex = 6;
             this.label40.Text = "Application Context";
             // 
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(24, 96);
+            this.label41.Location = new System.Drawing.Point(36, 148);
+            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(75, 13);
+            this.label41.Size = new System.Drawing.Size(112, 20);
             this.label41.TabIndex = 4;
             this.label41.Text = "DLMS Version";
             // 
@@ -920,10 +995,11 @@
             // 
             this.tabconformanceBlock.Controls.Add(this.chlSelectAll);
             this.tabconformanceBlock.Controls.Add(this.grpConformanceBlock);
-            this.tabconformanceBlock.Location = new System.Drawing.Point(4, 25);
+            this.tabconformanceBlock.Location = new System.Drawing.Point(4, 32);
+            this.tabconformanceBlock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabconformanceBlock.Name = "tabconformanceBlock";
-            this.tabconformanceBlock.Padding = new System.Windows.Forms.Padding(3);
-            this.tabconformanceBlock.Size = new System.Drawing.Size(424, 373);
+            this.tabconformanceBlock.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabconformanceBlock.Size = new System.Drawing.Size(640, 582);
             this.tabconformanceBlock.TabIndex = 3;
             this.tabconformanceBlock.Text = "Conformance Block";
             this.tabconformanceBlock.UseVisualStyleBackColor = true;
@@ -933,9 +1009,10 @@
             this.chlSelectAll.AutoSize = true;
             this.chlSelectAll.Enabled = false;
             this.chlSelectAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chlSelectAll.Location = new System.Drawing.Point(227, 307);
+            this.chlSelectAll.Location = new System.Drawing.Point(340, 472);
+            this.chlSelectAll.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chlSelectAll.Name = "chlSelectAll";
-            this.chlSelectAll.Size = new System.Drawing.Size(88, 17);
+            this.chlSelectAll.Size = new System.Drawing.Size(128, 24);
             this.chlSelectAll.TabIndex = 24;
             this.chlSelectAll.Text = "Select ALL";
             this.chlSelectAll.UseVisualStyleBackColor = true;
@@ -969,9 +1046,11 @@
             this.grpConformanceBlock.Controls.Add(this.Resered1);
             this.grpConformanceBlock.Enabled = false;
             this.grpConformanceBlock.ForeColor = System.Drawing.Color.Black;
-            this.grpConformanceBlock.Location = new System.Drawing.Point(7, 6);
+            this.grpConformanceBlock.Location = new System.Drawing.Point(10, 9);
+            this.grpConformanceBlock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpConformanceBlock.Name = "grpConformanceBlock";
-            this.grpConformanceBlock.Size = new System.Drawing.Size(390, 295);
+            this.grpConformanceBlock.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpConformanceBlock.Size = new System.Drawing.Size(585, 454);
             this.grpConformanceBlock.TabIndex = 14;
             this.grpConformanceBlock.TabStop = false;
             this.grpConformanceBlock.Text = "Praposed Conformance Blick Settings";
@@ -979,9 +1058,10 @@
             // chkAction
             // 
             this.chkAction.AutoSize = true;
-            this.chkAction.Location = new System.Drawing.Point(220, 269);
+            this.chkAction.Location = new System.Drawing.Point(330, 414);
+            this.chkAction.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkAction.Name = "chkAction";
-            this.chkAction.Size = new System.Drawing.Size(56, 17);
+            this.chkAction.Size = new System.Drawing.Size(80, 24);
             this.chkAction.TabIndex = 23;
             this.chkAction.Text = "Action";
             this.chkAction.UseVisualStyleBackColor = true;
@@ -989,9 +1069,10 @@
             // chkEventNotification
             // 
             this.chkEventNotification.AutoSize = true;
-            this.chkEventNotification.Location = new System.Drawing.Point(220, 246);
+            this.chkEventNotification.Location = new System.Drawing.Point(330, 378);
+            this.chkEventNotification.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkEventNotification.Name = "chkEventNotification";
-            this.chkEventNotification.Size = new System.Drawing.Size(110, 17);
+            this.chkEventNotification.Size = new System.Drawing.Size(159, 24);
             this.chkEventNotification.TabIndex = 22;
             this.chkEventNotification.Text = "Event Notification";
             this.chkEventNotification.UseVisualStyleBackColor = true;
@@ -999,9 +1080,10 @@
             // chkSelectiveAccess
             // 
             this.chkSelectiveAccess.AutoSize = true;
-            this.chkSelectiveAccess.Location = new System.Drawing.Point(220, 223);
+            this.chkSelectiveAccess.Location = new System.Drawing.Point(330, 343);
+            this.chkSelectiveAccess.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkSelectiveAccess.Name = "chkSelectiveAccess";
-            this.chkSelectiveAccess.Size = new System.Drawing.Size(108, 17);
+            this.chkSelectiveAccess.Size = new System.Drawing.Size(155, 24);
             this.chkSelectiveAccess.TabIndex = 21;
             this.chkSelectiveAccess.Text = "Selective Access";
             this.chkSelectiveAccess.UseVisualStyleBackColor = true;
@@ -1009,9 +1091,10 @@
             // chkSet
             // 
             this.chkSet.AutoSize = true;
-            this.chkSet.Location = new System.Drawing.Point(220, 203);
+            this.chkSet.Location = new System.Drawing.Point(330, 312);
+            this.chkSet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkSet.Name = "chkSet";
-            this.chkSet.Size = new System.Drawing.Size(42, 17);
+            this.chkSet.Size = new System.Drawing.Size(60, 24);
             this.chkSet.TabIndex = 20;
             this.chkSet.Text = "Set";
             this.chkSet.UseVisualStyleBackColor = true;
@@ -1019,9 +1102,10 @@
             // chkGet
             // 
             this.chkGet.AutoSize = true;
-            this.chkGet.Location = new System.Drawing.Point(220, 181);
+            this.chkGet.Location = new System.Drawing.Point(330, 278);
+            this.chkGet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkGet.Name = "chkGet";
-            this.chkGet.Size = new System.Drawing.Size(43, 17);
+            this.chkGet.Size = new System.Drawing.Size(62, 24);
             this.chkGet.TabIndex = 19;
             this.chkGet.Text = "Get";
             this.chkGet.UseVisualStyleBackColor = true;
@@ -1029,9 +1113,10 @@
             // chkParameterizedAccess
             // 
             this.chkParameterizedAccess.AutoSize = true;
-            this.chkParameterizedAccess.Location = new System.Drawing.Point(220, 158);
+            this.chkParameterizedAccess.Location = new System.Drawing.Point(330, 243);
+            this.chkParameterizedAccess.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkParameterizedAccess.Name = "chkParameterizedAccess";
-            this.chkParameterizedAccess.Size = new System.Drawing.Size(131, 17);
+            this.chkParameterizedAccess.Size = new System.Drawing.Size(194, 24);
             this.chkParameterizedAccess.TabIndex = 18;
             this.chkParameterizedAccess.Text = "Parameterized Access";
             this.chkParameterizedAccess.UseVisualStyleBackColor = true;
@@ -1040,9 +1125,10 @@
             // 
             this.Resered7.AutoSize = true;
             this.Resered7.Enabled = false;
-            this.Resered7.Location = new System.Drawing.Point(220, 135);
+            this.Resered7.Location = new System.Drawing.Point(330, 208);
+            this.Resered7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Resered7.Name = "Resered7";
-            this.Resered7.Size = new System.Drawing.Size(72, 17);
+            this.Resered7.Size = new System.Drawing.Size(103, 24);
             this.Resered7.TabIndex = 17;
             this.Resered7.Text = "Reserved";
             this.Resered7.UseVisualStyleBackColor = true;
@@ -1051,9 +1137,10 @@
             // 
             this.Resered6.AutoSize = true;
             this.Resered6.Enabled = false;
-            this.Resered6.Location = new System.Drawing.Point(220, 112);
+            this.Resered6.Location = new System.Drawing.Point(330, 172);
+            this.Resered6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Resered6.Name = "Resered6";
-            this.Resered6.Size = new System.Drawing.Size(72, 17);
+            this.Resered6.Size = new System.Drawing.Size(103, 24);
             this.Resered6.TabIndex = 16;
             this.Resered6.Text = "Reserved";
             this.Resered6.UseVisualStyleBackColor = true;
@@ -1061,9 +1148,10 @@
             // chkInformationReport
             // 
             this.chkInformationReport.AutoSize = true;
-            this.chkInformationReport.Location = new System.Drawing.Point(220, 93);
+            this.chkInformationReport.Location = new System.Drawing.Point(330, 143);
+            this.chkInformationReport.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkInformationReport.Name = "chkInformationReport";
-            this.chkInformationReport.Size = new System.Drawing.Size(108, 17);
+            this.chkInformationReport.Size = new System.Drawing.Size(162, 24);
             this.chkInformationReport.TabIndex = 15;
             this.chkInformationReport.Text = "Information report";
             this.chkInformationReport.UseVisualStyleBackColor = true;
@@ -1071,9 +1159,10 @@
             // chkMultiReference
             // 
             this.chkMultiReference.AutoSize = true;
-            this.chkMultiReference.Location = new System.Drawing.Point(220, 70);
+            this.chkMultiReference.Location = new System.Drawing.Point(330, 108);
+            this.chkMultiReference.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkMultiReference.Name = "chkMultiReference";
-            this.chkMultiReference.Size = new System.Drawing.Size(115, 17);
+            this.chkMultiReference.Size = new System.Drawing.Size(168, 24);
             this.chkMultiReference.TabIndex = 14;
             this.chkMultiReference.Text = "Multiple Reference";
             this.chkMultiReference.UseVisualStyleBackColor = true;
@@ -1081,9 +1170,10 @@
             // chkBlockTransferwithAction
             // 
             this.chkBlockTransferwithAction.AutoSize = true;
-            this.chkBlockTransferwithAction.Location = new System.Drawing.Point(220, 51);
+            this.chkBlockTransferwithAction.Location = new System.Drawing.Point(330, 78);
+            this.chkBlockTransferwithAction.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkBlockTransferwithAction.Name = "chkBlockTransferwithAction";
-            this.chkBlockTransferwithAction.Size = new System.Drawing.Size(153, 17);
+            this.chkBlockTransferwithAction.Size = new System.Drawing.Size(222, 24);
             this.chkBlockTransferwithAction.TabIndex = 13;
             this.chkBlockTransferwithAction.Text = "Block Transfer With Action";
             this.chkBlockTransferwithAction.UseVisualStyleBackColor = true;
@@ -1091,9 +1181,10 @@
             // chkBlockTransferwithWrite
             // 
             this.chkBlockTransferwithWrite.AutoSize = true;
-            this.chkBlockTransferwithWrite.Location = new System.Drawing.Point(220, 31);
+            this.chkBlockTransferwithWrite.Location = new System.Drawing.Point(330, 48);
+            this.chkBlockTransferwithWrite.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkBlockTransferwithWrite.Name = "chkBlockTransferwithWrite";
-            this.chkBlockTransferwithWrite.Size = new System.Drawing.Size(139, 17);
+            this.chkBlockTransferwithWrite.Size = new System.Drawing.Size(202, 24);
             this.chkBlockTransferwithWrite.TabIndex = 12;
             this.chkBlockTransferwithWrite.Text = "Block Transfer With Set";
             this.chkBlockTransferwithWrite.UseVisualStyleBackColor = true;
@@ -1102,9 +1193,10 @@
             // 
             this.Resered5.AutoSize = true;
             this.Resered5.Enabled = false;
-            this.Resered5.Location = new System.Drawing.Point(33, 184);
+            this.Resered5.Location = new System.Drawing.Point(50, 283);
+            this.Resered5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Resered5.Name = "Resered5";
-            this.Resered5.Size = new System.Drawing.Size(72, 17);
+            this.Resered5.Size = new System.Drawing.Size(103, 24);
             this.Resered5.TabIndex = 7;
             this.Resered5.Text = "Reserved";
             this.Resered5.UseVisualStyleBackColor = true;
@@ -1113,9 +1205,10 @@
             // 
             this.Resered4.AutoSize = true;
             this.Resered4.Enabled = false;
-            this.Resered4.Location = new System.Drawing.Point(33, 162);
+            this.Resered4.Location = new System.Drawing.Point(50, 249);
+            this.Resered4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Resered4.Name = "Resered4";
-            this.Resered4.Size = new System.Drawing.Size(72, 17);
+            this.Resered4.Size = new System.Drawing.Size(103, 24);
             this.Resered4.TabIndex = 6;
             this.Resered4.Text = "Reserved";
             this.Resered4.UseVisualStyleBackColor = true;
@@ -1123,9 +1216,10 @@
             // chkUwrite
             // 
             this.chkUwrite.AutoSize = true;
-            this.chkUwrite.Location = new System.Drawing.Point(33, 139);
+            this.chkUwrite.Location = new System.Drawing.Point(50, 214);
+            this.chkUwrite.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkUwrite.Name = "chkUwrite";
-            this.chkUwrite.Size = new System.Drawing.Size(114, 17);
+            this.chkUwrite.Size = new System.Drawing.Size(167, 24);
             this.chkUwrite.TabIndex = 5;
             this.chkUwrite.Text = "Unconfirmed Write";
             this.chkUwrite.UseVisualStyleBackColor = true;
@@ -1133,9 +1227,10 @@
             // chkWrite
             // 
             this.chkWrite.AutoSize = true;
-            this.chkWrite.Location = new System.Drawing.Point(33, 116);
+            this.chkWrite.Location = new System.Drawing.Point(50, 178);
+            this.chkWrite.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkWrite.Name = "chkWrite";
-            this.chkWrite.Size = new System.Drawing.Size(51, 17);
+            this.chkWrite.Size = new System.Drawing.Size(72, 24);
             this.chkWrite.TabIndex = 4;
             this.chkWrite.Text = "Write";
             this.chkWrite.UseVisualStyleBackColor = true;
@@ -1143,9 +1238,10 @@
             // chkBlockTransferwithGetRead
             // 
             this.chkBlockTransferwithGetRead.AutoSize = true;
-            this.chkBlockTransferwithGetRead.Location = new System.Drawing.Point(33, 269);
+            this.chkBlockTransferwithGetRead.Location = new System.Drawing.Point(50, 414);
+            this.chkBlockTransferwithGetRead.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkBlockTransferwithGetRead.Name = "chkBlockTransferwithGetRead";
-            this.chkBlockTransferwithGetRead.Size = new System.Drawing.Size(140, 17);
+            this.chkBlockTransferwithGetRead.Size = new System.Drawing.Size(204, 24);
             this.chkBlockTransferwithGetRead.TabIndex = 11;
             this.chkBlockTransferwithGetRead.Text = "Block Transfer With Get";
             this.chkBlockTransferwithGetRead.UseVisualStyleBackColor = true;
@@ -1153,9 +1249,10 @@
             // chkread
             // 
             this.chkread.AutoSize = true;
-            this.chkread.Location = new System.Drawing.Point(33, 93);
+            this.chkread.Location = new System.Drawing.Point(50, 143);
+            this.chkread.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkread.Name = "chkread";
-            this.chkread.Size = new System.Drawing.Size(52, 17);
+            this.chkread.Size = new System.Drawing.Size(74, 24);
             this.chkread.TabIndex = 3;
             this.chkread.Text = "Read";
             this.chkread.UseVisualStyleBackColor = true;
@@ -1163,9 +1260,10 @@
             // chkAttributewithGet
             // 
             this.chkAttributewithGet.AutoSize = true;
-            this.chkAttributewithGet.Location = new System.Drawing.Point(33, 249);
+            this.chkAttributewithGet.Location = new System.Drawing.Point(50, 383);
+            this.chkAttributewithGet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkAttributewithGet.Name = "chkAttributewithGet";
-            this.chkAttributewithGet.Size = new System.Drawing.Size(123, 17);
+            this.chkAttributewithGet.Size = new System.Drawing.Size(182, 24);
             this.chkAttributewithGet.TabIndex = 10;
             this.chkAttributewithGet.Text = "Attribute \'0\' With Get";
             this.chkAttributewithGet.UseVisualStyleBackColor = true;
@@ -1174,9 +1272,10 @@
             // 
             this.Resered3.AutoSize = true;
             this.Resered3.Enabled = false;
-            this.Resered3.Location = new System.Drawing.Point(33, 70);
+            this.Resered3.Location = new System.Drawing.Point(50, 108);
+            this.Resered3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Resered3.Name = "Resered3";
-            this.Resered3.Size = new System.Drawing.Size(72, 17);
+            this.Resered3.Size = new System.Drawing.Size(103, 24);
             this.Resered3.TabIndex = 2;
             this.Resered3.Text = "Reserved";
             this.Resered3.UseVisualStyleBackColor = true;
@@ -1184,9 +1283,10 @@
             // chkPriority
             // 
             this.chkPriority.AutoSize = true;
-            this.chkPriority.Location = new System.Drawing.Point(33, 226);
+            this.chkPriority.Location = new System.Drawing.Point(50, 348);
+            this.chkPriority.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkPriority.Name = "chkPriority";
-            this.chkPriority.Size = new System.Drawing.Size(133, 17);
+            this.chkPriority.Size = new System.Drawing.Size(196, 24);
             this.chkPriority.TabIndex = 9;
             this.chkPriority.Text = "Priority Mgt. Supported";
             this.chkPriority.UseVisualStyleBackColor = true;
@@ -1195,9 +1295,10 @@
             // 
             this.Resered2.AutoSize = true;
             this.Resered2.Enabled = false;
-            this.Resered2.Location = new System.Drawing.Point(33, 51);
+            this.Resered2.Location = new System.Drawing.Point(50, 78);
+            this.Resered2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Resered2.Name = "Resered2";
-            this.Resered2.Size = new System.Drawing.Size(72, 17);
+            this.Resered2.Size = new System.Drawing.Size(103, 24);
             this.Resered2.TabIndex = 1;
             this.Resered2.Text = "Reserved";
             this.Resered2.UseVisualStyleBackColor = true;
@@ -1205,9 +1306,10 @@
             // chkAttributeWithSet
             // 
             this.chkAttributeWithSet.AutoSize = true;
-            this.chkAttributeWithSet.Location = new System.Drawing.Point(33, 203);
+            this.chkAttributeWithSet.Location = new System.Drawing.Point(50, 312);
+            this.chkAttributeWithSet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkAttributeWithSet.Name = "chkAttributeWithSet";
-            this.chkAttributeWithSet.Size = new System.Drawing.Size(122, 17);
+            this.chkAttributeWithSet.Size = new System.Drawing.Size(180, 24);
             this.chkAttributeWithSet.TabIndex = 8;
             this.chkAttributeWithSet.Text = "Attribute \'0\' With Set";
             this.chkAttributeWithSet.UseVisualStyleBackColor = true;
@@ -1216,25 +1318,27 @@
             // 
             this.Resered1.AutoSize = true;
             this.Resered1.Enabled = false;
-            this.Resered1.Location = new System.Drawing.Point(33, 31);
+            this.Resered1.Location = new System.Drawing.Point(50, 48);
+            this.Resered1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Resered1.Name = "Resered1";
-            this.Resered1.Size = new System.Drawing.Size(72, 17);
+            this.Resered1.Size = new System.Drawing.Size(103, 24);
             this.Resered1.TabIndex = 0;
             this.Resered1.Text = "Reserved";
             this.Resered1.UseVisualStyleBackColor = true;
             // 
             // Association
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(434, 457);
+            this.ClientSize = new System.Drawing.Size(686, 703);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Association";

@@ -155,7 +155,7 @@ namespace CabconPMP
             this.MinimizeBox = false;
             this.Name = "frmLoginMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login Cabcon PMP";
+            this.Text = "Cabcon PMP";
             this.Load += new System.EventHandler(this.frmLoginMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PanelLoginControl.ResumeLayout(false);

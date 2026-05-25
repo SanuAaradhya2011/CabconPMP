@@ -188,8 +188,22 @@ namespace COMMONENTITY
             }
             else if (ctrl is TabControl tab)
             {
-                tab.Font = ControlFont;
-                tab.Padding = new Point(12, 5);
+                // Normalize tab control visual appearance
+                tab.Appearance = TabAppearance.Normal;
+                tab.DrawMode = TabDrawMode.OwnerDrawFixed;
+                tab.ItemSize = new Size(110, 32);
+                tab.SizeMode = TabSizeMode.Fixed;
+                
+                // Attach safe double-draw protection
+                tab.DrawItem -= TabControl_DrawItem;
+                tab.DrawItem += TabControl_DrawItem;
+
+                // Set parent form backcolor to BgColor for all tab pages
+                foreach (TabPage page in tab.TabPages)
+                {
+                    page.BackColor = CardBgColor;
+                    page.ForeColor = TextColor;
+                }
             }
             else if (ctrl is DataGridView dgv)
             {
@@ -251,6 +265,45 @@ namespace COMMONENTITY
                 ss.Font = ControlFont;
                 ss.Padding = new Padding(1, 0, 14, 0);
             }
+        }
+
+        private static void TabControl_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (!(sender is TabControl tab) || e.Index < 0 || e.Index >= tab.TabCount) return;
+
+            Graphics g = e.Graphics;
+            TabPage page = tab.TabPages[e.Index];
+            Rectangle rect = tab.GetTabRect(e.Index);
+
+            // Antialiasing for high-DPI text rendering
+            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+
+            bool isSelected = (tab.SelectedIndex == e.Index);
+
+            if (isSelected)
+            {
+                // Active tab background
+                g.FillRectangle(new SolidBrush(Color.White), rect);
+
+                // Modern 3px bottom active indicator
+                using (Pen accentPen = new Pen(PrimaryAccent, 3))
+                {
+                    g.DrawLine(accentPen, rect.Left + 2, rect.Bottom - 1, rect.Right - 2, rect.Bottom - 1);
+                }
+            }
+            else
+            {
+                // Inactive tab background
+                g.FillRectangle(new SolidBrush(BgColor), rect);
+            }
+
+            // Render modern flat tab label
+            TextFormatFlags flags = TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter | TextFormatFlags.SingleLine;
+            Font textFont = isSelected ? ControlBoldFont : ControlFont;
+            Color textColor = isSelected ? PrimaryAccent : SecondaryText;
+
+            TextRenderer.DrawText(g, page.Text, textFont, rect, textColor, flags);
         }
     }
 
