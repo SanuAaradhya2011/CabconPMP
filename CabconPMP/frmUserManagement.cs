@@ -19,7 +19,7 @@ namespace CabconPMP
         string useractionType = string.Empty;
         public frmUserManagement(string userAction, EntityUserManagement objgetum)
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
             useractionType = userAction;
             objetyusermgt.LoginuserID = objgetum.LoginuserID;
             if (userAction == "PWD") { cmbUserType.Enabled = false; txtUserID.Enabled = false; this.Text = "Change Password"; DGVUsermgt.Visible = false; this.Height = 215; }

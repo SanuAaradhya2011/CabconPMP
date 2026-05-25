@@ -115,7 +115,7 @@ namespace CabconPMPREJECTIONTOOL
         public frmErrorList(EntityUserManagement objetyusermgt)
         {
             this.objetyusermgt = objetyusermgt;
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
             //
             panelFilters.Height = 34;
             dtpStart.Value = dtpEnd.Value.AddMonths(-1);

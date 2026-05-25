@@ -51,7 +51,7 @@ namespace CabconPMPREJECTIONTOOL
         /// <param name="pcbaid"></param>
         public frmHardError(EntityUserManagement objetyusermgt, string pcbaid)
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
             this.panelErrorType.Paint += (s, e) => PaintCustomBorderBox(s, e, true, true, true, true);
             this.panelRejectDetails.Paint += (s, e) => PaintCustomBorderBox(s, e, true, true, true, true);
             this.groupMeterType.Paint += (s, e) => PaintCustomBorderBox(s, e, true, true, true, true);
@@ -83,7 +83,7 @@ namespace CabconPMPREJECTIONTOOL
         public frmHardError()
         {
             //this.TopMost = true;
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
         }
         /// <summary>
         /// Gets PCBAID through dlms communication on serial port.

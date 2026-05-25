@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,7 +21,7 @@ namespace CabconPMP
 
         public AccessPassword()
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
         }
 
         private void btnOK_Click(object sender, EventArgs e)

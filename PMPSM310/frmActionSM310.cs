@@ -56,7 +56,7 @@ namespace PMPSM310
         bool ExecutionWithOutTravellerStage = false;
         public frmActionSM310(string[] ipPara)
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
             testtype = ipPara[0];
             TestProcedureName = ipPara[1];
             logedUserID = ipPara[32];

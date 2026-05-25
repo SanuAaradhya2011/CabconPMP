@@ -1,4 +1,4 @@
-﻿///****************************************************************************
+///****************************************************************************
 //'*
 //'*  Projet       : Smart Meter
 //'*
@@ -37,7 +37,7 @@ namespace CabconPMP
         
         public Association()
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
         }
 
         private void Association_Load(object sender, EventArgs e)

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +15,7 @@ namespace PMPSM110
 
         public frmLCDDisplayTest(GlobalMethods StaticVariablesvar, string mesgdefault, string mesgmin, string mesgmax)
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
             rdPhaseOK.Checked = true;
             rdRelayOK.Checked = true;
             rdActiveOK.Checked = true;

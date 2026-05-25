@@ -28,7 +28,7 @@ namespace CabconPMP
         //DataAccessDAL objChangePass = new DataAccessDAL();
         public frmMeterRange()
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
         }
         /// <summary>
         ///  Button Close event handeler for closing the form

@@ -31,7 +31,7 @@ namespace CabconPMP
         EntityUserManagement objentyUM;
         public frmProcedureOpen(string ptype, EntityUserManagement objetyusermgtref)
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
             proactionTypr = ptype;
             logedUserID = objetyusermgtref.LoginuserID;
             if (objetyusermgtref.LoginTypeIndex == (int)StaticVariables.userCategory.Useradministrator || objetyusermgtref.LoginTypeIndex == (int)StaticVariables.userCategory.UserPoweradministrator) btnDelete.Enabled = true;

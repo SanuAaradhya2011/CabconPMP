@@ -27,7 +27,7 @@ namespace CabconPMPREJECTIONTOOL
         /// <param name="objetyusermgt"></param>
         public frmUpdateEntry(EntityUserManagement objetyusermgt)
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
             loggeduserid = objetyusermgt.LoginuserID;
             loggedusertype = objetyusermgt.LogType;
             PerformStartupActions();
@@ -38,7 +38,7 @@ namespace CabconPMPREJECTIONTOOL
         /// </summary>
         public frmUpdateEntry()
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
         }
         /// <summary>
         /// Draw table borders for layout.
@@ -135,7 +135,7 @@ namespace CabconPMPREJECTIONTOOL
         /// <param name="objetyusermgt"></param>
         public frmUpdateEntry(DataRow dgvSelectedRow, DataTable tableextinfo, EntityUserManagement objetyusermgt)
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
 
             loggeduserid = objetyusermgt.LoginuserID;
             loggedusertype = objetyusermgt.LogType;

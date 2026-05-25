@@ -34,7 +34,7 @@ namespace CabconPMP
         string procedureName;
         public frmProcedure(string pName, EntityUserManagement objetyusermgtref)
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
             Application.DoEvents();
             Application.DoEvents();
             procedureName = pName;

@@ -22,7 +22,7 @@ namespace CabconPMPREJECTIONTOOL
 
         public frmChooseSaveColumns()
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
         }
         /// <summary>
         /// Instantiates class using given column collection.
@@ -31,7 +31,7 @@ namespace CabconPMPREJECTIONTOOL
         public frmChooseSaveColumns(DataColumnCollection columnCollection)
         {
             this.columnCollection = columnCollection;
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
         }
         /// <summary>
         /// Sets initial column states.

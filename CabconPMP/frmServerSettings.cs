@@ -17,7 +17,7 @@ namespace CabconPMP
         AESEncryption objaes = new AESEncryption();
         public frmServerSettings(bool isopenModeisAdmin)
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
             txtTimeout.Enabled = isopenModeisAdmin;
         }
 

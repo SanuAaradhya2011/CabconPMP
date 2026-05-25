@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +14,7 @@ namespace PMPSM110
         GlobalMethods objtemp;
         public fromLEDTest(GlobalMethods StaticVariablesvar)
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
             rdPhaseOK.Checked = true;
             rdRelayOK.Checked = true;
             rdActiveOK.Checked = true;

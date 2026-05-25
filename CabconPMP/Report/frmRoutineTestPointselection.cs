@@ -17,7 +17,7 @@ namespace CabconPMP.Report
 
         public frmRoutineTestPointselection(List<string> _param)
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
             mparamdetails = _param;
            
         }

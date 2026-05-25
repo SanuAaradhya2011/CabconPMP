@@ -56,7 +56,7 @@ namespace PMPSAPPHIRE
         bool ExecutionWithOutTravellerStage = false;
         public frmActionSAPPHIRE(string[] ipPara)
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
             testtype = ipPara[0];
             TestProcedureName = ipPara[1];
             logedUserID = ipPara[32];

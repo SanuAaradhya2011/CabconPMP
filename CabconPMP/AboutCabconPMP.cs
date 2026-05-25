@@ -14,7 +14,7 @@ namespace CabconPMP
     {
         public AboutCabconPMP()
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
         }
         private void btnOK_Click(object sender, EventArgs e)
         {

@@ -54,7 +54,7 @@ namespace E150ECOSTAR
         bool ExecutionWithOutTravellerStage = false;
         public frmActionEcoStar(string[] ipPara)
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
             testtype = ipPara[0];
             TestProcedureName = ipPara[1];
             logedUserID = ipPara[32];

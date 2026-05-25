@@ -131,6 +131,7 @@
     <Compile Include="ExcecutionResultImportExport.cs" />
     <Compile Include="FileEncryptionMethod.cs" />
     <Compile Include="IECCommonCommandMethods.cs" />
+    <Compile Include="FormStyleHelper.cs" />
     <Compile Include="inputBox.cs">
       <SubType>Form</SubType>
     </Compile>

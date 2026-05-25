@@ -30,7 +30,7 @@ namespace CabconPMP
         int getUserIndex = 0;
         public frmMain(EntityUserManagement objetyum)
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
             objetyusermgt.LoginuserID = objetyum.LoginuserID;
             objetyusermgt = objetyum;
             logedUserType = objetyum.LogType;

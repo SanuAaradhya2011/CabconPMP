@@ -44,7 +44,7 @@ namespace CabconPMP.Report
 
         public frmRoutineTestReport(EntityUserManagement objetyusermgtref)
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
             if (objetyusermgtref.LoginTypeIndex == (int)StaticVariables.userCategory.Usersupervisor || objetyusermgtref.LoginTypeIndex == (int)StaticVariables.userCategory.Useradministrator || objetyusermgtref.LoginTypeIndex == (int)StaticVariables.userCategory.UserPoweradministrator) chkRangedReport.Enabled = true;
             else chkRangedReport.Enabled = false;
         }

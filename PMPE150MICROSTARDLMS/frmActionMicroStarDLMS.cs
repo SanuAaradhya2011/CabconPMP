@@ -55,7 +55,7 @@ namespace PMPE150MICROSTARDLMS
         bool ExecutionWithOutTravellerStage = false;
         public frmActionMicroStarDLMS(string[] ipPara)
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
             testtype = ipPara[0];
             TestProcedureName = ipPara[1];
             logedUserID = ipPara[32];

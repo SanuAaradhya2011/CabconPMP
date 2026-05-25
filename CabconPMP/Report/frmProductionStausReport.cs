@@ -23,7 +23,7 @@ namespace CabconPMP
         DataSet ds = new DataSet();
         public frmProductionStausReport()
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
         }
 
          

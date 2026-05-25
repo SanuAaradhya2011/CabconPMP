@@ -26,7 +26,7 @@ namespace CabconPMPREJECTIONTOOL
         /// </summary>
         public frmRecordHistory()
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
         }
         /// <summary>
         /// Creates an instance of this class using pcbaid, production stage and login details.
@@ -39,7 +39,7 @@ namespace CabconPMPREJECTIONTOOL
             this.objetyusermgt = objusermgmt;
             this.PCBAID = PCBAID;
             this.productionStage = productionStage;
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
             this.dgvRecordHistory.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvRecordHistory_RowPostPaint);
        
         }

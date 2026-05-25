@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,7 +29,7 @@ namespace CabconPMPREJECTIONTOOL
         /// </summary>
         public AccessPassword()
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
         }
         /// <summary>
         /// Creates an instance of this class as entry form for PCBAID.
@@ -37,7 +37,7 @@ namespace CabconPMPREJECTIONTOOL
         /// <param name="objetyusermgt"></param>
         public AccessPassword(EntityUserManagement objetyusermgt)
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
 
             bMode = true;
             this.Text = "Enter PCBA ID";

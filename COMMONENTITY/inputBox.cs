@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +14,7 @@ namespace COMMONENTITY
     {
         public inputBox(string textvalue)
         {
-           InitializeComponent();
+           InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
            this.Text = textvalue;
            Application.DoEvents();
         }

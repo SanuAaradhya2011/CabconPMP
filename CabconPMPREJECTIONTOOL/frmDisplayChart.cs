@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -64,7 +64,7 @@ namespace CabconPMPREJECTIONTOOL
 
         public frmDisplayChart(Dictionary<string, string> chartparam, string rowFilterQuery)
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
             param = chartparam;
             query = rowFilterQuery;
             cmbRefreshTime.SelectedItem = "60";

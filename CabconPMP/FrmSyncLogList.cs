@@ -22,7 +22,7 @@ namespace CabconPMP
                 MessageBox.Show("No Logs present!", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
         }
 
         private void FrmSyncLogList_Load(object sender, EventArgs e)

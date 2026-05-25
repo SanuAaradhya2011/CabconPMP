@@ -18,7 +18,7 @@ namespace CabconPMP
         int loginLimit = 3;
          public frmLoginMain()
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

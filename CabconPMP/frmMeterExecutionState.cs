@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,7 +18,7 @@ namespace CabconPMP
         {
             TestTypeList = GetTestTypeList;
             FinalStatusList = GetFinalStatusList;
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
             lblFinalmsg.Text = pcba;
         }
 

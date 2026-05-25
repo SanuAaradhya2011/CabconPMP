@@ -25,7 +25,7 @@ namespace CabconPMP
         BALPrograms objbalprog = new BALPrograms();
         public frmReportTestWise()
         {
-            InitializeComponent();
+            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
         }
 
         private void frmResultsReport_Load(object sender, EventArgs e)
