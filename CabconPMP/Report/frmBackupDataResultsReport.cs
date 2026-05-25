@@ -1,0 +1,338 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Globalization;
+using System.Data.SqlClient;
+using COMMONENTITY;
+using BALLAYER;
+using Utilities;
+using SystemSecurityLibrary;
+namespace CabconPMP
+{
+    public partial class frmBackupDataResultsReport : Form
+    {
+        StandardDateTime std = new StandardDateTime();
+        BALExecutionResults objER = new BALExecutionResults();
+        EntityExecutionResult objettER = new EntityExecutionResult();
+        BALDBConnectionTest objdbcon = new BALDBConnectionTest();
+        DataSet ds = new DataSet();
+        public frmBackupDataResultsReport()
+        {
+            InitializeComponent();
+        }
+
+        private void frmResultsReport_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Cursor = Cursors.WaitCursor;
+                if (!objdbcon.IsDBConnected())
+                {
+                    MessageBox.Show("Unable To Connect DataBase, Server May Down" + "\n" + "Plase Contact System Administrator !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Application.DoEvents();
+                    this.Close();
+                    Application.DoEvents();
+                    return;
+                }
+
+                XMLExportImport objexpimp = new XMLExportImport();
+                cmbTestType.Items.Clear();
+                GetDistinctProcedureType();
+                GetDistinctMeterType();
+                cmbSortBy.SelectedIndex = 0;
+                cmbStatus.SelectedIndex = 0;                
+                txtFind.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                this.Cursor = Cursors.Default;               
+            }
+        } 
+        private void GetDistinctMeterType()
+        {
+            cmbMeterType.DataSource = StaticVariables.GetMeterType();
+            if (cmbMeterType.Items.Count >= 0) cmbMeterType.SelectedIndex = 0;            
+        }
+         private void GetDistinctProcedureType()
+        {
+            List<string> mtypeList = StaticVariables.GetTestType();
+            mtypeList.Add("All Stage");
+            cmbTestType.DataSource = mtypeList;
+            if (cmbTestType.Items.Count >= 0) cmbTestType.SelectedIndex = 0;
+           
+        }
+        private void lblFind_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+            BindingSource SBind = new BindingSource();
+            ts_Menu.Enabled = false;
+            try
+            {
+                if (!objdbcon.IsDBConnected())
+                {
+                    MessageBox.Show("Unable To Connect To DataBase, Server May Down" + "\n" + "Plase Contact System Administrator !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (txtFind.Text.Trim().Length <=0)
+                {
+                    MessageBox.Show("Plase Provide Valid Input For Data Search !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtFind.Focus();
+                    return;
+                }
+                if (cmbTestType.SelectedIndex < cmbTestType.Items.Count - 1) objettER.ExecutionProcedureType = cmbTestType.Text.Trim();
+                else objettER.ExecutionProcedureType = "";
+                objettER.ExecutionMeterType = cmbMeterType.Text.Trim();
+                objettER.FinalResult = cmbStatus.Text.Trim().ToUpper();  //Final Status
+                objettER.LatestStatus = 1;  //LatestStatus
+                if (cmbStatus.SelectedIndex <= 0) objettER.FinalResult = "";//-------Show All
+              
+               
+                   if (cmbSortBy.SelectedIndex == 0) { objettER.PCBAID = txtFind.Text.Trim();  ds = objER.Select_Backup_GetExecutionResult_LIKE_PCBAID(objettER); }
+                   else if (cmbSortBy.SelectedIndex == 1) { objettER.MeterID = txtFind.Text.Trim(); ds = objER.Select_Backup_GetExecutionResult_LIKE_MeterID(objettER); }
+                   else
+                   {
+                       MessageBox.Show("Plase Provide Valid Input For Data Search/ Undefined Condition Selected  !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                       txtFind.Focus();
+                       return;
+                   }
+                   
+                    if (ds != null)
+                    {
+                        DataView dv = ds.Tables[0].DefaultView;
+                        dv.Sort = "Execution Date Desc";
+                        DataTable sortedDT = dv.ToTable();
+
+                        SBind.Clear();
+                        DGVTestResult.DataSource = SBind;
+                        if (DGVTestResult.RowCount > 0) DGVTestResult.Rows.Clear();
+                        if (DGVTestResult.ColumnCount > 0) DGVTestResult.Columns.Clear();
+                        SBind.DataSource = sortedDT;
+                        DGVTestResult.DataSource = SBind;
+                        txttotalrecCount.Text = sortedDT.Rows.Count.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Unable To Connect To DataBase, Server May Down" + "\n" + "Plase Contact System Administrator !" + "\n" + "Data Not Found OR Unable to Retrive Data ! !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unable To Connect To DataBase, Invalid Response !" + "\n\n" + ex.ToString(), "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                this.Cursor = Cursors.Default;
+                ts_Menu.Enabled = true;
+            }
+        }
+
+        private void txtFind_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter) lblFind_Click(this,e);
+        }
+
+        private void lblClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lblReports_Click(object sender, EventArgs e)
+        {
+            string meterID = string.Empty;
+            string pcbaID = string.Empty;
+            string meterType = string.Empty;
+            string testType = string.Empty;
+            string testID = string.Empty;
+            this.Cursor = Cursors.WaitCursor;           
+            ts_Menu.Enabled = false;
+            try
+            {
+                if (!objdbcon.IsDBConnected())
+                {
+                    MessageBox.Show("Unable To Connect DataBase, Server May Down" + "\n" + "Plase Contact System Administrator !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (DGVTestResult.CurrentRow == null)
+                {
+                    MessageBox.Show("No Records Selected To Generate Report !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                    if (DGVTestResult.Rows[DGVTestResult.CurrentRow.Index].Cells[0].Value == null) return;
+                    objettER.ExecutionDate = Convert.ToDateTime(DGVTestResult.Rows[DGVTestResult.CurrentRow.Index].Cells[8].Value);
+                    objettER.PCBAID = DGVTestResult.Rows[DGVTestResult.CurrentRow.Index].Cells[0].Value.ToString();
+                    ds = objER.SelectFromtabExecutionReport_onPCBAIDSpecefic(objettER);
+
+                    if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                    {
+                        DataTable dt = new DataTable();
+                        DataTable dtexes = new DataTable();
+                        DataTable dtcover = new DataTable("Cover");
+                        dtcover.Columns.Add("Parameters");
+                        dtcover.Columns.Add("Values");
+
+                        dtcover.Rows.Add("Meter ID", DGVTestResult.Rows[DGVTestResult.CurrentRow.Index].Cells["MeterID"].Value);
+                        dtcover.Rows.Add("PCBA ID", DGVTestResult.Rows[DGVTestResult.CurrentRow.Index].Cells["PCBAID"].Value);
+                        dtcover.Rows.Add("User ID", DGVTestResult.Rows[DGVTestResult.CurrentRow.Index].Cells["User ID"].Value);
+                        dtcover.Rows.Add("Work Station ID", DGVTestResult.Rows[DGVTestResult.CurrentRow.Index].Cells["WorkStationID"].Value);
+                        dtcover.Rows.Add("Meter Type", cmbMeterType.Text);
+                        dtcover.Rows.Add("ProcedureType", DGVTestResult.Rows[DGVTestResult.CurrentRow.Index].Cells["ProcedureType"].Value);
+                        dtcover.Rows.Add("TestID", DGVTestResult.Rows[DGVTestResult.CurrentRow.Index].Cells["TestID"].Value);
+                        dtcover.Rows.Add("ProgramName", ds.Tables[0].Rows[0]["ProgramName"].ToString());
+                        dtcover.Rows.Add("ExecutionDate", DGVTestResult.Rows[DGVTestResult.CurrentRow.Index].Cells["Execution Date"].Value);
+                        dtcover.Rows.Add("CustomerName", DGVTestResult.Rows[DGVTestResult.CurrentRow.Index].Cells["CustomerName"].Value);
+
+
+
+                        ds.Tables[0].Columns.RemoveAt(ds.Tables[0].Columns.Count - 1);
+
+                        DataView dv = ds.Tables[0].DefaultView;
+                        dv.Sort = "SNo asc";
+                        DataTable sortedDT = dv.ToTable();
+
+                        dtexes = sortedDT.Copy();
+                        dtexes.TableName = "Execution Status";
+
+                        ds = null;
+                        DataSet EXCELLDS = new DataSet();
+                        EXCELLDS.Tables.Add(dtcover);
+                        EXCELLDS.Tables.Add(dtexes);
+                        ServiceClass.ServiceInstance.ExportDataSetToExcell(EXCELLDS);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No Records Found For Selected PCBA ID !, Try Again ", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                this.Cursor = Cursors.Default;
+                ts_Menu.Enabled = true;
+            }
+        }
+
+        private void lblPrint_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (DGVTestResult.RowCount <= 0)
+                {
+                    MessageBox.Show("No Records Selected To Generate Report !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                this.Cursor = Cursors.WaitCursor;
+                ts_Menu.Enabled = false;
+                if (DGVTestResult.CurrentRow.Index >= 0)
+                {
+                    if (DGVTestResult.Rows[0].Cells[2].Value == null) return;
+                }
+                else return;
+            DataSet EXCELLDS = new DataSet();
+            DataTable dt = ServiceClass.ServiceInstance.GetGridDataTable("Execution Result", DGVTestResult);
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                EXCELLDS.Tables.Add(dt);
+                ServiceClass.ServiceInstance.ExportDataSetToExcell(EXCELLDS);
+            }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                this.Cursor = Cursors.Default;
+                ts_Menu.Enabled = true;
+            }
+        }
+
+        private void cmbSortBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSortBy.SelectedIndex <= 0) lblFrom.Text = "PCBA ID";
+            else lblFrom.Text = "Meter ID";
+        }
+
+        private void DGVTestResult_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void lblState_Click(object sender, EventArgs e)
+        {
+             
+            string meterID = string.Empty;
+            string pcbaID = string.Empty;
+            string meterType = string.Empty;
+            string testType = string.Empty;
+            string testID = string.Empty;
+                  
+            ts_Menu.Enabled = false;
+            try
+            {
+                if (!objdbcon.IsDBConnected())
+                {
+                    MessageBox.Show("Unable To Connect DataBase, Server May Down" + "\n" + "Plase Contact System Administrator !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (DGVTestResult.CurrentRow == null)
+                {
+                    MessageBox.Show("No Records Selected To Generate Product Status Graph !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                    
+                if (DGVTestResult.Rows[DGVTestResult.CurrentRow.Index].Cells[0].Value == null) return;
+                    objettER.ExecutionMeterType = DGVTestResult.Rows[DGVTestResult.CurrentRow.Index].Cells[7].Value.ToString();
+                    objettER.PCBAID = DGVTestResult.Rows[DGVTestResult.CurrentRow.Index].Cells[0].Value.ToString();
+                    ds = objER.SelectFromtabExecutionReport_onMeterTypeandPCBAID(objettER);
+                
+                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                {
+                    List<string> TestTypeList = new List<string>();
+                    List<bool> FinalStatusList = new List<bool>();
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        if (!TestTypeList.Contains(dr[1].ToString()))
+                        {
+                            TestTypeList.Add(dr[1].ToString());
+                            if (dr[2].ToString().ToUpper() == "PASS" ) FinalStatusList.Add(true);
+                            else FinalStatusList.Add(false);
+                        }
+                    }
+
+                    frmMeterExecutionState objexeState = new frmMeterExecutionState(TestTypeList, FinalStatusList, objettER.PCBAID);
+                    objexeState.ShowDialog();
+                      
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                
+                ts_Menu.Enabled = true;
+            }
+         
+        
+        }
+
+        
+        
+    }
+}

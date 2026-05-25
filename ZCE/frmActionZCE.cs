@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -71,7 +71,7 @@ namespace ZCE
                 FillTestLists();
                 if (testCategory.Trim().Length <= 0)
                 {
-                    MessageBox.Show("Invalid Test Type !", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Invalid Test Type !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     this.Close();
                 }
                 txtTestType.Text = testCategory;
@@ -84,7 +84,7 @@ namespace ZCE
             }
             catch (Exception Ex)
             {
-                MessageBox.Show("Unable To Run Test !" + "\n" + Ex.ToString(), "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Unable To Run Test !" + "\n" + Ex.ToString(), "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
 
@@ -148,7 +148,7 @@ namespace ZCE
             }
             catch (Exception Ex)
             {
-                MessageBox.Show("Setting Main Form Status Failed !" + "\r\n" + "\r\n" + Ex.ToString(), "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("Setting Main Form Status Failed !" + "\r\n" + "\r\n" + Ex.ToString(), "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button1);
             }
         }
 
@@ -195,14 +195,14 @@ namespace ZCE
                 this.Cursor = Cursors.WaitCursor;
                 if (!ProgrammLabelMsg.ToUpperInvariant().Contains("PCBA") && txtPCBAID.Text.Trim().Length <= 0)
                 {
-                    MessageBox.Show("Please Scan Valid " + ProgrammLabelMsg + " ID !, ID Should Not Blank!", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please Scan Valid " + ProgrammLabelMsg + " ID !, ID Should Not Blank!", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 objLI.UpdatedLed += new LayerInterface.UpdateHandler(AddressForm_PingLed);
                 objIECLI.UpdatedLed += new IECLayerInterface.UpdateHandler(AddressForm_PingLed);
                 if (DGVParaLists.Rows.Count <= 0)
                 {
-                    MessageBox.Show("No Active Procedure to Execute Test!", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No Active Procedure to Execute Test!", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 objexeresult.PCBAID = txtPCBAID.Text.Trim();
@@ -221,7 +221,7 @@ namespace ZCE
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             finally
@@ -261,13 +261,13 @@ namespace ZCE
 
                 if (!objIECLI.ConnectToMeter())
                 {
-                    MessageBox.Show("Unable To Communicate, Meter Should Compatible to Selected Test Procedure !" + "\n" + "Please Verify Communication Settings .", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Unable To Communicate, Meter Should Compatible to Selected Test Procedure !" + "\n" + "Please Verify Communication Settings .", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 } 
                 string meterSignonResponse = objIECLI.MeterSignonResponse;
                 if (meterSignonResponse.IndexOf(StaticVariables.MeterType_ZCE) < 0)
                 {
-                    MessageBox.Show("Invalid Test/Meter Type Selected !", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Invalid Test/Meter Type Selected !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
                 selectedControlIDX = 0;
@@ -276,7 +276,7 @@ namespace ZCE
                  if (objexeresult.ExecutionProcedureType.IndexOf(StaticVariables.TestType_EMS) < 0)
                  {
                     // txtMeterPCBAID.Text = getpcbaResponse;
-                     if (getpcbaResponse.IndexOf(StaticVariables.ERRORPreFix) >= 0 || getpcbaResponse.Trim().Length < 7) { MessageBox.Show("Invalid PCBA ID, Length Should be >= 7 " + "\n" + getpcbaResponse, "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop); return false; }
+                     if (getpcbaResponse.IndexOf(StaticVariables.ERRORPreFix) >= 0 || getpcbaResponse.Trim().Length < 7) { MessageBox.Show("Invalid PCBA ID, Length Should be >= 7 " + "\n" + getpcbaResponse, "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop); return false; }
                  }
                  //-----------------------New Implementation for WO Scan-------------------
                  txtMeterPCBAID.Text = getpcbaResponse;
@@ -284,7 +284,7 @@ namespace ZCE
                  {
                      if (ExecutionWithManualScan == true && getpcbaResponse != txtPCBAID.Text.Trim())
                      {
-                         MessageBox.Show("Scan PCBA ID and Meter PCBA ID Not Match !", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                         MessageBox.Show("Scan PCBA ID and Meter PCBA ID Not Match !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                          return false;
                      }
                      if (ExecutionWithManualScan == false) txtPCBAID.Text = getpcbaResponse;
@@ -409,7 +409,7 @@ namespace ZCE
                         case "MANUALMESSAGE":
                             if (DGVParaLists.Rows[selectedControlIDX].Cells["colDefaultValue"].Value.ToString().Trim().Length > 0)
                             {
-                                MessageBox.Show(DGVParaLists.Rows[selectedControlIDX].Cells["colDefaultValue"].Value.ToString(), "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show(DGVParaLists.Rows[selectedControlIDX].Cells["colDefaultValue"].Value.ToString(), "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 testExecutionStatus = (int)StaticVariables.ExecutionReurnStatus.Pass;
                             }
                             else { DGVParaLists.Rows[selectedControlIDX].Cells["colRemarks"].Value = "No Message To Display !"; testExecutionStatus = (int)StaticVariables.ExecutionReurnStatus.Fail; }
@@ -460,7 +460,7 @@ namespace ZCE
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -494,7 +494,7 @@ namespace ZCE
                 if (resultmsg != "")
                 {
                     objIECLI.DisplayStatusMsg("Unable To Save Results !", true);
-                    MessageBox.Show("Unable To Save Results !" + "\n" + resultmsg, "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("Unable To Save Results !" + "\n" + resultmsg, "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     return false;
                 }
                 DataSet ds = objexere.Select_GetExecutionResult_onPCBAID_ProType_ExeDate(objexeresult);
@@ -507,7 +507,7 @@ namespace ZCE
                 else
                 {
                     objIECLI.DisplayStatusMsg("Scan Meter Record Not Found in Database !", true);
-                    MessageBox.Show("Scan Meter Record Not Found in Database !, Re-Scan and Try Again !", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("Scan Meter Record Not Found in Database !, Re-Scan and Try Again !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     return false;
                 }
                
@@ -517,7 +517,7 @@ namespace ZCE
             {
                 resultmsg = Ex.Message;
                 objIECLI.DisplayStatusMsg("Unable To Save Results !", true);
-                MessageBox.Show("Unable To Save Results !" + "\n" + Ex.Message, "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Unable To Save Results !" + "\n" + Ex.Message, "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return false;
             }
             finally
@@ -550,7 +550,7 @@ namespace ZCE
                 {
                     if (txtPCBAID.Text.Trim().Length <= 0)
                     {
-                        MessageBox.Show("Please Scan Valid " + ProgrammLabelMsg + " ID !, ID Should Not Blank!", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Please Scan Valid " + ProgrammLabelMsg + " ID !, ID Should Not Blank!", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                     btnStart_Click(sender, e);
@@ -558,7 +558,7 @@ namespace ZCE
             }
             catch (Exception Ex)
             {
-                MessageBox.Show(Ex.ToString(), "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Ex.ToString(), "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }        
         }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -74,7 +74,7 @@ namespace E150MICROSTAR
                 FillTestLists();
                 if (testCategory.Trim().Length <= 0)
                 {
-                    MessageBox.Show("Invalid Test Type !", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Invalid Test Type !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     this.Close();
                 }
                 txtTestType.Text = testCategory;
@@ -87,7 +87,7 @@ namespace E150MICROSTAR
             }
             catch (Exception Ex)
             {
-                MessageBox.Show("Unable To Run Test !" + "\n" + Ex.ToString(), "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Unable To Run Test !" + "\n" + Ex.ToString(), "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
 
@@ -141,7 +141,7 @@ namespace E150MICROSTAR
             }
             catch (Exception Ex)
             {
-                MessageBox.Show("Setting Main Form Status Failed !" + "\r\n" + "\r\n" + Ex.ToString(), "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("Setting Main Form Status Failed !" + "\r\n" + "\r\n" + Ex.ToString(), "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button1);
             }
         }
 
@@ -193,13 +193,13 @@ namespace E150MICROSTAR
                 this.Cursor = Cursors.WaitCursor;
                 if (!ProgrammLabelMsg.ToUpperInvariant().Contains("PCBA") && txtPCBAID.Text.Trim().Length <= 0)
                 {
-                    MessageBox.Show("Please Scan Valid " + ProgrammLabelMsg + " ID !, ID Should Not Blank!", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please Scan Valid " + ProgrammLabelMsg + " ID !, ID Should Not Blank!", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 objIECLI.UpdatedLed += new IECLayerInterface.UpdateHandler(AddressForm_PingLed);
                 if (DGVParaLists.Rows.Count <= 0)
                 {
-                    MessageBox.Show("No Active Procedure to Execute Test!", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No Active Procedure to Execute Test!", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 objexeresult.PCBAID = txtPCBAID.Text.Trim();
@@ -218,7 +218,7 @@ namespace E150MICROSTAR
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             finally
@@ -260,13 +260,13 @@ namespace E150MICROSTAR
 
                 if (!objIECLI.ConnectToMeter())
                 {
-                    MessageBox.Show("Unable To Communicate, Meter Should Compatible to Selected Test Procedure !" + "\n" + "Please Verify Communication Settings .", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Unable To Communicate, Meter Should Compatible to Selected Test Procedure !" + "\n" + "Please Verify Communication Settings .", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 } 
                 string meterSignonResponse = objIECLI.MeterSignonResponse;
                 if (meterSignonResponse.IndexOf(StaticVariables.MeterType_EcoStar) < 0)
                 {
-                    MessageBox.Show("Invalid Test/Meter Type Selected !", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Invalid Test/Meter Type Selected !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
                 
@@ -275,7 +275,7 @@ namespace E150MICROSTAR
                 if (objexeresult.ExecutionProcedureType.IndexOf(StaticVariables.TestType_EMS) < 0)
                 {
                     //txtMeterPCBAID.Text = getpcbaResponse;
-                    if (getpcbaResponse.IndexOf(StaticVariables.ERRORPreFix) >= 0 || getpcbaResponse.Trim().Length < 7) { MessageBox.Show("Invalid PCBA ID, Length Should be >= 7 " + "\n" + getpcbaResponse, "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop); return false; }
+                    if (getpcbaResponse.IndexOf(StaticVariables.ERRORPreFix) >= 0 || getpcbaResponse.Trim().Length < 7) { MessageBox.Show("Invalid PCBA ID, Length Should be >= 7 " + "\n" + getpcbaResponse, "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop); return false; }
                 }
                 //-----------------------New Implementation for WO Scan-------------------
                 txtMeterPCBAID.Text = getpcbaResponse;
@@ -283,7 +283,7 @@ namespace E150MICROSTAR
                 {
                     if (ExecutionWithManualScan == true && getpcbaResponse != txtPCBAID.Text.Trim())
                     {
-                        MessageBox.Show("Scan PCBA ID and Meter PCBA ID Not Match !", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Scan PCBA ID and Meter PCBA ID Not Match !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                     if (ExecutionWithManualScan == false) txtPCBAID.Text = getpcbaResponse;
@@ -355,7 +355,7 @@ namespace E150MICROSTAR
                             else testExecutionStatus = (int)StaticVariables.ExecutionReurnStatus.Fail;
                             break;
                         case "VERIFYPHASECURRENT":
-                            MessageBox.Show("Press Phase Current Switch And Hit OK To Continue.", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("Press Phase Current Switch And Hit OK To Continue.", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             Application.DoEvents();
                             string phaseCurrentResponse = objIECccmdmethod.VerifyMeterCurrent(DGVParaLists.Rows[selectedControlIDX].Cells["colDefaultValue"].Value.ToString(), DGVParaLists.Rows[selectedControlIDX].Cells["ColMinVal"].Value.ToString(), DGVParaLists.Rows[selectedControlIDX].Cells["ColMaxValue"].Value.ToString(),(int)StaticVariables.MeterCurrentType.PhaseCurrent);
                             DGVParaLists.Rows[selectedControlIDX].Cells["colRemarks"].Value = phaseCurrentResponse;
@@ -363,7 +363,7 @@ namespace E150MICROSTAR
                             else testExecutionStatus = (int)StaticVariables.ExecutionReurnStatus.Fail;
                             break;
                         case "VERIFYNEUTRALCURRENT":
-                            MessageBox.Show("Press Neutral Current Switch And Hit OK To Continue.", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("Press Neutral Current Switch And Hit OK To Continue.", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             Application.DoEvents();
                             string neuCurrentResponse = objIECccmdmethod.VerifyMeterCurrent(DGVParaLists.Rows[selectedControlIDX].Cells["colDefaultValue"].Value.ToString(), DGVParaLists.Rows[selectedControlIDX].Cells["ColMinVal"].Value.ToString(), DGVParaLists.Rows[selectedControlIDX].Cells["ColMaxValue"].Value.ToString(), (int)StaticVariables.MeterCurrentType.NeutralCurrent);
                             DGVParaLists.Rows[selectedControlIDX].Cells["colRemarks"].Value = neuCurrentResponse;
@@ -507,7 +507,7 @@ namespace E150MICROSTAR
                             break;
                         case "COMMUNICATIONTESTONBATTERY":
                             objIECLI.PortDisconnect();
-                            MessageBox.Show("Power-on Meter on Battery Mode And Hit OK To Continue.", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("Power-on Meter on Battery Mode And Hit OK To Continue.", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             Application.DoEvents();
                             Thread.Sleep(100);
 
@@ -518,7 +518,7 @@ namespace E150MICROSTAR
                             else { testExecutionStatus = (int)StaticVariables.ExecutionReurnStatus.Fail;break;}
                             
                             Thread.Sleep(100);
-                            MessageBox.Show("Power-on Meter on Main Supply Mode And Hit OK To Continue.", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("Power-on Meter on Main Supply Mode And Hit OK To Continue.", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             Thread.Sleep(1500);
                             if (!objIECLI.ConnectToMeter()) { testExecutionStatus = (int)StaticVariables.ExecutionReurnStatus.Fail; DGVParaLists.Rows[selectedControlIDX].Cells["colRemarks"].Value = StaticVariables.ERRORPreFix + "COMM Failed."; break; }
                             Application.DoEvents();
@@ -589,7 +589,7 @@ namespace E150MICROSTAR
                         case "MANUALMESSAGE":
                             if (DGVParaLists.Rows[selectedControlIDX].Cells["colDefaultValue"].Value.ToString().Trim().Length > 0)
                             {
-                                MessageBox.Show(DGVParaLists.Rows[selectedControlIDX].Cells["colDefaultValue"].Value.ToString(), "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show(DGVParaLists.Rows[selectedControlIDX].Cells["colDefaultValue"].Value.ToString(), "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 testExecutionStatus = (int)StaticVariables.ExecutionReurnStatus.Pass;
                             }
                             else { DGVParaLists.Rows[selectedControlIDX].Cells["colRemarks"].Value = "No Message To Display !"; testExecutionStatus = (int)StaticVariables.ExecutionReurnStatus.Fail; }
@@ -627,7 +627,7 @@ namespace E150MICROSTAR
                     //{
                     //    if (objexeresult.FinalResult == "PASS")
                     //    {
-                    //        if (!objIECccmdmethod.SetTravelerData_VIMNONDLMS(TravelerStage)) { MessageBox.Show("Unable To Set Production Stage Flag, Meter May at Invalid Production Stage !", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error); return false; }
+                    //        if (!objIECccmdmethod.SetTravelerData_VIMNONDLMS(TravelerStage)) { MessageBox.Show("Unable To Set Production Stage Flag, Meter May at Invalid Production Stage !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error); return false; }
                     //    }
                     //}
                     //return (ExportResultsByBatch());
@@ -647,7 +647,7 @@ namespace E150MICROSTAR
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -682,7 +682,7 @@ namespace E150MICROSTAR
                 if (resultmsg != "")
                 {
                     objIECLI.DisplayStatusMsg("Unable To Save Results !", true);
-                    MessageBox.Show("Unable To Save Results !" + "\n" + resultmsg, "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("Unable To Save Results !" + "\n" + resultmsg, "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     return false;
                 }
                 DataSet ds = objexere.Select_GetExecutionResult_onPCBAID_ProType_ExeDate(objexeresult);
@@ -695,7 +695,7 @@ namespace E150MICROSTAR
                 else
                 {
                     objIECLI.DisplayStatusMsg("Scan Meter Record Not Found in Database !", true);
-                    MessageBox.Show("Scan Meter Record Not Found in Database !, Re-Scan and Try Again !", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("Scan Meter Record Not Found in Database !, Re-Scan and Try Again !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     return false;
                 }
                 
@@ -705,7 +705,7 @@ namespace E150MICROSTAR
             {
                 resultmsg = Ex.Message;
                 objIECLI.DisplayStatusMsg("Unable To Save Results !", true);
-                MessageBox.Show("Unable To Save Results !" + "\n" + Ex.Message, "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Unable To Save Results !" + "\n" + Ex.Message, "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return false;
             }
             finally
@@ -739,7 +739,7 @@ namespace E150MICROSTAR
                 {
                     if (txtPCBAID.Text.Trim().Length <= 0)
                     {
-                        MessageBox.Show("Please Scan Valid " + ProgrammLabelMsg + " ID !, ID Should Not Blank!", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Please Scan Valid " + ProgrammLabelMsg + " ID !, ID Should Not Blank!", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                     btnStart_Click(sender, e);
@@ -747,7 +747,7 @@ namespace E150MICROSTAR
             }
             catch (Exception Ex)
             {
-                MessageBox.Show(Ex.ToString(), "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Ex.ToString(), "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }
@@ -768,7 +768,7 @@ namespace E150MICROSTAR
                 string pushButtonCountResponse = objIECccmdmethod.StartPushButtonRest();
                 if (pushButtonCountResponse.IndexOf(StaticVariables.ERRORPreFix) >= 0) return pushButtonCountResponse;//-----If Fail the return
                 
-                MessageBox.Show("Press Push Button Switch " + pushCount.ToString() + " Time And Hit OK To Continue.", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Press Push Button Switch " + pushCount.ToString() + " Time And Hit OK To Continue.", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Application.DoEvents();
                 return objIECccmdmethod.VerifyPushButtonCount(defaultVal, minVal, maxVal);
             }

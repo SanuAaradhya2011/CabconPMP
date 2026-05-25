@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -75,7 +75,7 @@ namespace PMPSM110
             FillTestLists();
             if (testCategory.Trim().Length <= 0)
             {
-                MessageBox.Show("Invalid Test Type !", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid Test Type !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
             txtTestType.Text = testCategory;      
@@ -83,7 +83,7 @@ namespace PMPSM110
             if (TravelerStage < 0 && testCategory != "Other Test")
             {
 
-                MessageBox.Show("Invalid Test Type !, Error: Setting Product Stage.", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid Test Type !, Error: Setting Product Stage.", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
             objccmdmethod.SetDefaultSettings(IPParalist);
@@ -94,7 +94,7 @@ namespace PMPSM110
             }
             catch (Exception Ex)
             {
-                MessageBox.Show("Unable To Run Test !" + "\n" + Ex.ToString(), "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Unable To Run Test !" + "\n" + Ex.ToString(), "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
 
@@ -109,14 +109,14 @@ namespace PMPSM110
                 this.Cursor = Cursors.WaitCursor;
                 if (!ProgrammLabelMsg.ToUpperInvariant().Contains("PCBA") && txtPCBAID.Text.Trim().Length <= 0)
                 {
-                    MessageBox.Show("Please Scan Valid " + ProgrammLabelMsg + " ID !, ID Should Not Blank!", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please Scan Valid " + ProgrammLabelMsg + " ID !, ID Should Not Blank!", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 objLI.UpdatedLed += new LayerInterface.UpdateHandler(AddressForm_PingLed);
 
                 if (DGVParaLists.Rows.Count <= 0)
                 {
-                    MessageBox.Show("No Active Procedure to Execute Test!", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No Active Procedure to Execute Test!", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 objexeresult.PCBAID = txtPCBAID.Text.Trim();
@@ -135,7 +135,7 @@ namespace PMPSM110
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             finally
@@ -222,7 +222,7 @@ namespace PMPSM110
                 if (objexeresult.ExecutionProcedureType.IndexOf(StaticVariables.TestType_EMS) < 0)
                 {
                     //txtMeterPCBAID.Text = getpcbaResponse;
-                    if (getpcbaResponse.IndexOf(StaticVariables.ERRORPreFix) >= 0 || getpcbaResponse.Trim().Length < 7) { MessageBox.Show("Invalid PCBA ID, Length Should be >= 7 " + "\n" + getpcbaResponse, "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop); return false; }
+                    if (getpcbaResponse.IndexOf(StaticVariables.ERRORPreFix) >= 0 || getpcbaResponse.Trim().Length < 7) { MessageBox.Show("Invalid PCBA ID, Length Should be >= 7 " + "\n" + getpcbaResponse, "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop); return false; }
                 }
                 //-----------------------New Implementation for WO Scan-------------------
                 txtMeterPCBAID.Text = getpcbaResponse;
@@ -230,7 +230,7 @@ namespace PMPSM110
                 {
                     if (ExecutionWithManualScan == true && getpcbaResponse != txtPCBAID.Text.Trim())
                     {
-                        MessageBox.Show("Scan PCBA ID and Meter PCBA ID Not Match !", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Scan PCBA ID and Meter PCBA ID Not Match !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                     if (ExecutionWithManualScan == false) txtPCBAID.Text = getpcbaResponse;
@@ -376,7 +376,7 @@ namespace PMPSM110
                             else testExecutionStatus = (int)StaticVariables.ExecutionReurnStatus.Fail;
                             break;
                         case "METROLOGYTESTPHASE":
-                            MessageBox.Show("Press Phase Current Switch And Hit OK To Continue.", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("Press Phase Current Switch And Hit OK To Continue.", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             Application.DoEvents();
                             string mmiResponse = objccmdmethod.MetrologyTest_1PhaseFalcon(DGVParaLists.Rows[selectedControlIDX].Cells["colDefaultValue"].Value.ToString(), DGVParaLists.Rows[selectedControlIDX].Cells["ColMinVal"].Value.ToString(), DGVParaLists.Rows[selectedControlIDX].Cells["ColMaxValue"].Value.ToString(), (int)StaticVariables.MMITestParameters.PhaseCurrentTest);
                             DGVParaLists.Rows[selectedControlIDX].Cells["colRemarks"].Value = mmiResponse;
@@ -384,7 +384,7 @@ namespace PMPSM110
                             else testExecutionStatus = (int)StaticVariables.ExecutionReurnStatus.Fail;
                             break;
                         case "METROLOGYTESTNEUTRAL":
-                            MessageBox.Show("Press Neutral Current Switch And Hit OK To Continue.", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("Press Neutral Current Switch And Hit OK To Continue.", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             Application.DoEvents();
                             string mmiResponseNeu = objccmdmethod.MetrologyTest_1PhaseFalcon(DGVParaLists.Rows[selectedControlIDX].Cells["colDefaultValue"].Value.ToString(), DGVParaLists.Rows[selectedControlIDX].Cells["ColMinVal"].Value.ToString(), DGVParaLists.Rows[selectedControlIDX].Cells["ColMaxValue"].Value.ToString(), (int)StaticVariables.MMITestParameters.NeutralCurrentTest);
                             DGVParaLists.Rows[selectedControlIDX].Cells["colRemarks"].Value = mmiResponseNeu;
@@ -399,7 +399,7 @@ namespace PMPSM110
                             break;
                         case "COMMUNICATIONTESTONBATTERY":
                             objLI.AssociationDisconnect();
-                            MessageBox.Show("Power-on Meter on Battery Mode And Hit OK To Continue.", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("Power-on Meter on Battery Mode And Hit OK To Continue.", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             Application.DoEvents();
                             Thread.Sleep(100);
                             if (!objLI.ConnectToMeter()) { testExecutionStatus = (int)StaticVariables.ExecutionReurnStatus.Fail; DGVParaLists.Rows[selectedControlIDX].Cells["colRemarks"].Value = StaticVariables.ERRORPreFix + "COMM Failed."; break; }
@@ -410,7 +410,7 @@ namespace PMPSM110
                             else testExecutionStatus = (int)StaticVariables.ExecutionReurnStatus.Fail;
                             objLI.AssociationDisconnect();
                             Thread.Sleep(100);
-                            MessageBox.Show("Power-on Meter on Main Supply Mode And Hit OK To Continue.", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("Power-on Meter on Main Supply Mode And Hit OK To Continue.", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             Thread.Sleep(1500);
                             if (!objLI.ConnectToMeter()) { testExecutionStatus = (int)StaticVariables.ExecutionReurnStatus.Fail; DGVParaLists.Rows[selectedControlIDX].Cells["colRemarks"].Value = StaticVariables.ERRORPreFix + "COMM Failed."; break; }
                             Application.DoEvents();
@@ -580,7 +580,7 @@ namespace PMPSM110
                         case "MANUALMESSAGE":
                             if (DGVParaLists.Rows[selectedControlIDX].Cells["colDefaultValue"].Value.ToString().Trim().Length > 0)
                             {
-                                MessageBox.Show(DGVParaLists.Rows[selectedControlIDX].Cells["colDefaultValue"].Value.ToString(), "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show(DGVParaLists.Rows[selectedControlIDX].Cells["colDefaultValue"].Value.ToString(), "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 testExecutionStatus = (int)StaticVariables.ExecutionReurnStatus.Pass;
                             }
                             else { DGVParaLists.Rows[selectedControlIDX].Cells["colRemarks"].Value = "No Message To Display !"; testExecutionStatus = (int)StaticVariables.ExecutionReurnStatus.Fail; }
@@ -614,7 +614,7 @@ namespace PMPSM110
                 {
                     if (!isComError && !ExecutionWithOutTravellerStage)
                     {
-                        if (!objccmdmethod.SetTravelerData_SmartMeter1Phase(selectedControlIDX, TravelerStage, DGVParaLists)) { MessageBox.Show("Unable To Set Production Stage !", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error); return false; }
+                        if (!objccmdmethod.SetTravelerData_SmartMeter1Phase(selectedControlIDX, TravelerStage, DGVParaLists)) { MessageBox.Show("Unable To Set Production Stage !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error); return false; }
                     }
                     //return (ExportResultsByBatch());
                     if (ExportResultsByBatch())
@@ -632,7 +632,7 @@ namespace PMPSM110
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             finally
@@ -649,7 +649,7 @@ namespace PMPSM110
             {                
                 if (tavelerreadResponse.IndexOf(StaticVariables.ERRORPreFix) >= 0)
                 { 
-                    MessageBox.Show("Product are At Invalid Production Stage, Return To Previous Production Stage !", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Product are At Invalid Production Stage, Return To Previous Production Stage !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }                 
             }
@@ -678,7 +678,7 @@ namespace PMPSM110
                 if (resultmsg != "")
                 {
                     objLI.DisplayStatusMsg("Unable To Save Results !", true);
-                    MessageBox.Show("Unable To Save Results !" + "\n" + resultmsg, "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("Unable To Save Results !" + "\n" + resultmsg, "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     return false;
                 }
                 DataSet ds = objexere.Select_GetExecutionResult_onPCBAID_ProType_ExeDate(objexeresult);
@@ -691,7 +691,7 @@ namespace PMPSM110
                 else
                 {
                     objLI.DisplayStatusMsg("Scan Meter Record Not Found in Database !", true);
-                    MessageBox.Show("Scan Meter Record Not Found in Database !, Re-Scan and Try Again !", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("Scan Meter Record Not Found in Database !, Re-Scan and Try Again !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     return false;
                 }
                
@@ -701,7 +701,7 @@ namespace PMPSM110
             {
                 resultmsg = Ex.Message;
                 objLI.DisplayStatusMsg("Unable To Save Results !", true);
-                MessageBox.Show("Unable To Save Results !" + "\n" + Ex.Message, "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Unable To Save Results !" + "\n" + Ex.Message, "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return false;
             }
             finally
@@ -765,7 +765,7 @@ namespace PMPSM110
             }
             catch (Exception Ex)
             {
-                MessageBox.Show("Setting Main Form Status Failed !" + "\r\n" + "\r\n" + Ex.ToString(), "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("Setting Main Form Status Failed !" + "\r\n" + "\r\n" + Ex.ToString(), "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button1);
             }
         }
 
@@ -843,7 +843,7 @@ namespace PMPSM110
                     if (FailMsg.Length > 0)
                     {
                         objLI.DisplayStatusMsg("Meter Initializing Test Fail!", true);
-                        MessageBox.Show("Meter Initializing Test Fail!" + "\n" + FailMsg, "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Meter Initializing Test Fail!" + "\n" + FailMsg, "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
@@ -971,7 +971,7 @@ namespace PMPSM110
                 {
                     if (txtPCBAID.Text.Trim().Length <= 0)
                     {
-                        MessageBox.Show("Please Scan Valid " + ProgrammLabelMsg + " ID !, ID Should Not Blank!", "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Please Scan Valid " + ProgrammLabelMsg + " ID !, ID Should Not Blank!", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                     btnStart_Click(sender, e);
@@ -979,7 +979,7 @@ namespace PMPSM110
             }
             catch (Exception Ex)
             {
-                MessageBox.Show(Ex.ToString(), "L+G PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Ex.ToString(), "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }           
         }
