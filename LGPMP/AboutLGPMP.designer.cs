@@ -153,7 +153,7 @@
             this.lblproductname.Name = "lblproductname";
             this.lblproductname.Size = new System.Drawing.Size(160, 20);
             this.lblproductname.TabIndex = 7;
-            this.lblproductname.Text = "Landis+Gyr Ltd. India";
+            this.lblproductname.Text = "Cabcon Technologies";
             // 
             // label4
             // 

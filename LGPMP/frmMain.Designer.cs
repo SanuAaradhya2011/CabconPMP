@@ -111,6 +111,7 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.LightCyan;
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ts_file,
@@ -120,7 +121,7 @@
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(2517, 54);
+            this.menuStrip1.Size = new System.Drawing.Size(1678, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -134,7 +135,7 @@
             this.tsm_export,
             this.exitToolStripMenuItem1});
             this.ts_file.Name = "ts_file";
-            this.ts_file.Size = new System.Drawing.Size(54, 48);
+            this.ts_file.Size = new System.Drawing.Size(54, 29);
             this.ts_file.Text = "File";
             // 
             // tsm_New
@@ -260,7 +261,7 @@
             this.tsm_changePassword,
             this.tsm_ServerSettings});
             this.ts_configuration.Name = "ts_configuration";
-            this.ts_configuration.Size = new System.Drawing.Size(92, 48);
+            this.ts_configuration.Size = new System.Drawing.Size(92, 29);
             this.ts_configuration.Text = "Settings";
             // 
             // tsm_Association
@@ -302,7 +303,7 @@
             this.backupDataReportToolStripMenuItem,
             this.tsm_rejectlist});
             this.ts_report.Name = "ts_report";
-            this.ts_report.Size = new System.Drawing.Size(89, 48);
+            this.ts_report.Size = new System.Drawing.Size(89, 29);
             this.ts_report.Text = "Reports";
             // 
             // tsm_executionReports
@@ -360,7 +361,7 @@
             this.aboutToolStripMenuItem,
             this.contentsToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 48);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
@@ -381,7 +382,7 @@
             // 
             this.exitToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(55, 48);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(55, 29);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -464,7 +465,7 @@
             this.toolStripSeparator4,
             this.ts_Exit,
             this.toolStripSeparator3});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 81);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 33);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.toolStrip1.Size = new System.Drawing.Size(1678, 60);
@@ -682,12 +683,12 @@
             // 
             // pcbBackgroundImage
             // 
-            this.pcbBackgroundImage.BackgroundImage = global::CabconPMP.Properties.Resources.mainpagetheme;
+            this.pcbBackgroundImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pcbBackgroundImage.BackgroundImage")));
             this.pcbBackgroundImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pcbBackgroundImage.Location = new System.Drawing.Point(0, 171);
+            this.pcbBackgroundImage.Location = new System.Drawing.Point(0, 93);
             this.pcbBackgroundImage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pcbBackgroundImage.Name = "pcbBackgroundImage";
-            this.pcbBackgroundImage.Size = new System.Drawing.Size(2517, 1287);
+            this.pcbBackgroundImage.Size = new System.Drawing.Size(1678, 879);
             this.pcbBackgroundImage.TabIndex = 19;
             this.pcbBackgroundImage.TabStop = false;
             // 

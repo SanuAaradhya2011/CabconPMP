@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("0.0.1.7")]
 [assembly: AssemblyDescription("Routine Test Data Logger")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Landis+Gyr Limited")]
+[assembly: AssemblyCompany("Cabcon Technologies Limited")]
 [assembly: AssemblyProduct("CabconRTL")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyCopyright("Copyright ©  2026")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

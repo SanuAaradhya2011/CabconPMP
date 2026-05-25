@@ -54,7 +54,7 @@ namespace CabconRTL
             {
                 Console.Clear();
                 AESEncryption objaes = new AESEncryption();
-                System.Console.WriteLine("              LG Rouiten Test Logger V" + objaes.ProductVersion());
+                System.Console.WriteLine("              Cabcon Rouiten Test Logger V" + objaes.ProductVersion());
                 System.Console.WriteLine("\n=============================================================\n");
                 string srverLabel = GetServer();
                 System.Console.WriteLine(srverLabel);

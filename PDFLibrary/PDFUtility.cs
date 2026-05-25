@@ -211,9 +211,9 @@ namespace PDFLibraryCabcon
             cell.BackgroundColor = new Color(backColor);
             table.AddCell(cell);
         }
-        
+
         /// <summary>
-        /// Add LandisGyr Logo for each page for given writer,document object
+        /// Add Cabcon Technologies Logo for each page for given writer,document object
         /// </summary>
         /// <param name="writer"></param>
         /// <param name="document"></param>

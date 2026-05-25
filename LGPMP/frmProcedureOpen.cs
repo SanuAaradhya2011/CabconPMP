@@ -299,7 +299,7 @@ namespace CabconPMP
                 string opFileName = fileName.Replace("tpf", "xml");
                 if (!File.Exists(fileName))
                 {
-                    MessageBox.Show("Invalid File Selected, File Not Exist!", "Landis+Gyr", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Invalid File Selected, File Not Exist!", "Cabcon Technologies", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 this.Cursor = Cursors.WaitCursor;
@@ -309,7 +309,7 @@ namespace CabconPMP
                 ds.ReadXml(opFileName);
                 if (!File.Exists(opFileName))
                 {
-                    MessageBox.Show("Invalid File Selected, File Not Exist!", "Landis+Gyr", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Invalid File Selected, File Not Exist!", "Cabcon Technologies", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 

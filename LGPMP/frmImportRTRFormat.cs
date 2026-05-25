@@ -1,11 +1,11 @@
 ﻿/*
  * Work File      : frmMeterRange.cs
- * Date Started   : 15/Feb/2010
- * Date Completed : 15/Feb/2010
+ * Date Started   : 25/05/2026
+ * Date Completed : 25/05/2026
  * Project        : PMP Software
- * Copyright      : Landis + Gyr
+ * Copyright      : Cabcon Technologies
  * Revision       : 1.0
- * Author         : BalGovind
+ * Author         : Piyush Singh
  * Last Modified  :
  * Discription    : For Defining Meter Range
  */
