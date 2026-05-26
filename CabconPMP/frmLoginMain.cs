@@ -17,9 +17,22 @@ namespace CabconPMP
         BALDBConnectionTest objdbcon = new BALDBConnectionTest();
         int loginLimit = 3;
          public frmLoginMain()
-        {
-            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
-        }
+         {
+             InitializeComponent(); 
+             COMMONENTITY.FormStyleHelper.Apply(this);
+
+             // Apply visual transparency overrides after global styling
+             this.PanelLoginControl.BackColor = System.Drawing.Color.Transparent;
+             this.PanelLoginControl.BackgroundImage = null;
+             this.PanelLoginControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
+             this.PanelLoginControl.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelLoginControl_Paint);
+
+             this.txtuserID.BackColor = System.Drawing.Color.Transparent;
+             this.txtuserID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+
+             this.txtPassword.BackColor = System.Drawing.Color.Transparent;
+             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -111,6 +124,26 @@ namespace CabconPMP
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtuserID_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PanelLoginControl_Paint(object sender, PaintEventArgs e)
+        {
+            // Draw a stylish 1px border around the transparent text boxes
+            using (Pen borderPen = new Pen(Color.FromArgb(180, 200, 220), 1))
+            {
+                // Around txtuserID
+                Rectangle rectUser = new Rectangle(txtuserID.Left - 1, txtuserID.Top - 1, txtuserID.Width + 1, txtuserID.Height + 1);
+                e.Graphics.DrawRectangle(borderPen, rectUser);
+
+                // Around txtPassword
+                Rectangle rectPass = new Rectangle(txtPassword.Left - 1, txtPassword.Top - 1, txtPassword.Width + 1, txtPassword.Height + 1);
+                e.Graphics.DrawRectangle(borderPen, rectPass);
+            }
         }
     }
 }

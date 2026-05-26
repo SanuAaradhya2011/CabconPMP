@@ -255,6 +255,9 @@
     <Compile Include="frmLoginMain.Designer.cs">
       <DependentUpon>frmLoginMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="TransparentTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="PMPDataSet.cs">
       <DependentUpon>PMPDataSet.xsd</DependentUpon>
     </Compile>

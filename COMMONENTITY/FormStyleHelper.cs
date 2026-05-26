@@ -191,7 +191,23 @@ namespace COMMONENTITY
                 // Normalize tab control visual appearance
                 tab.Appearance = TabAppearance.Normal;
                 tab.DrawMode = TabDrawMode.OwnerDrawFixed;
-                tab.ItemSize = new Size(110, 32);
+                
+                // Dynamically calculate the ideal tab width based on the longest tab title text
+                int maxWidth = 110; // Default minimum width
+                using (Graphics g = tab.CreateGraphics())
+                {
+                    foreach (TabPage page in tab.TabPages)
+                    {
+                        SizeF size = g.MeasureString(page.Text, ControlBoldFont);
+                        int idealWidth = (int)Math.Ceiling(size.Width) + 30; // 30px padding for elegant breathing room
+                        if (idealWidth > maxWidth)
+                        {
+                            maxWidth = idealWidth;
+                        }
+                    }
+                }
+                
+                tab.ItemSize = new Size(maxWidth, 32);
                 tab.SizeMode = TabSizeMode.Fixed;
                 
                 // Attach safe double-draw protection

@@ -230,17 +230,20 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabControl1.Controls.Add(this.tabSerialPort);
             this.tabControl1.Controls.Add(this.tabHDLC);
             this.tabControl1.Controls.Add(this.tabAssociation);
             this.tabControl1.Controls.Add(this.tabconformanceBlock);
+
             this.tabControl1.Location = new System.Drawing.Point(2, 2);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(648, 618);
             this.tabControl1.TabIndex = 22;
+            this.tabControl1.Padding = new System.Drawing.Point(18, 8);
+            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.Normal;
+            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Normal;
             // 
             // tabSerialPort
             // 
@@ -664,6 +667,7 @@
             this.label39.Size = new System.Drawing.Size(125, 20);
             this.label39.TabIndex = 0;
             this.label39.Text = "Information Size";
+
             // 
             // tabAssociation
             // 

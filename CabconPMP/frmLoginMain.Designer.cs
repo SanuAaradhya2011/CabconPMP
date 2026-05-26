@@ -31,12 +31,12 @@ namespace CabconPMP
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoginMain));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelLoginControl = new System.Windows.Forms.Panel();
-            this.txtuserID = new System.Windows.Forms.TextBox();
+            this.txtuserID = new CabconPMP.TransparentTextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtPassword = new CabconPMP.TransparentTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PanelLoginControl.SuspendLayout();
             this.SuspendLayout();
@@ -80,6 +80,7 @@ namespace CabconPMP
             this.txtuserID.Name = "txtuserID";
             this.txtuserID.Size = new System.Drawing.Size(250, 26);
             this.txtuserID.TabIndex = 0;
+            this.txtuserID.TextChanged += new System.EventHandler(this.txtuserID_TextChanged_1);
             this.txtuserID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtuserID_KeyPress);
             // 
             // btnLogin
@@ -172,8 +173,8 @@ namespace CabconPMP
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtuserID;
+        private CabconPMP.TransparentTextBox txtPassword;
+        private CabconPMP.TransparentTextBox txtuserID;
 
     }
 }
