@@ -594,6 +594,7 @@
             this.ts_Help.Size = new System.Drawing.Size(114, 55);
             this.ts_Help.Text = "       Help      ";
             this.ts_Help.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ts_Help.Visible = false;
             this.ts_Help.Click += new System.EventHandler(this.ts_Help_Click);
             // 
             // toolStripSeparator4

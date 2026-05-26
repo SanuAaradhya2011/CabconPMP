@@ -1,4 +1,4 @@
-﻿namespace CabconPMP
+namespace CabconPMP
 {
     partial class frmProcedure
     {
@@ -46,19 +46,19 @@
             this.colMaxValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStatus = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.lblNew = new System.Windows.Forms.ToolStripLabel();
+            this.lblNew = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.lblAddUpdate = new System.Windows.Forms.ToolStripLabel();
+            this.lblAddUpdate = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.lblEdit = new System.Windows.Forms.ToolStripLabel();
+            this.lblEdit = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.lblInsert = new System.Windows.Forms.ToolStripLabel();
+            this.lblInsert = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.lblDelete = new System.Windows.Forms.ToolStripLabel();
+            this.lblDelete = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.lblSave = new System.Windows.Forms.ToolStripLabel();
+            this.lblSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.lblClose = new System.Windows.Forms.ToolStripLabel();
+            this.lblClose = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -101,9 +101,11 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtDefaultValue);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(6, 109);
+            this.groupBox1.Location = new System.Drawing.Point(9, 169);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(938, 57);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(1407, 88);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -112,9 +114,10 @@
             this.cmbParametersName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbParametersName.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbParametersName.FormattingEnabled = true;
-            this.cmbParametersName.Location = new System.Drawing.Point(6, 31);
+            this.cmbParametersName.Location = new System.Drawing.Point(9, 48);
+            this.cmbParametersName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbParametersName.Name = "cmbParametersName";
-            this.cmbParametersName.Size = new System.Drawing.Size(269, 21);
+            this.cmbParametersName.Size = new System.Drawing.Size(402, 28);
             this.cmbParametersName.TabIndex = 23;
             this.cmbParametersName.SelectedIndexChanged += new System.EventHandler(this.cmbParametersName_SelectedIndexChanged);
             this.cmbParametersName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbParametersName_KeyPress);
@@ -124,9 +127,10 @@
             this.chkStatus.AutoSize = true;
             this.chkStatus.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.chkStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkStatus.Location = new System.Drawing.Point(889, 19);
+            this.chkStatus.Location = new System.Drawing.Point(1334, 29);
+            this.chkStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkStatus.Name = "chkStatus";
-            this.chkStatus.Size = new System.Drawing.Size(47, 31);
+            this.chkStatus.Size = new System.Drawing.Size(67, 45);
             this.chkStatus.TabIndex = 10;
             this.chkStatus.Text = "Status";
             this.chkStatus.UseVisualStyleBackColor = true;
@@ -134,63 +138,70 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(752, 14);
+            this.label5.Location = new System.Drawing.Point(1128, 22);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 13);
+            this.label5.Size = new System.Drawing.Size(87, 20);
             this.label5.TabIndex = 9;
             this.label5.Text = "Max. Value";
             // 
             // txtMaxValue
             // 
-            this.txtMaxValue.Location = new System.Drawing.Point(684, 31);
+            this.txtMaxValue.Location = new System.Drawing.Point(1026, 48);
+            this.txtMaxValue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMaxValue.MaxLength = 49;
             this.txtMaxValue.Name = "txtMaxValue";
-            this.txtMaxValue.Size = new System.Drawing.Size(201, 20);
+            this.txtMaxValue.Size = new System.Drawing.Size(300, 26);
             this.txtMaxValue.TabIndex = 8;
             this.txtMaxValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaxValue_KeyPress);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(540, 14);
+            this.label4.Location = new System.Drawing.Point(810, 22);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 13);
+            this.label4.Size = new System.Drawing.Size(83, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Min. Value";
             // 
             // txtMinValue
             // 
-            this.txtMinValue.Location = new System.Drawing.Point(482, 31);
+            this.txtMinValue.Location = new System.Drawing.Point(723, 48);
+            this.txtMinValue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMinValue.MaxLength = 49;
             this.txtMinValue.Name = "txtMinValue";
-            this.txtMinValue.Size = new System.Drawing.Size(201, 20);
+            this.txtMinValue.Size = new System.Drawing.Size(300, 26);
             this.txtMinValue.TabIndex = 6;
             this.txtMinValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMinValue_KeyPress);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(351, 14);
+            this.label3.Location = new System.Drawing.Point(526, 22);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 13);
+            this.label3.Size = new System.Drawing.Size(106, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Default Value";
             // 
             // txtDefaultValue
             // 
-            this.txtDefaultValue.Location = new System.Drawing.Point(279, 31);
+            this.txtDefaultValue.Location = new System.Drawing.Point(418, 48);
+            this.txtDefaultValue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDefaultValue.MaxLength = 140;
             this.txtDefaultValue.Name = "txtDefaultValue";
-            this.txtDefaultValue.Size = new System.Drawing.Size(201, 20);
+            this.txtDefaultValue.Size = new System.Drawing.Size(300, 26);
             this.txtDefaultValue.TabIndex = 4;
             this.txtDefaultValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDefaultValue_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(76, 14);
+            this.label2.Location = new System.Drawing.Point(114, 22);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 13);
+            this.label2.Size = new System.Drawing.Size(129, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Parameter Name";
             // 
@@ -206,17 +217,20 @@
             this.ColMinVal,
             this.colMaxValue,
             this.colStatus});
-            this.DGVProcedure.Location = new System.Drawing.Point(6, 170);
+            this.DGVProcedure.Location = new System.Drawing.Point(9, 262);
+            this.DGVProcedure.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DGVProcedure.MultiSelect = false;
             this.DGVProcedure.Name = "DGVProcedure";
             this.DGVProcedure.ReadOnly = true;
+            this.DGVProcedure.RowHeadersWidth = 62;
             this.DGVProcedure.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVProcedure.Size = new System.Drawing.Size(934, 329);
+            this.DGVProcedure.Size = new System.Drawing.Size(1401, 506);
             this.DGVProcedure.TabIndex = 1;
             // 
             // SNO
             // 
             this.SNO.HeaderText = "S. No.";
+            this.SNO.MinimumWidth = 8;
             this.SNO.Name = "SNO";
             this.SNO.ReadOnly = true;
             this.SNO.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -225,6 +239,7 @@
             // ParametersName
             // 
             this.ParametersName.HeaderText = "Parameters Name";
+            this.ParametersName.MinimumWidth = 8;
             this.ParametersName.Name = "ParametersName";
             this.ParametersName.ReadOnly = true;
             this.ParametersName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -233,6 +248,7 @@
             // colDefaultValue
             // 
             this.colDefaultValue.HeaderText = "Default Value";
+            this.colDefaultValue.MinimumWidth = 8;
             this.colDefaultValue.Name = "colDefaultValue";
             this.colDefaultValue.ReadOnly = true;
             this.colDefaultValue.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -241,6 +257,7 @@
             // ColMinVal
             // 
             this.ColMinVal.HeaderText = "Min Value";
+            this.ColMinVal.MinimumWidth = 8;
             this.ColMinVal.Name = "ColMinVal";
             this.ColMinVal.ReadOnly = true;
             this.ColMinVal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -249,6 +266,7 @@
             // colMaxValue
             // 
             this.colMaxValue.HeaderText = "Max Value";
+            this.colMaxValue.MinimumWidth = 8;
             this.colMaxValue.Name = "colMaxValue";
             this.colMaxValue.ReadOnly = true;
             this.colMaxValue.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -257,6 +275,7 @@
             // colStatus
             // 
             this.colStatus.HeaderText = "Status";
+            this.colStatus.MinimumWidth = 8;
             this.colStatus.Name = "colStatus";
             this.colStatus.ReadOnly = true;
             this.colStatus.Width = 50;
@@ -265,6 +284,7 @@
             // 
             this.toolStrip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblNew,
             this.toolStripSeparator7,
@@ -282,14 +302,15 @@
             this.toolStripSeparator3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(947, 25);
+            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.toolStrip1.Size = new System.Drawing.Size(1420, 38);
             this.toolStrip1.TabIndex = 17;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // lblNew
             // 
             this.lblNew.Name = "lblNew";
-            this.lblNew.Size = new System.Drawing.Size(34, 22);
+            this.lblNew.Size = new System.Drawing.Size(55, 32);
             this.lblNew.Text = "New";
             this.lblNew.ToolTipText = "To Create New Test Point";
             this.lblNew.Click += new System.EventHandler(this.lblNew_Click);
@@ -297,12 +318,12 @@
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 37);
             // 
             // lblAddUpdate
             // 
             this.lblAddUpdate.Name = "lblAddUpdate";
-            this.lblAddUpdate.Size = new System.Drawing.Size(80, 22);
+            this.lblAddUpdate.Size = new System.Drawing.Size(126, 32);
             this.lblAddUpdate.Text = "Add/Update";
             this.lblAddUpdate.ToolTipText = "To Add or Update Test Point";
             this.lblAddUpdate.Click += new System.EventHandler(this.lblAddUpdate_Click);
@@ -310,12 +331,12 @@
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 37);
             // 
             // lblEdit
             // 
             this.lblEdit.Name = "lblEdit";
-            this.lblEdit.Size = new System.Drawing.Size(71, 22);
+            this.lblEdit.Size = new System.Drawing.Size(111, 32);
             this.lblEdit.Text = "Get Details";
             this.lblEdit.ToolTipText = "To Get Test point Details for Edit ";
             this.lblEdit.Click += new System.EventHandler(this.lblEdit_Click);
@@ -323,12 +344,12 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 37);
             // 
             // lblInsert
             // 
             this.lblInsert.Name = "lblInsert";
-            this.lblInsert.Size = new System.Drawing.Size(40, 22);
+            this.lblInsert.Size = new System.Drawing.Size(64, 32);
             this.lblInsert.Text = "Insert";
             this.lblInsert.ToolTipText = "To Insert Test point above the Selected point";
             this.lblInsert.Click += new System.EventHandler(this.lblInsert_Click);
@@ -336,12 +357,12 @@
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 37);
             // 
             // lblDelete
             // 
             this.lblDelete.Name = "lblDelete";
-            this.lblDelete.Size = new System.Drawing.Size(45, 22);
+            this.lblDelete.Size = new System.Drawing.Size(72, 32);
             this.lblDelete.Text = "Delete";
             this.lblDelete.ToolTipText = "To Delete Selected Test point";
             this.lblDelete.Click += new System.EventHandler(this.lblDelete_Click);
@@ -349,12 +370,12 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 37);
             // 
             // lblSave
             // 
             this.lblSave.Name = "lblSave";
-            this.lblSave.Size = new System.Drawing.Size(35, 22);
+            this.lblSave.Size = new System.Drawing.Size(57, 32);
             this.lblSave.Text = "Save";
             this.lblSave.ToolTipText = "To Save Test Procedure";
             this.lblSave.Click += new System.EventHandler(this.lblSave_Click);
@@ -362,35 +383,37 @@
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 37);
             // 
             // lblClose
             // 
             this.lblClose.Name = "lblClose";
-            this.lblClose.Size = new System.Drawing.Size(40, 22);
+            this.lblClose.Size = new System.Drawing.Size(63, 32);
             this.lblClose.Text = "Close";
             this.lblClose.Click += new System.EventHandler(this.lblClose_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 37);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 10);
+            this.label1.Location = new System.Drawing.Point(80, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.Size = new System.Drawing.Size(88, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Meter Type";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(207, 11);
+            this.label6.Location = new System.Drawing.Point(310, 17);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 13);
+            this.label6.Size = new System.Drawing.Size(78, 20);
             this.label6.TabIndex = 19;
             this.label6.Text = "Test Type";
             // 
@@ -404,27 +427,31 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(6, 23);
+            this.groupBox2.Location = new System.Drawing.Point(9, 35);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(624, 57);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Size = new System.Drawing.Size(936, 88);
             this.groupBox2.TabIndex = 20;
             this.groupBox2.TabStop = false;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(371, 11);
+            this.label9.Location = new System.Drawing.Point(556, 17);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 13);
+            this.label9.Size = new System.Drawing.Size(128, 20);
             this.label9.TabIndex = 25;
             this.label9.Text = "Procedure Name";
             // 
             // txtProcedureName
             // 
-            this.txtProcedureName.Location = new System.Drawing.Point(304, 29);
+            this.txtProcedureName.Location = new System.Drawing.Point(456, 45);
+            this.txtProcedureName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtProcedureName.MaxLength = 40;
             this.txtProcedureName.Name = "txtProcedureName";
-            this.txtProcedureName.Size = new System.Drawing.Size(180, 20);
+            this.txtProcedureName.Size = new System.Drawing.Size(268, 26);
             this.txtProcedureName.TabIndex = 24;
             this.txtProcedureName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProcedureName_KeyPress);
             // 
@@ -433,9 +460,10 @@
             this.cmbProcedureType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProcedureType.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbProcedureType.FormattingEnabled = true;
-            this.cmbProcedureType.Location = new System.Drawing.Point(174, 28);
+            this.cmbProcedureType.Location = new System.Drawing.Point(261, 43);
+            this.cmbProcedureType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbProcedureType.Name = "cmbProcedureType";
-            this.cmbProcedureType.Size = new System.Drawing.Size(124, 21);
+            this.cmbProcedureType.Size = new System.Drawing.Size(184, 28);
             this.cmbProcedureType.TabIndex = 24;
             this.cmbProcedureType.SelectedIndexChanged += new System.EventHandler(this.cmbProcedureType_SelectedIndexChanged);
             this.cmbProcedureType.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbProsedureName_KeyPress);
@@ -445,9 +473,10 @@
             this.cmbProgramList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProgramList.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbProgramList.FormattingEnabled = true;
-            this.cmbProgramList.Location = new System.Drawing.Point(490, 27);
+            this.cmbProgramList.Location = new System.Drawing.Point(735, 42);
+            this.cmbProgramList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbProgramList.Name = "cmbProgramList";
-            this.cmbProgramList.Size = new System.Drawing.Size(124, 21);
+            this.cmbProgramList.Size = new System.Drawing.Size(184, 28);
             this.cmbProgramList.TabIndex = 23;
             this.cmbProgramList.SelectionChangeCommitted += new System.EventHandler(this.cmbProgramList_SelectionChangeCommitted);
             this.cmbProgramList.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbProgramList_KeyPress);
@@ -457,9 +486,10 @@
             this.cmbMeterType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMeterType.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbMeterType.FormattingEnabled = true;
-            this.cmbMeterType.Location = new System.Drawing.Point(6, 27);
+            this.cmbMeterType.Location = new System.Drawing.Point(9, 42);
+            this.cmbMeterType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbMeterType.Name = "cmbMeterType";
-            this.cmbMeterType.Size = new System.Drawing.Size(162, 21);
+            this.cmbMeterType.Size = new System.Drawing.Size(241, 28);
             this.cmbMeterType.TabIndex = 22;
             this.cmbMeterType.SelectionChangeCommitted += new System.EventHandler(this.cmbMeterType_SelectionChangeCommitted);
             this.cmbMeterType.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbMeterType_KeyPress);
@@ -467,9 +497,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(490, 11);
+            this.label7.Location = new System.Drawing.Point(735, 17);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(124, 13);
+            this.label7.Size = new System.Drawing.Size(188, 20);
             this.label7.TabIndex = 21;
             this.label7.Text = "Program File List (*. EXE)";
             // 
@@ -477,9 +508,10 @@
             // 
             this.lblProcedureName.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.lblProcedureName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProcedureName.Location = new System.Drawing.Point(800, 2);
+            this.lblProcedureName.Location = new System.Drawing.Point(1200, 3);
+            this.lblProcedureName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProcedureName.Name = "lblProcedureName";
-            this.lblProcedureName.Size = new System.Drawing.Size(129, 18);
+            this.lblProcedureName.Size = new System.Drawing.Size(194, 28);
             this.lblProcedureName.TabIndex = 22;
             this.lblProcedureName.Text = "Procedure Name";
             this.lblProcedureName.Visible = false;
@@ -494,9 +526,11 @@
             this.grpMeterIDRange.Controls.Add(this.txtMeterIDFrom);
             this.grpMeterIDRange.Controls.Add(this.txtMeterIDPrefix);
             this.grpMeterIDRange.Controls.Add(this.label8);
-            this.grpMeterIDRange.Location = new System.Drawing.Point(636, 23);
+            this.grpMeterIDRange.Location = new System.Drawing.Point(954, 35);
+            this.grpMeterIDRange.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpMeterIDRange.Name = "grpMeterIDRange";
-            this.grpMeterIDRange.Size = new System.Drawing.Size(308, 90);
+            this.grpMeterIDRange.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpMeterIDRange.Size = new System.Drawing.Size(462, 138);
             this.grpMeterIDRange.TabIndex = 23;
             this.grpMeterIDRange.TabStop = false;
             this.grpMeterIDRange.Text = "Meter ID Range";
@@ -516,9 +550,10 @@
             "14",
             "15",
             "16"});
-            this.cmbMidDegits.Location = new System.Drawing.Point(6, 32);
+            this.cmbMidDegits.Location = new System.Drawing.Point(9, 49);
+            this.cmbMidDegits.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbMidDegits.Name = "cmbMidDegits";
-            this.cmbMidDegits.Size = new System.Drawing.Size(45, 21);
+            this.cmbMidDegits.Size = new System.Drawing.Size(66, 28);
             this.cmbMidDegits.TabIndex = 37;
             this.cmbMidDegits.SelectedIndexChanged += new System.EventHandler(this.cmbMidDegits_SelectedIndexChanged);
             // 
@@ -526,9 +561,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.DarkRed;
-            this.label10.Location = new System.Drawing.Point(9, 18);
+            this.label10.Location = new System.Drawing.Point(14, 28);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(40, 13);
+            this.label10.Size = new System.Drawing.Size(59, 20);
             this.label10.TabIndex = 36;
             this.label10.Text = "Length";
             // 
@@ -536,9 +572,10 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.DarkRed;
-            this.label11.Location = new System.Drawing.Point(243, 18);
+            this.label11.Location = new System.Drawing.Point(364, 28);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(20, 13);
+            this.label11.Size = new System.Drawing.Size(27, 20);
             this.label11.TabIndex = 35;
             this.label11.Text = "To";
             // 
@@ -546,52 +583,57 @@
             // 
             this.lblFrom.AutoSize = true;
             this.lblFrom.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblFrom.Location = new System.Drawing.Point(146, 18);
+            this.lblFrom.Location = new System.Drawing.Point(219, 28);
+            this.lblFrom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFrom.Name = "lblFrom";
-            this.lblFrom.Size = new System.Drawing.Size(30, 13);
+            this.lblFrom.Size = new System.Drawing.Size(46, 20);
             this.lblFrom.TabIndex = 34;
             this.lblFrom.Text = "From";
             // 
             // txtMeterIDTO
             // 
             this.txtMeterIDTO.BackColor = System.Drawing.Color.White;
-            this.txtMeterIDTO.Location = new System.Drawing.Point(224, 32);
+            this.txtMeterIDTO.Location = new System.Drawing.Point(336, 49);
+            this.txtMeterIDTO.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMeterIDTO.MaxLength = 16;
             this.txtMeterIDTO.Name = "txtMeterIDTO";
-            this.txtMeterIDTO.Size = new System.Drawing.Size(80, 20);
+            this.txtMeterIDTO.Size = new System.Drawing.Size(118, 26);
             this.txtMeterIDTO.TabIndex = 33;
-            this.txtMeterIDTO.Leave += new System.EventHandler(this.txtMeterIDTO_Leave);
             this.txtMeterIDTO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMeterIDTO_KeyPress);
+            this.txtMeterIDTO.Leave += new System.EventHandler(this.txtMeterIDTO_Leave);
             // 
             // txtMeterIDFrom
             // 
             this.txtMeterIDFrom.BackColor = System.Drawing.Color.White;
-            this.txtMeterIDFrom.Location = new System.Drawing.Point(140, 33);
+            this.txtMeterIDFrom.Location = new System.Drawing.Point(210, 51);
+            this.txtMeterIDFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMeterIDFrom.MaxLength = 16;
             this.txtMeterIDFrom.Name = "txtMeterIDFrom";
-            this.txtMeterIDFrom.Size = new System.Drawing.Size(80, 20);
+            this.txtMeterIDFrom.Size = new System.Drawing.Size(118, 26);
             this.txtMeterIDFrom.TabIndex = 32;
-            this.txtMeterIDFrom.Leave += new System.EventHandler(this.txtMeterIDFrom_Leave);
             this.txtMeterIDFrom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMeterIDFrom_KeyPress);
+            this.txtMeterIDFrom.Leave += new System.EventHandler(this.txtMeterIDFrom_Leave);
             // 
             // txtMeterIDPrefix
             // 
             this.txtMeterIDPrefix.BackColor = System.Drawing.Color.White;
-            this.txtMeterIDPrefix.Location = new System.Drawing.Point(54, 34);
+            this.txtMeterIDPrefix.Location = new System.Drawing.Point(81, 52);
+            this.txtMeterIDPrefix.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMeterIDPrefix.MaxLength = 12;
             this.txtMeterIDPrefix.Name = "txtMeterIDPrefix";
-            this.txtMeterIDPrefix.Size = new System.Drawing.Size(82, 20);
+            this.txtMeterIDPrefix.Size = new System.Drawing.Size(121, 26);
             this.txtMeterIDPrefix.TabIndex = 31;
-            this.txtMeterIDPrefix.Leave += new System.EventHandler(this.txtMeterIDPrefix_Leave);
             this.txtMeterIDPrefix.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMeterIDPrefix_KeyPress);
+            this.txtMeterIDPrefix.Leave += new System.EventHandler(this.txtMeterIDPrefix_Leave);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.DarkRed;
-            this.label8.Location = new System.Drawing.Point(66, 18);
+            this.label8.Location = new System.Drawing.Point(99, 28);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(39, 13);
+            this.label8.Size = new System.Drawing.Size(58, 20);
             this.label8.TabIndex = 30;
             this.label8.Text = "Pre-Fix";
             // 
@@ -599,19 +641,23 @@
             // 
             this.grpOtherSettings.Controls.Add(this.chkExecutionWithoutTraveler);
             this.grpOtherSettings.Controls.Add(this.chkDisablemanualScan);
-            this.grpOtherSettings.Location = new System.Drawing.Point(6, 80);
+            this.grpOtherSettings.Location = new System.Drawing.Point(9, 124);
+            this.grpOtherSettings.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpOtherSettings.Name = "grpOtherSettings";
-            this.grpOtherSettings.Size = new System.Drawing.Size(624, 34);
+            this.grpOtherSettings.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpOtherSettings.Size = new System.Drawing.Size(936, 52);
             this.grpOtherSettings.TabIndex = 24;
             this.grpOtherSettings.TabStop = false;
             this.grpOtherSettings.Text = "others Setting";
+            this.grpOtherSettings.Enter += new System.EventHandler(this.grpOtherSettings_Enter);
             // 
             // chkExecutionWithoutTraveler
             // 
             this.chkExecutionWithoutTraveler.AutoSize = true;
-            this.chkExecutionWithoutTraveler.Location = new System.Drawing.Point(304, 11);
+            this.chkExecutionWithoutTraveler.Location = new System.Drawing.Point(456, 17);
+            this.chkExecutionWithoutTraveler.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkExecutionWithoutTraveler.Name = "chkExecutionWithoutTraveler";
-            this.chkExecutionWithoutTraveler.Size = new System.Drawing.Size(194, 17);
+            this.chkExecutionWithoutTraveler.Size = new System.Drawing.Size(282, 24);
             this.chkExecutionWithoutTraveler.TabIndex = 1;
             this.chkExecutionWithoutTraveler.Text = "Enable Execution Without Traveler ";
             this.chkExecutionWithoutTraveler.UseVisualStyleBackColor = true;
@@ -620,18 +666,19 @@
             // chkDisablemanualScan
             // 
             this.chkDisablemanualScan.AutoSize = true;
-            this.chkDisablemanualScan.Location = new System.Drawing.Point(94, 11);
+            this.chkDisablemanualScan.Location = new System.Drawing.Point(141, 17);
+            this.chkDisablemanualScan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkDisablemanualScan.Name = "chkDisablemanualScan";
-            this.chkDisablemanualScan.Size = new System.Drawing.Size(180, 17);
+            this.chkDisablemanualScan.Size = new System.Drawing.Size(263, 24);
             this.chkDisablemanualScan.TabIndex = 0;
             this.chkDisablemanualScan.Text = "Enable Execution Without Scan ";
             this.chkDisablemanualScan.UseVisualStyleBackColor = true;
             // 
             // frmProcedure
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(947, 511);
+            this.ClientSize = new System.Drawing.Size(1420, 786);
             this.ControlBox = false;
             this.Controls.Add(this.grpOtherSettings);
             this.Controls.Add(this.grpMeterIDRange);
@@ -640,6 +687,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.DGVProcedure);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmProcedure";
@@ -674,13 +722,13 @@
         private System.Windows.Forms.TextBox txtDefaultValue;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripLabel lblNew;
+        private System.Windows.Forms.ToolStripButton lblNew;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
-        private System.Windows.Forms.ToolStripLabel lblAddUpdate;
+        private System.Windows.Forms.ToolStripButton lblAddUpdate;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
-        private System.Windows.Forms.ToolStripLabel lblSave;
+        private System.Windows.Forms.ToolStripButton lblSave;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripLabel lblClose;
+        private System.Windows.Forms.ToolStripButton lblClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -690,15 +738,15 @@
         private System.Windows.Forms.ComboBox cmbProcedureType;
         private System.Windows.Forms.ComboBox cmbProgramList;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripLabel lblDelete;
+        private System.Windows.Forms.ToolStripButton lblDelete;
         private System.Windows.Forms.CheckBox chkStatus;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtProcedureName;
         private System.Windows.Forms.Label lblProcedureName;
-        private System.Windows.Forms.ToolStripLabel lblEdit;
+        private System.Windows.Forms.ToolStripButton lblEdit;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripLabel lblInsert;
+        private System.Windows.Forms.ToolStripButton lblInsert;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.DataGridViewTextBoxColumn SNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn ParametersName;

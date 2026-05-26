@@ -113,6 +113,16 @@ namespace CabconPMP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bakgroundmain1 {
+            get {
+                object obj = ResourceManager.GetObject("bakgroundmain1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cabconpmp {
             get {
                 object obj = ResourceManager.GetObject("Cabconpmp", resourceCulture);

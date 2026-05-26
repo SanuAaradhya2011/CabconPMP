@@ -32,17 +32,103 @@ namespace CabconPMP
         int procedureRindex = -1;
         decimal objdec;
         string procedureName;
-        public frmProcedure(string pName, EntityUserManagement objetyusermgtref)
-        {
-            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
-            Application.DoEvents();
-            Application.DoEvents();
-            procedureName = pName;
-            lblProcedureName.Text = pName;
+         public frmProcedure(string pName, EntityUserManagement objetyusermgtref)
+         {
+             InitializeComponent(); 
+             COMMONENTITY.FormStyleHelper.Apply(this);
 
-            if (objetyusermgtref.LoginTypeIndex == (int)StaticVariables.userCategory.Useradministrator || objetyusermgtref.LoginTypeIndex == (int)StaticVariables.userCategory.UserPoweradministrator) { lblDelete.Enabled = true; cmbProgramList.Enabled = true; }
-            else { lblDelete.Enabled = false; cmbProgramList.Enabled = false; }
-        }
+             // --- Premium 2026 UI Modernization Overrides ---
+             this.BackColor = Color.FromArgb(249, 250, 251); // Premium soft off-white background
+             this.Size = new Size(980, 580); // Spacious form layout
+
+             // 1. ToolStrip Modernization (Header Nav Style)
+             this.toolStrip1.BackColor = Color.White;
+             this.toolStrip1.AutoSize = false;
+             this.toolStrip1.Height = 45;
+             this.toolStrip1.Padding = new Padding(12, 6, 12, 6);
+             this.toolStrip1.GripStyle = ToolStripGripStyle.Hidden;
+             this.toolStrip1.RenderMode = ToolStripRenderMode.Professional;
+             this.toolStrip1.Paint += (s, ePaint) =>
+             {
+                 using (Pen borderPen = new Pen(Color.FromArgb(229, 231, 235), 1))
+                 {
+                     ePaint.Graphics.DrawLine(borderPen, 0, toolStrip1.Height - 1, toolStrip1.Width, toolStrip1.Height - 1);
+                 }
+             };
+
+             // Convert ToolStrip Buttons to modern flat pill controls
+             foreach (ToolStripItem item in toolStrip1.Items)
+             {
+                 if (item is ToolStripButton btn)
+                 {
+                     btn.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+                     btn.ForeColor = Color.FromArgb(37, 99, 235); // Premium royal blue Accent
+                     btn.Margin = new Padding(6, 2, 6, 2);
+                     btn.Padding = new Padding(10, 4, 10, 4);
+                     btn.DisplayStyle = ToolStripItemDisplayStyle.Text;
+                 }
+             }
+
+             // 2. DataGridView Custom Styling (Elegant Grid)
+             this.DGVProcedure.BackgroundColor = Color.White;
+             this.DGVProcedure.GridColor = Color.FromArgb(243, 244, 246);
+             this.DGVProcedure.BorderStyle = BorderStyle.None;
+             this.DGVProcedure.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+             this.DGVProcedure.RowTemplate.Height = 32;
+             this.DGVProcedure.ColumnHeadersHeight = 36;
+             this.DGVProcedure.EnableHeadersVisualStyles = false;
+             
+             // Columns space adjustment
+             this.DGVProcedure.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+             
+             this.DGVProcedure.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(243, 244, 246);
+             this.DGVProcedure.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(75, 85, 99);
+             this.DGVProcedure.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+             this.DGVProcedure.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(243, 244, 246);
+             
+             this.DGVProcedure.DefaultCellStyle.BackColor = Color.White;
+             this.DGVProcedure.DefaultCellStyle.ForeColor = Color.FromArgb(17, 24, 39);
+             this.DGVProcedure.DefaultCellStyle.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular);
+             this.DGVProcedure.DefaultCellStyle.SelectionBackColor = Color.FromArgb(239, 246, 255);
+             this.DGVProcedure.DefaultCellStyle.SelectionForeColor = Color.FromArgb(37, 99, 235);
+             this.DGVProcedure.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(253, 254, 255);
+
+             // 3. GroupBox Modernization (Card Style)
+             var groupBoxes = new GroupBox[] { groupBox1, groupBox2, grpMeterIDRange, grpOtherSettings };
+             foreach (var grp in groupBoxes)
+             {
+                 grp.FlatStyle = FlatStyle.Flat;
+                 grp.ForeColor = Color.FromArgb(30, 58, 138); // Premium navy header
+                 grp.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+                 grp.BackColor = Color.White;
+                 
+                 grp.Paint += (s, ePaint) =>
+                 {
+                     GroupBox gBox = (GroupBox)s;
+                     using (Pen borderPen = new Pen(Color.FromArgb(229, 231, 235), 1))
+                     {
+                         ePaint.Graphics.Clear(Color.White);
+                         ePaint.Graphics.DrawRectangle(borderPen, 0, 8, gBox.Width - 1, gBox.Height - 9);
+                         if (!string.IsNullOrEmpty(gBox.Text))
+                         {
+                             using (Brush textBrush = new SolidBrush(gBox.ForeColor))
+                             {
+                                 ePaint.Graphics.DrawString(gBox.Text, gBox.Font, textBrush, 12, 0);
+                             }
+                         }
+                     }
+                 };
+             }
+             // --- End Premium 2026 UI Overrides ---
+
+             Application.DoEvents();
+             Application.DoEvents();
+             procedureName = pName;
+             lblProcedureName.Text = pName;
+
+             if (objetyusermgtref.LoginTypeIndex == (int)StaticVariables.userCategory.Useradministrator || objetyusermgtref.LoginTypeIndex == (int)StaticVariables.userCategory.UserPoweradministrator) { lblDelete.Enabled = true; cmbProgramList.Enabled = true; }
+             else { lblDelete.Enabled = false; cmbProgramList.Enabled = false; }
+         }
         public void AddressForm_PingLed(object sender, UpdateEventArgs e)
         {
             args = new UpdateEventArgs(e.msg, e.isError);
@@ -707,6 +793,11 @@ namespace CabconPMP
         {
             if (chkExecutionWithoutTraveler.Checked)
                 if (MessageBox.Show("Do you want to Disable the Production Traveler stage Write Command ?", "Cabcon PMP", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No) chkExecutionWithoutTraveler.Checked = false;
+        }
+
+        private void grpOtherSettings_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -48,29 +48,32 @@ namespace CabconPMP
             // 
             // btnOK
             // 
+            this.btnOK.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btnOK.Location = new System.Drawing.Point(238, 549);
             this.btnOK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(116, 43);
             this.btnOK.TabIndex = 3;
             this.btnOK.Text = "OK";
-            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.MintCream;
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Location = new System.Drawing.Point(39, 386);
+            this.groupBox2.Location = new System.Drawing.Point(0, 377);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox2.Size = new System.Drawing.Size(597, 154);
+            this.groupBox2.Size = new System.Drawing.Size(658, 163);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             // 
             // label6
             // 
+            this.label6.ForeColor = System.Drawing.Color.Coral;
             this.label6.Location = new System.Drawing.Point(22, 54);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
@@ -81,7 +84,7 @@ namespace CabconPMP
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.Blue;
+            this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(22, 25);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
@@ -91,7 +94,7 @@ namespace CabconPMP
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::CabconPMP.Properties.Resources.aboutpmp;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.ImageLocation = "";
@@ -113,11 +116,11 @@ namespace CabconPMP
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.lblliciencedto);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(39, 180);
+            this.groupBox1.Location = new System.Drawing.Point(0, 180);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(597, 206);
+            this.groupBox1.Size = new System.Drawing.Size(658, 206);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
@@ -140,7 +143,7 @@ namespace CabconPMP
             this.lblProductVersion.Location = new System.Drawing.Point(168, 89);
             this.lblProductVersion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProductVersion.Name = "lblProductVersion";
-            this.lblProductVersion.Size = new System.Drawing.Size(129, 20);
+            this.lblProductVersion.Size = new System.Drawing.Size(153, 20);
             this.lblProductVersion.TabIndex = 8;
             this.lblProductVersion.Text = "Cabcon PMP 0.0.1.0";
             // 
@@ -151,7 +154,7 @@ namespace CabconPMP
             this.lblproductname.Location = new System.Drawing.Point(168, 46);
             this.lblproductname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblproductname.Name = "lblproductname";
-            this.lblproductname.Size = new System.Drawing.Size(160, 20);
+            this.lblproductname.Size = new System.Drawing.Size(162, 20);
             this.lblproductname.TabIndex = 7;
             this.lblproductname.Text = "Cabcon Technologies";
             // 
@@ -188,16 +191,19 @@ namespace CabconPMP
             this.label3.TabIndex = 4;
             this.label3.Text = "Product Name";
             // 
-            // AboutLGPMP
+            // AboutCabconPMP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::CabconPMP.Properties.Resources.bakgroundmain1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(658, 597);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnOK);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
