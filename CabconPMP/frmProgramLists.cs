@@ -18,6 +18,7 @@ namespace CabconPMP
         public frmProgramLists(string prgName, EntityUserManagement objetyusermgtref)
         {
             InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
+
             objentityprog.ProgramName = prgName;
             DataTable ProgramMasterClone = new DataTable();
             if (objetyusermgtref.LoginTypeIndex == (int)StaticVariables.userCategory.Useradministrator || objetyusermgtref.LoginTypeIndex == (int)StaticVariables.userCategory.UserPoweradministrator) { cmbMeterType.Enabled = true; lblDelete.Enabled = true; txtProgramName.Enabled = true; }
@@ -204,6 +205,9 @@ namespace CabconPMP
             }
         }
 
-              
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
