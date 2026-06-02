@@ -1,0 +1,126 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="App_1Phase" GeneratedClassName="SerialPortSettings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SerialPort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">COM1</Value>
+    </Setting>
+    <Setting Name="SignOnBaudRate" Type="System.String" Scope="User">
+      <Value Profile="(Default)">300</Value>
+    </Setting>
+    <Setting Name="CommandBaudRate" Type="System.String" Scope="User">
+      <Value Profile="(Default)">9600</Value>
+    </Setting>
+    <Setting Name="StopBits" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="DataBits" Type="System.String" Scope="User">
+      <Value Profile="(Default)">8</Value>
+    </Setting>
+    <Setting Name="Parity" Type="System.String" Scope="User">
+      <Value Profile="(Default)">None</Value>
+    </Setting>
+    <Setting Name="CommandTimeOut" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3500</Value>
+    </Setting>
+    <Setting Name="IntercharacterDelay" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2500</Value>
+    </Setting>
+    <Setting Name="InterframeTimeout" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1500</Value>
+    </Setting>
+    <Setting Name="ServerSAP" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="ServerLowerMacAddress" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">256</Value>
+    </Setting>
+    <Setting Name="ClientSAP" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">16</Value>
+    </Setting>
+    <Setting Name="ApplicationContext" Type="System.Byte" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="SecurityMechanism" Type="System.Byte" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">12345678</Value>
+    </Setting>
+    <Setting Name="PDUSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">9999</Value>
+    </Setting>
+    <Setting Name="Cnf1" Type="System.Byte" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="Cnf2" Type="System.Byte" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="Cnf3" Type="System.Byte" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="ReadOut" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files\Landis+Gyr\DLMS MMP\Configuration\Instantaneous_c.xml</Value>
+    </Setting>
+    <Setting Name="Billing" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files\Landis+Gyr\DLMS MMP\Configuration\Billing.xml</Value>
+    </Setting>
+    <Setting Name="BillingVZ" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files\Landis+Gyr\DLMS MMP\Configuration\BillingVZ.xml</Value>
+    </Setting>
+    <Setting Name="TamperXML" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files\Landis+Gyr\DLMS MMP\Configuration\Tamper.xml</Value>
+    </Setting>
+    <Setting Name="CommunicationPort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">RJ Port</Value>
+    </Setting>
+    <Setting Name="CommunicationMode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Mode-E</Value>
+    </Setting>
+    <Setting Name="ModemNumber" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ScaleXMLPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files\Landis+Gyr\DLMS MMP\Configuration</Value>
+    </Setting>
+    <Setting Name="HLSKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">93BC0FABF6C85E9E1C53D78885373DC7</Value>
+    </Setting>
+    <Setting Name="ConformanceBlock" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0100121A</Value>
+    </Setting>
+    <Setting Name="HLSPWD" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5555555555555555</Value>
+    </Setting>
+    <Setting Name="HDLCAddressing" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="AddressingSchem" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="Authentication" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="DLMSVersion" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">6</Value>
+    </Setting>
+    <Setting Name="InformationSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">128</Value>
+    </Setting>
+    <Setting Name="WindowSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="ServerPhysicalID" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="CosemBufferSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">9999</Value>
+    </Setting>
+    <Setting Name="DLLBufferSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">9999</Value>
+    </Setting>
+    <Setting Name="BaudRateSelectedIndex" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -335,7 +335,7 @@
             // 
             // pbExecutionStatus
             // 
-            this.pbExecutionStatus.Image = global::MICROSTARDLMS.Properties.Resources.ExecutionWait;
+            this.pbExecutionStatus.Image = global::CabconDLMS.Properties.Resources.ExecutionWait;
             this.pbExecutionStatus.Location = new System.Drawing.Point(491, 329);
             this.pbExecutionStatus.Name = "pbExecutionStatus";
             this.pbExecutionStatus.Size = new System.Drawing.Size(113, 115);

@@ -1,0 +1,37 @@
+<RequestMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://iec.ch/TC57/2011/schema/message">
+<Header>
+<Verb>get</Verb>
+<Noun>GetEndDeviceSecurityConfig</Noun>
+<Revision>2.0</Revision>
+<Timestamp>2017-05-18T15:57:55+05:30</Timestamp>
+<Source>HHU</Source>
+<MessageID>7427076d-4dde-47ad-a8f9-83880bcca114</MessageID>
+<!--GUID-->
+<CorrelationID>D9F521CB-406F-4F29-AEC3-2F17C8755B2D</CorrelationID>
+<!--??-->
+</Header>
+  <Request>
+<GetEndDeviceSecurityConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://iec.ch/TC57/2011/GetEndDeviceSecurityConfig#">
+  <EndDeviceSecurity>
+    <Names>
+      <name>meterid</name> <!--Meter x Serial ID-->
+      <NameType>
+          <description>description</description>  <!--Meter x description if any-->
+          <name>Nametype</name> <!--Meter x Name type if any-->
+      </NameType>
+    </Names>
+    <Names>
+      <name>meterid</name> <!--Meter y Serial ID-->
+      <NameType>
+          <description>description</description>  <!--Meter y description if any-->
+          <name>Nametype</name> <!--Meter y Name type if any-->
+      </NameType>
+    </Names>
+    <KeyEncryptionKey>
+       <modulus>base64string modulus</modulus>
+       <exponent>base64string exponent</exponent>
+     </KeyEncryptionKey>
+  </EndDeviceSecurity>
+</GetEndDeviceSecurityConfig>
+</Request>
+</RequestMessage>

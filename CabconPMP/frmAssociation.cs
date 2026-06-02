@@ -162,7 +162,7 @@ namespace CabconPMP
         {
             try
             {
-                 
+
                 if (!IsValidFields()) return;
                 List<string> DataValueList = new List<string>();
                 DataValueList.Add(cmbPort.Text.Trim());
@@ -182,12 +182,13 @@ namespace CabconPMP
                 if (cmbBaudRate.SelectedIndex < 0) DataValueList.Add("0");
                 else DataValueList.Add(cmbBaudRate.SelectedIndex.ToString());
 
-                if (cmbClientType.SelectedIndex == 0) DataValueList.Add(Convert.ToInt32("10",16).ToString());//PC
+                if (cmbClientType.SelectedIndex == 0) DataValueList.Add(Convert.ToInt32("10", 16).ToString());//PC
                 else if (cmbClientType.SelectedIndex == 1) DataValueList.Add(Convert.ToInt32("20", 16).ToString());//MR
                 else if (cmbClientType.SelectedIndex == 2) DataValueList.Add(Convert.ToInt32("30", 16).ToString());//US
-                else if (cmbClientType.SelectedIndex == 3 && cmbAuthenticationLevel.SelectedIndex <= 1) DataValueList.Add(Convert.ToInt32("40", 16).ToString());//FS
-                else if (cmbClientType.SelectedIndex == 3 && cmbAuthenticationLevel.SelectedIndex == 2) DataValueList.Add(Convert.ToInt32("7E", 16).ToString());//FS
-                else if (cmbClientType.SelectedIndex == 4) DataValueList.Add(Convert.ToInt32("50", 16).ToString());//FU
+                else if (cmbClientType.SelectedIndex == 3) DataValueList.Add(Convert.ToInt32("50", 16).ToString());//FU
+                else if (cmbClientType.SelectedIndex == 4 && cmbAuthenticationLevel.SelectedIndex <= 1) DataValueList.Add(Convert.ToInt32("40", 16).ToString());//FS
+                else if (cmbClientType.SelectedIndex == 4 && cmbAuthenticationLevel.SelectedIndex == 2) DataValueList.Add(Convert.ToInt32("7E", 16).ToString());//FS
+
                 DataValueList.Add(txtServerUAddress.Text.Trim());
                 DataValueList.Add(txtServerLAddress.Text.Trim());
                 DataValueList.Add(txtDLMSVersion.Text.Trim());
@@ -202,26 +203,87 @@ namespace CabconPMP
                 DataValueList.Add(txtMaxPDUSize.Text.Trim());
                 string confblk = GetConformanceBlockConfig();
                 DataValueList.Add(confblk.ToUpper());
-                DataValueList.Add( Application.StartupPath + @"\Configuration"); //Set as App Default Path
+                DataValueList.Add(Application.StartupPath + @"\Configuration"); //Set as App Default Path
                 DataValueList.Add(cmbSignonBaudRate.Text);//------Signon Baudrate Applicable for IEC Communication
-               // DataValueList.Add(cmbCyphering.Text);// Cypher/Non Cypher -- for smart meter
+                                                          // DataValueList.Add(cmbCyphering.Text);// Cypher/Non Cypher -- for smart meter
                 DataValueList.Add(txtClientSystem.Text);// Client system title byte -- for smart meter
                 if (cmbSecuritysuit.SelectedIndex == 0) DataValueList.Add(Convert.ToInt32("10", 16).ToString());//Authentication
                 else if (cmbSecuritysuit.SelectedIndex == 1) DataValueList.Add(Convert.ToInt32("20", 16).ToString());//Encryption
                 else if (cmbSecuritysuit.SelectedIndex == 2) DataValueList.Add(Convert.ToInt32("30", 16).ToString());//Authentication + Encryption
                 DataValueList.Add(txtEncryKey.Text);// Global Encryption Key
-            
-               if (cmbDedicatedKey.SelectedIndex == 0) DataValueList.Add(Convert.ToInt16("01", 16).ToString());//Dedicated key true
+
+                if (cmbDedicatedKey.SelectedIndex == 0) DataValueList.Add(Convert.ToInt16("01", 16).ToString());//Dedicated key true
                 else if (cmbDedicatedKey.SelectedIndex == 1) DataValueList.Add(Convert.ToInt16("00", 16).ToString());//Dedicated key false
                 DataValueList.Add(txtAuthentication.Text);     // Auth. Key
-               if (!objApps.SaveSettings(DataValueList))
+                if (!objApps.SaveSettings(DataValueList))
                 {
-                    MessageBox.Show("Unable To saved Settings !", "DLMS-PT", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("Unable To saved Settings !", "PowerTool", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     return;
                 }
-               
-                MessageBox.Show("Settings saved sucessfully !", "DLMS-PT", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //  objApps.SetAssociationAccess(cmbClientType.Items.);
+                objApps.SetAssociationAccess(cmbClientType.SelectedItem.ToString());
+                MessageBox.Show("Settings saved sucessfully !", "PowerTool", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
+
+                /*  if (!IsValidFields()) return;
+                  List<string> DataValueList = new List<string>();
+                  DataValueList.Add(cmbPort.Text.Trim());
+                  DataValueList.Add(cmbParity.Text.Trim());
+                  DataValueList.Add(cmbDatabits.Text.Trim());
+                  DataValueList.Add(cmbStopBits.Text.Trim());
+                  DataValueList.Add(cmbBaudRate.Text.Trim());
+                  DataValueList.Add(txtInterFrameTimeout.Text);
+                  DataValueList.Add(txtResponsTimeout.Text);
+
+                  DataValueList.Add(txtInformationSize.Text.Trim());
+                  DataValueList.Add(cmbWindowSize.Text.Trim());
+                  DataValueList.Add(cmbHDLCAddressing.SelectedIndex.ToString());
+                  DataValueList.Add(txtPhysicalID.Text.Trim());
+                  DataValueList.Add(txtCosemBufferSize.Text.Trim());
+                  DataValueList.Add(txtDLLBufferSize.Text.Trim());
+                  if (cmbBaudRate.SelectedIndex < 0) DataValueList.Add("0");
+                  else DataValueList.Add(cmbBaudRate.SelectedIndex.ToString());
+
+                  if (cmbClientType.SelectedIndex == 0) DataValueList.Add(Convert.ToInt32("10",16).ToString());//PC
+                  else if (cmbClientType.SelectedIndex == 1) DataValueList.Add(Convert.ToInt32("20", 16).ToString());//MR
+                  else if (cmbClientType.SelectedIndex == 2) DataValueList.Add(Convert.ToInt32("30", 16).ToString());//US
+                  else if (cmbClientType.SelectedIndex == 3 && cmbAuthenticationLevel.SelectedIndex <= 1) DataValueList.Add(Convert.ToInt32("40", 16).ToString());//FS
+                  else if (cmbClientType.SelectedIndex == 3 && cmbAuthenticationLevel.SelectedIndex == 2) DataValueList.Add(Convert.ToInt32("7E", 16).ToString());//FS
+                  else if (cmbClientType.SelectedIndex == 4) DataValueList.Add(Convert.ToInt32("50", 16).ToString());//FU
+                  DataValueList.Add(txtServerUAddress.Text.Trim());
+                  DataValueList.Add(txtServerLAddress.Text.Trim());
+                  DataValueList.Add(txtDLMSVersion.Text.Trim());
+                  if (cmbApplicationContext.SelectedIndex == 0) DataValueList.Add("02"); //Short Name
+                  else if (cmbApplicationContext.SelectedIndex == 2) DataValueList.Add("03"); //Logical Name with ciphering
+                  else DataValueList.Add("01"); //Logical Name without ciphering               
+                  if (cmbAuthenticationLevel.SelectedIndex == 0) DataValueList.Add("00");//No Security
+                  else if (cmbAuthenticationLevel.SelectedIndex == 1) DataValueList.Add("01");  //Low Level               
+                  else DataValueList.Add("02"); //High Level
+                  if (cmbAuthenticationLevel.SelectedIndex <= 1) { DataValueList.Add(txtPassword.Text.Trim()); DataValueList.Add(""); }
+                  else { DataValueList.Add(""); DataValueList.Add(txtPassword.Text.Trim()); }
+                  DataValueList.Add(txtMaxPDUSize.Text.Trim());
+                  string confblk = GetConformanceBlockConfig();
+                  DataValueList.Add(confblk.ToUpper());
+                  DataValueList.Add( Application.StartupPath + @"\Configuration"); //Set as App Default Path
+                  DataValueList.Add(cmbSignonBaudRate.Text);//------Signon Baudrate Applicable for IEC Communication
+                 // DataValueList.Add(cmbCyphering.Text);// Cypher/Non Cypher -- for smart meter
+                  DataValueList.Add(txtClientSystem.Text);// Client system title byte -- for smart meter
+                  if (cmbSecuritysuit.SelectedIndex == 0) DataValueList.Add(Convert.ToInt32("10", 16).ToString());//Authentication
+                  else if (cmbSecuritysuit.SelectedIndex == 1) DataValueList.Add(Convert.ToInt32("20", 16).ToString());//Encryption
+                  else if (cmbSecuritysuit.SelectedIndex == 2) DataValueList.Add(Convert.ToInt32("30", 16).ToString());//Authentication + Encryption
+                  DataValueList.Add(txtEncryKey.Text);// Global Encryption Key
+
+                 if (cmbDedicatedKey.SelectedIndex == 0) DataValueList.Add(Convert.ToInt16("01", 16).ToString());//Dedicated key true
+                  else if (cmbDedicatedKey.SelectedIndex == 1) DataValueList.Add(Convert.ToInt16("00", 16).ToString());//Dedicated key false
+                  DataValueList.Add(txtAuthentication.Text);     // Auth. Key
+                 if (!objApps.SaveSettings(DataValueList))
+                  {
+                      MessageBox.Show("Unable To saved Settings !", "DLMS-PT", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                      return;
+                  }
+
+                  MessageBox.Show("Settings saved sucessfully !", "DLMS-PT", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                  this.Close();*/
             }
             catch (Exception Ex)
             {

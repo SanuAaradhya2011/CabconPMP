@@ -119,8 +119,8 @@ namespace PMPE150MICROSTARDLMS
                 objexeresult.ExecutionTestID = TestProcedureName;
                 //--------------------------------Execution ----------------------------------------------------------
                 bool finalExecutionStatus = ExecuteProcedure();
-                if (finalExecutionStatus) pbExecutionStatus.Image = MICROSTARDLMS.Properties.Resources.ExecutionPass;
-                else pbExecutionStatus.Image = MICROSTARDLMS.Properties.Resources.ExecutionFail;
+                if (finalExecutionStatus) pbExecutionStatus.Image = CabconDLMS.Properties.Resources.ExecutionPass;
+                else pbExecutionStatus.Image = CabconDLMS.Properties.Resources.ExecutionFail;
 
                 txtLastScanID.Text = txtPCBAID.Text.Trim();
                 if (objexeresult.FinalResult == "PASS" && finalExecutionStatus)  { txtPCBAID.Text = ""; }
@@ -149,7 +149,7 @@ namespace PMPE150MICROSTARDLMS
                 int testExecutionStatus = -1;
                 isProcedureExecuted = true;
                 this.Cursor = Cursors.WaitCursor;
-                pbExecutionStatus.Image = MICROSTARDLMS.Properties.Resources.ExecutionWait;
+                pbExecutionStatus.Image = CabconDLMS.Properties.Resources.ExecutionWait;
                 Application.DoEvents();
                 int string_length = 0;
                 string MeterID = string.Empty;

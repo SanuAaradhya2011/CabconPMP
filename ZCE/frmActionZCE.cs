@@ -259,7 +259,7 @@ namespace ZCE
                 objLI.DisplayStatusMsg("", false);
                 txtMeterPCBAID.Text = "";
 
-                if (!objIECLI.ConnectToMeter())
+                if (!objLI.ConnectToMeter())
                 {
                     MessageBox.Show("Unable To Communicate, Meter Should Compatible to Selected Test Procedure !" + "\n" + "Please Verify Communication Settings .", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;

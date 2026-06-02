@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -94,10 +94,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ApplicationInterface, Version=0.0.1.8, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\CabconPMP\Dependencies\ApplicationInterface.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -113,14 +109,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="SystemLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\CabconPMP\Dependencies\SystemLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="Utilities, Version=0.0.1.6, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\CabconPMP\Dependencies\Utilities.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="frmActionZCE.cs">
@@ -156,6 +144,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ApplicationInterface\ApplicationInterface.csproj">
+      <Project>{39a51a7d-3b0d-432b-8f3c-3336aad9de2a}</Project>
+      <Name>ApplicationInterface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BALLAYER\CabconPMPBALLAYER.csproj">
       <Project>{97593B6F-FA3C-4428-AB48-CAAF7AE16551}</Project>
       <Name>CabconPMPBALLAYER</Name>
@@ -163,6 +155,14 @@
     <ProjectReference Include="..\COMMONENTITY\CabconPMPCOMMONENTITY.csproj">
       <Project>{D35FEE1D-2386-4F6F-B136-EDE9420FA6E3}</Project>
       <Name>CabconPMPCOMMONENTITY</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SystemSecurityLibrary\SystemSecurityLibrary.csproj">
+      <Project>{B66A59F1-70B1-4546-9064-198C5672BEEE}</Project>
+      <Name>SystemSecurityLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{1C998CF6-4BD7-449E-AD67-7057FDA6C71D}</Project>
+      <Name>Utilities</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

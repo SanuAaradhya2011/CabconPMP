@@ -97,21 +97,15 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ApplicationInterface, Version=1.0.0.4, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Dependencies\ApplicationInterface.dll</HintPath>
-    </Reference>
-    <Reference Include="DLMSLIB, Version=1.0.0.1, Culture=neutral, processorArchitecture=x86" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
-      <HintPath>..\packages\Microsoft.Office.Interop.Excel.16.0.18925.20022\lib\net40\Microsoft.Office.Interop.Excel.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4420.1017\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1004\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="SerialCommunication, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86" />
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -147,11 +141,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="SystemLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86" />
-    <Reference Include="Utilities, Version=1.0.0.3, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Dependencies\Utilities.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AboutCabconPMP.cs">
@@ -397,6 +386,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ApplicationInterface\ApplicationInterface.csproj">
+      <Project>{39a51a7d-3b0d-432b-8f3c-3336aad9de2a}</Project>
+      <Name>ApplicationInterface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BALLAYER\CabconPMPBALLAYER.csproj">
       <Project>{97593B6F-FA3C-4428-AB48-CAAF7AE16551}</Project>
       <Name>CabconPMPBALLAYER</Name>
@@ -421,48 +414,29 @@
       <Project>{4F6A9151-6FCB-43E0-B6C1-CA5FB4A27DF9}</Project>
       <Name>CabconPMPSYNCSERVICE</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PMP3PHDLMS\PMP3PHDLMS.csproj">
-      <Project>{51712A82-3150-4945-8C74-D5B539E85A72}</Project>
-      <Name>PMP3PHDLMS</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PMPE150MICROSTARDLMS\PMPE150DLMS.csproj">
+    <ProjectReference Include="..\PMPE150MICROSTARDLMS\CabconDLMS.csproj">
       <Project>{FF96E265-D6ED-4761-BDC8-C252CB0A93CF}</Project>
-      <Name>PMPE150DLMS</Name>
+      <Name>CabconDLMS</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PMPSAPPHIRE\PMPSAPPHIRE.csproj">
-      <Project>{1433B250-9413-4231-A548-B594393E80A8}</Project>
-      <Name>PMPSAPPHIRE</Name>
+    <ProjectReference Include="..\DLMSLIB\DLMSLIB.csproj">
+      <Project>{8C3587A9-7A26-43B8-9D12-3F5934740528}</Project>
+      <Name>DLMSLIB</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PMPSM110\PMPSM110.csproj">
-      <Project>{C22D7D5C-04CD-4496-90E7-AE4E1B4D5E05}</Project>
-      <Name>PMPSM110</Name>
+    <ProjectReference Include="..\SerialCommunication\SerialCommunication.csproj">
+      <Project>{D8A3C316-50FF-4960-A9A4-3B5AF82DC024}</Project>
+      <Name>SerialCommunication</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PMPSM310\PMPSM310.csproj">
-      <Project>{3087F6CD-6469-4C08-AFCC-2231EEDAA7A9}</Project>
-      <Name>PMPSM310</Name>
+    <ProjectReference Include="..\SystemSecurityLibrary\SystemSecurityLibrary.csproj">
+      <Project>{B66A59F1-70B1-4546-9064-198C5672BEEE}</Project>
+      <Name>SystemSecurityLibrary</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ZCE\PMPZCE.csproj">
-      <Project>{9097544D-13FF-4E47-9C85-82FB2F53ABCF}</Project>
-      <Name>PMPZCE</Name>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{1C998CF6-4BD7-449E-AD67-7057FDA6C71D}</Project>
+      <Name>Utilities</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Dependencies\ApplicationInterface.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Dependencies\ApplicationLibrary.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Dependencies\DLMSLIB.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Dependencies\SerialCommunication.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Dependencies\SystemLibrary.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Dependencies\Utilities.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Images\alliance.png" />

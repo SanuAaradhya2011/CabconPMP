@@ -23,6 +23,7 @@ namespace E150MICROSTAR
     public partial class frmActionMicroStar : Form
     {         
         int test_index = 0;
+        LayerInterface objLI = new LayerInterface();
         IECLayerInterface objIECLI = new IECLayerInterface();
         BALExecutionResults objexere = new BALExecutionResults();
         EntityExecutionResult objexeresult = new EntityExecutionResult();
@@ -258,7 +259,7 @@ namespace E150MICROSTAR
                 objIECLI.DisplayStatusMsg("", false);
                 txtMeterPCBAID.Text = "";
 
-                if (!objIECLI.ConnectToMeter())
+                if (!objLI.ConnectToMeter())
                 {
                     MessageBox.Show("Unable To Communicate, Meter Should Compatible to Selected Test Procedure !" + "\n" + "Please Verify Communication Settings .", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
@@ -520,7 +521,7 @@ namespace E150MICROSTAR
                             Thread.Sleep(100);
                             MessageBox.Show("Power-on Meter on Main Supply Mode And Hit OK To Continue.", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             Thread.Sleep(1500);
-                            if (!objIECLI.ConnectToMeter()) { testExecutionStatus = (int)StaticVariables.ExecutionReurnStatus.Fail; DGVParaLists.Rows[selectedControlIDX].Cells["colRemarks"].Value = StaticVariables.ERRORPreFix + "COMM Failed."; break; }
+                            if (!objLI.ConnectToMeter()) { testExecutionStatus = (int)StaticVariables.ExecutionReurnStatus.Fail; DGVParaLists.Rows[selectedControlIDX].Cells["colRemarks"].Value = StaticVariables.ERRORPreFix + "COMM Failed."; break; }
                             Application.DoEvents();
                             break;
                         case "COMMUNICATIONTESTONBATTERYWOMAINS":
@@ -815,7 +816,7 @@ namespace E150MICROSTAR
                     if (CurrentCOM == portName) continue;
                     objIECLI.AssociationDisconnect();
                     objappSettings.SetPortName(portName);
-                    if (!objIECLI.ConnectToMeter()) { return StaticVariables.ERRORPreFix + "COMM Failed."; }
+                    if (!objLI.ConnectToMeter()) { return StaticVariables.ERRORPreFix + "COMM Failed."; }
                     Application.DoEvents();
 
                 }
@@ -830,7 +831,7 @@ namespace E150MICROSTAR
                 objIECLI.AssociationDisconnect();
                 System.Threading.Thread.Sleep(200);
                 objappSettings.SetPortName(CurrentCOM);
-                objIECLI.ConnectToMeter();
+                objLI.ConnectToMeter();
             }
         }
 
