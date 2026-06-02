@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.panelUserInfo = new System.Windows.Forms.Panel();
             this.txtPDUSize = new System.Windows.Forms.TextBox();
             this.txtConformanceBlock = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -126,7 +126,7 @@
             this.Resered2 = new System.Windows.Forms.CheckBox();
             this.chkAttributeWithSet = new System.Windows.Forms.CheckBox();
             this.Resered1 = new System.Windows.Forms.CheckBox();
-            this.groupBox6.SuspendLayout();
+            this.panelUserInfo.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabSerialPort.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -138,21 +138,20 @@
             this.grpConformanceBlock.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox6
+            // panelUserInfo
             // 
-            this.groupBox6.Controls.Add(this.txtPDUSize);
-            this.groupBox6.Controls.Add(this.txtConformanceBlock);
-            this.groupBox6.Controls.Add(this.label8);
-            this.groupBox6.Controls.Add(this.label9);
-            this.groupBox6.Location = new System.Drawing.Point(388, 822);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox6.Size = new System.Drawing.Size(501, 168);
-            this.groupBox6.TabIndex = 1;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "User Information Field";
-            this.groupBox6.Visible = false;
+            this.panelUserInfo.Controls.Add(this.txtPDUSize);
+            this.panelUserInfo.Controls.Add(this.txtConformanceBlock);
+            this.panelUserInfo.Controls.Add(this.label8);
+            this.panelUserInfo.Controls.Add(this.label9);
+            this.panelUserInfo.Location = new System.Drawing.Point(388, 822);
+            this.panelUserInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelUserInfo.Name = "panelUserInfo";
+            this.panelUserInfo.Size = new System.Drawing.Size(501, 168);
+            this.panelUserInfo.TabIndex = 1;
+            this.panelUserInfo.BackColor = System.Drawing.Color.White;
+            this.panelUserInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelUserInfo.Visible = false;
             // 
             // txtPDUSize
             // 
@@ -203,7 +202,10 @@
             this.button1.Size = new System.Drawing.Size(117, 54);
             this.button1.TabIndex = 6;
             this.button1.Text = "Set Conformance";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(0, 120, 215);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.button1.Visible = false;
             // 
             // button3
@@ -214,7 +216,10 @@
             this.button3.Size = new System.Drawing.Size(112, 43);
             this.button3.TabIndex = 3;
             this.button3.Text = "&Cancel";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(232, 17, 35);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnOK
@@ -225,7 +230,10 @@
             this.btnOK.Size = new System.Drawing.Size(112, 43);
             this.btnOK.TabIndex = 2;
             this.btnOK.Text = "&OK";
-            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOK.BackColor = System.Drawing.Color.FromArgb(0, 120, 215);
+            this.btnOK.ForeColor = System.Drawing.Color.White;
+            this.btnOK.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // tabControl1
@@ -247,7 +255,7 @@
             // 
             // tabSerialPort
             // 
-            this.tabSerialPort.BackColor = System.Drawing.SystemColors.Control;
+            this.tabSerialPort.BackColor = System.Drawing.Color.White;
             this.tabSerialPort.Controls.Add(this.label2);
             this.tabSerialPort.Controls.Add(this.cmbSettingCategory);
             this.tabSerialPort.Controls.Add(this.groupBox10);
@@ -263,7 +271,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Maroon;
             this.label2.Location = new System.Drawing.Point(135, 63);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -275,7 +283,7 @@
             // cmbSettingCategory
             // 
             this.cmbSettingCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSettingCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSettingCategory.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSettingCategory.FormattingEnabled = true;
             this.cmbSettingCategory.Items.AddRange(new object[] {
             "IEC Default",
@@ -289,7 +297,7 @@
             // 
             // groupBox10
             // 
-            this.groupBox10.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox10.BackColor = System.Drawing.Color.White;
             this.groupBox10.Controls.Add(this.cmbSignonBaudRate);
             this.groupBox10.Controls.Add(this.label1);
             this.groupBox10.Controls.Add(this.txtInterFrameTimeout);
@@ -319,6 +327,7 @@
             // cmbSignonBaudRate
             // 
             this.cmbSignonBaudRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSignonBaudRate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbSignonBaudRate.FormattingEnabled = true;
             this.cmbSignonBaudRate.Items.AddRange(new object[] {
             "300",
@@ -332,6 +341,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label1.Location = new System.Drawing.Point(21, 112);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -341,6 +351,7 @@
             // 
             // txtInterFrameTimeout
             // 
+            this.txtInterFrameTimeout.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtInterFrameTimeout.Location = new System.Drawing.Point(297, 322);
             this.txtInterFrameTimeout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtInterFrameTimeout.MaxLength = 5;
@@ -351,6 +362,7 @@
             // cmbParity
             // 
             this.cmbParity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbParity.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbParity.FormattingEnabled = true;
             this.cmbParity.Items.AddRange(new object[] {
             "None",
@@ -365,6 +377,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label23.Location = new System.Drawing.Point(21, 195);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
@@ -374,6 +387,7 @@
             // 
             // txtResponsTimeout
             // 
+            this.txtResponsTimeout.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtResponsTimeout.Location = new System.Drawing.Point(297, 282);
             this.txtResponsTimeout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtResponsTimeout.MaxLength = 5;
@@ -384,6 +398,7 @@
             // label30
             // 
             this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label30.Location = new System.Drawing.Point(21, 322);
             this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
@@ -394,6 +409,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label24.Location = new System.Drawing.Point(21, 154);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
@@ -404,6 +420,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label26.Location = new System.Drawing.Point(21, 282);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
@@ -414,6 +431,7 @@
             // cmbDatabits
             // 
             this.cmbDatabits.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDatabits.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbDatabits.FormattingEnabled = true;
             this.cmbDatabits.Items.AddRange(new object[] {
             "7",
@@ -427,6 +445,7 @@
             // cmbStopBits
             // 
             this.cmbStopBits.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbStopBits.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbStopBits.FormattingEnabled = true;
             this.cmbStopBits.Items.AddRange(new object[] {
             "1",
@@ -440,6 +459,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label29.Location = new System.Drawing.Point(21, 240);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
@@ -450,6 +470,7 @@
             // cmbBaudRate
             // 
             this.cmbBaudRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBaudRate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbBaudRate.FormattingEnabled = true;
             this.cmbBaudRate.Items.AddRange(new object[] {
             "300",
@@ -474,6 +495,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label25.Location = new System.Drawing.Point(21, 71);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
@@ -484,6 +506,7 @@
             // cmbPort
             // 
             this.cmbPort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPort.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbPort.FormattingEnabled = true;
             this.cmbPort.Location = new System.Drawing.Point(297, 29);
             this.cmbPort.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -495,6 +518,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label22.Location = new System.Drawing.Point(21, 29);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
@@ -504,7 +528,7 @@
             // 
             // tabHDLC
             // 
-            this.tabHDLC.BackColor = System.Drawing.SystemColors.Control;
+            this.tabHDLC.BackColor = System.Drawing.Color.White;
             this.tabHDLC.Controls.Add(this.groupBox11);
             this.tabHDLC.Location = new System.Drawing.Point(4, 32);
             this.tabHDLC.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -517,7 +541,7 @@
             // 
             // groupBox11
             // 
-            this.groupBox11.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox11.BackColor = System.Drawing.Color.White;
             this.groupBox11.Controls.Add(this.txtDLLBufferSize);
             this.groupBox11.Controls.Add(this.txtCosemBufferSize);
             this.groupBox11.Controls.Add(this.label27);
@@ -580,6 +604,7 @@
             // cmbWindowSize
             // 
             this.cmbWindowSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbWindowSize.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbWindowSize.FormattingEnabled = true;
             this.cmbWindowSize.Items.AddRange(new object[] {
             "1",
@@ -597,6 +622,7 @@
             // 
             // txtInformationSize
             // 
+            this.txtInformationSize.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtInformationSize.Location = new System.Drawing.Point(258, 32);
             this.txtInformationSize.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtInformationSize.MaxLength = 3;
@@ -606,6 +632,7 @@
             // 
             // txtPhysicalID
             // 
+            this.txtPhysicalID.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPhysicalID.Location = new System.Drawing.Point(258, 154);
             this.txtPhysicalID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPhysicalID.MaxLength = 8;
@@ -616,6 +643,7 @@
             // label36
             // 
             this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label36.Location = new System.Drawing.Point(56, 158);
             this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
@@ -626,6 +654,7 @@
             // cmbHDLCAddressing
             // 
             this.cmbHDLCAddressing.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbHDLCAddressing.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbHDLCAddressing.FormattingEnabled = true;
             this.cmbHDLCAddressing.Items.AddRange(new object[] {
             "1 Byte",
@@ -641,6 +670,7 @@
             // label37
             // 
             this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label37.Location = new System.Drawing.Point(54, 117);
             this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
@@ -651,6 +681,7 @@
             // label38
             // 
             this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label38.Location = new System.Drawing.Point(56, 75);
             this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label38.Name = "label38";
@@ -661,6 +692,7 @@
             // label39
             // 
             this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label39.Location = new System.Drawing.Point(54, 37);
             this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label39.Name = "label39";
@@ -671,7 +703,7 @@
             // 
             // tabAssociation
             // 
-            this.tabAssociation.BackColor = System.Drawing.SystemColors.Control;
+            this.tabAssociation.BackColor = System.Drawing.Color.White;
             this.tabAssociation.Controls.Add(this.groupBox12);
             this.tabAssociation.Location = new System.Drawing.Point(4, 32);
             this.tabAssociation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -683,7 +715,7 @@
             // 
             // groupBox12
             // 
-            this.groupBox12.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox12.BackColor = System.Drawing.Color.White;
             this.groupBox12.Controls.Add(this.txtAuthentication);
             this.groupBox12.Controls.Add(this.label7);
             this.groupBox12.Controls.Add(this.cmbDedicatedKey);
@@ -721,6 +753,7 @@
             // 
             // txtAuthentication
             // 
+            this.txtAuthentication.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAuthentication.Location = new System.Drawing.Point(242, 452);
             this.txtAuthentication.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAuthentication.MaxLength = 32;
@@ -731,6 +764,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label7.Location = new System.Drawing.Point(39, 457);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
@@ -741,6 +775,7 @@
             // cmbDedicatedKey
             // 
             this.cmbDedicatedKey.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDedicatedKey.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbDedicatedKey.FormattingEnabled = true;
             this.cmbDedicatedKey.Items.AddRange(new object[] {
             "True",
@@ -754,6 +789,7 @@
             // lbldedication
             // 
             this.lbldedication.AutoSize = true;
+            this.lbldedication.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lbldedication.Location = new System.Drawing.Point(40, 491);
             this.lbldedication.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbldedication.Name = "lbldedication";
@@ -763,6 +799,7 @@
             // 
             // txtEncryKey
             // 
+            this.txtEncryKey.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtEncryKey.Location = new System.Drawing.Point(242, 414);
             this.txtEncryKey.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEncryKey.MaxLength = 32;
@@ -773,6 +810,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label6.Location = new System.Drawing.Point(39, 418);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
@@ -783,6 +821,7 @@
             // cmbSecuritysuit
             // 
             this.cmbSecuritysuit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSecuritysuit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbSecuritysuit.FormattingEnabled = true;
             this.cmbSecuritysuit.Items.AddRange(new object[] {
             "Authentication Only",
@@ -797,6 +836,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label5.Location = new System.Drawing.Point(39, 378);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
@@ -806,6 +846,7 @@
             // 
             // txtClientSystem
             // 
+            this.txtClientSystem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtClientSystem.Location = new System.Drawing.Point(242, 334);
             this.txtClientSystem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtClientSystem.MaxLength = 8;
@@ -816,6 +857,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label4.Location = new System.Drawing.Point(40, 338);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -826,6 +868,7 @@
             // cmbClientType
             // 
             this.cmbClientType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbClientType.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbClientType.FormattingEnabled = true;
             this.cmbClientType.Items.AddRange(new object[] {
             " PC ",
@@ -843,6 +886,7 @@
             // label45
             // 
             this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label45.Location = new System.Drawing.Point(36, 37);
             this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label45.Name = "label45";
@@ -852,6 +896,7 @@
             // 
             // txtServerLAddress
             // 
+            this.txtServerLAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtServerLAddress.Location = new System.Drawing.Point(242, 105);
             this.txtServerLAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtServerLAddress.MaxLength = 5;
@@ -861,6 +906,7 @@
             // 
             // txtServerUAddress
             // 
+            this.txtServerUAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtServerUAddress.Location = new System.Drawing.Point(242, 71);
             this.txtServerUAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtServerUAddress.MaxLength = 1;
@@ -871,6 +917,7 @@
             // label42
             // 
             this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label42.Location = new System.Drawing.Point(34, 109);
             this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label42.Name = "label42";
@@ -881,6 +928,7 @@
             // label44
             // 
             this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label44.Location = new System.Drawing.Point(33, 74);
             this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label44.Name = "label44";
@@ -890,6 +938,7 @@
             // 
             // txtDLMSVersion
             // 
+            this.txtDLMSVersion.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDLMSVersion.Location = new System.Drawing.Point(242, 143);
             this.txtDLMSVersion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDLMSVersion.MaxLength = 1;
@@ -899,6 +948,7 @@
             // 
             // txtMaxPDUSize
             // 
+            this.txtMaxPDUSize.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMaxPDUSize.Location = new System.Drawing.Point(242, 297);
             this.txtMaxPDUSize.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMaxPDUSize.MaxLength = 4;
@@ -908,6 +958,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPassword.Location = new System.Drawing.Point(242, 258);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.MaxLength = 8;
@@ -918,6 +969,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label33.Location = new System.Drawing.Point(38, 302);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
@@ -928,6 +980,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label34.Location = new System.Drawing.Point(38, 263);
             this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label34.Name = "label34";
@@ -938,6 +991,7 @@
             // cmbAuthenticationLevel
             // 
             this.cmbAuthenticationLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAuthenticationLevel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbAuthenticationLevel.FormattingEnabled = true;
             this.cmbAuthenticationLevel.Items.AddRange(new object[] {
             "No - Security",
@@ -953,6 +1007,7 @@
             // label35
             // 
             this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label35.Location = new System.Drawing.Point(36, 225);
             this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
@@ -963,6 +1018,7 @@
             // cmbApplicationContext
             // 
             this.cmbApplicationContext.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbApplicationContext.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbApplicationContext.FormattingEnabled = true;
             this.cmbApplicationContext.Items.AddRange(new object[] {
             "Short Name without ciphering",
@@ -978,6 +1034,7 @@
             // label40
             // 
             this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label40.Location = new System.Drawing.Point(36, 186);
             this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
@@ -988,6 +1045,7 @@
             // label41
             // 
             this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label41.Location = new System.Drawing.Point(36, 148);
             this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label41.Name = "label41";
@@ -1012,7 +1070,7 @@
             // 
             this.chlSelectAll.AutoSize = true;
             this.chlSelectAll.Enabled = false;
-            this.chlSelectAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chlSelectAll.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chlSelectAll.Location = new System.Drawing.Point(340, 472);
             this.chlSelectAll.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chlSelectAll.Name = "chlSelectAll";
@@ -1050,6 +1108,7 @@
             this.grpConformanceBlock.Controls.Add(this.Resered1);
             this.grpConformanceBlock.Enabled = false;
             this.grpConformanceBlock.ForeColor = System.Drawing.Color.Black;
+            this.grpConformanceBlock.BackColor = System.Drawing.Color.White;
             this.grpConformanceBlock.Location = new System.Drawing.Point(10, 9);
             this.grpConformanceBlock.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpConformanceBlock.Name = "grpConformanceBlock";
@@ -1334,13 +1393,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(686, 703);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.groupBox6);
+            this.Controls.Add(this.panelUserInfo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
@@ -1350,8 +1409,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.Association_Load);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
+            this.panelUserInfo.ResumeLayout(false);
+            this.panelUserInfo.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabSerialPort.ResumeLayout(false);
             this.tabSerialPort.PerformLayout();
@@ -1372,8 +1431,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Panel panelUserInfo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtPDUSize;

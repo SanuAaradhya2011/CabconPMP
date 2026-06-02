@@ -40,11 +40,11 @@ namespace CabconPMP
             BALUserManagement objum = new BALUserManagement();
             try
             {
-                objetyusermgt.LogType = "aa";
+               /* objetyusermgt.LogType = "aa";
                   frmMain objmain = new frmMain(objetyusermgt);
-                objmain.Show();
-             
-                /*objetyusermgt.LoginuserID = txtuserID.Text.Trim();
+                objmain.Show();*/
+
+                objetyusermgt.LoginuserID = txtuserID.Text.Trim();
                 objetyusermgt.Loginpassword = txtPassword.Text.Trim();
 
                 if (!objdbcon.IsDBFileExist())
@@ -52,33 +52,33 @@ namespace CabconPMP
                     frmServerSettings objserversett = new frmServerSettings(false);
                     objserversett.ShowDialog();
                 }
-               
+
                 if (!objdbcon.IsDBConnected())
                 {
                     MessageBox.Show("Unable To Connect DataBase, Server May Down" + "\n" + "Please Contact System Administrator !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                 
-                 DataSet ds = objum.Select_LoginUseronUserIDandPWD(objetyusermgt);
-                 if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
-                 {
+
+                DataSet ds = objum.Select_LoginUseronUserIDandPWD(objetyusermgt);
+                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                {
                     objetyusermgt.LogType = ds.Tables[0].Rows[0][2].ToString();
                     frmMain objmain = new frmMain(objetyusermgt);
                     objmain.Show();
                     this.Hide();
-                   }
-                    else
+                }
+                else
+                {
+                    if (loginLimit-- <= 0)
                     {
-                        if (loginLimit-- <= 0)
-                        {
-                            MessageBox.Show("Unauthorized Access, Please Contact Administrator !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                            Application.Exit();
-                        }
-                        MessageBox.Show("Invalid User , Please Enter Valid Password !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                        txtPassword.Focus();
-                        return;
+                        MessageBox.Show("Unauthorized Access, Please Contact Administrator !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        Application.Exit();
+                    }
+                    MessageBox.Show("Invalid User , Please Enter Valid Password !", "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    txtPassword.Focus();
+                    return;
 
-                    }*/
+                }
 
             }
             catch (Exception ex)
