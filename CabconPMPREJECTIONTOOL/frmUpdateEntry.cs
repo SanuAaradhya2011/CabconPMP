@@ -86,14 +86,14 @@ namespace CabconPMPREJECTIONTOOL
             };
 
             this.cmbMeterType.DataSource = new List<string>(){
-                StaticVariables.MeterType_1PH_E150_ES,
-                StaticVariables.MeterType_1PH_E150_MS,
+               // StaticVariables.MeterType_1PH_E150_ES,
+              //  StaticVariables.MeterType_1PH_E150_MS,
                 StaticVariables.MeterType_1PH_E150_MSD,
-                StaticVariables.MeterType_3PH_DLMS,
-                StaticVariables.MeterType_3PH_Sapphire,
+             //   StaticVariables.MeterType_3PH_DLMS,
+              //  StaticVariables.MeterType_3PH_Sapphire,
                 StaticVariables.MeterType_1PH_SM,
                 StaticVariables.MeterType_3PH_SM,
-                StaticVariables.MeterType_1PH_ZCE
+            //    StaticVariables.MeterType_1PH_ZCE
             };
 
             this.cmbErrorState.DataSource = new List<string>(){

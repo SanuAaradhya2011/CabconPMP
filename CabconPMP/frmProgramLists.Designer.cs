@@ -123,6 +123,7 @@
             this.lstParameterLists.Size = new System.Drawing.Size(432, 304);
             this.lstParameterLists.TabIndex = 4;
             this.lstParameterLists.Click += new System.EventHandler(this.lstParameterLists_Click);
+            this.lstParameterLists.SelectedIndexChanged += new System.EventHandler(this.lstParameterLists_SelectedIndexChanged);
             this.lstParameterLists.DoubleClick += new System.EventHandler(this.lstParameterLists_DoubleClick);
             // 
             // label2
@@ -163,6 +164,7 @@
             this.txtProgramName.Name = "txtProgramName";
             this.txtProgramName.Size = new System.Drawing.Size(332, 26);
             this.txtProgramName.TabIndex = 0;
+            this.txtProgramName.TextChanged += new System.EventHandler(this.txtProgramName_TextChanged);
             this.txtProgramName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProgramName_KeyPress);
             // 
             // toolStrip1

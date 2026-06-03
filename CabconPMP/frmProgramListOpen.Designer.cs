@@ -43,17 +43,20 @@
             this.groupBox1.Controls.Add(this.btnDelete);
             this.groupBox1.Controls.Add(this.btnClose);
             this.groupBox1.Controls.Add(this.btnopen);
-            this.groupBox1.Location = new System.Drawing.Point(275, 115);
+            this.groupBox1.Location = new System.Drawing.Point(412, 177);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(91, 189);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(136, 291);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(6, 99);
+            this.btnRefresh.Location = new System.Drawing.Point(9, 152);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 36);
+            this.btnRefresh.Size = new System.Drawing.Size(112, 55);
             this.btnRefresh.TabIndex = 3;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -61,9 +64,10 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(6, 57);
+            this.btnDelete.Location = new System.Drawing.Point(9, 88);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 36);
+            this.btnDelete.Size = new System.Drawing.Size(112, 55);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -71,9 +75,10 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(6, 141);
+            this.btnClose.Location = new System.Drawing.Point(9, 217);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 36);
+            this.btnClose.Size = new System.Drawing.Size(112, 55);
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -81,9 +86,10 @@
             // 
             // btnopen
             // 
-            this.btnopen.Location = new System.Drawing.Point(6, 15);
+            this.btnopen.Location = new System.Drawing.Point(9, 23);
+            this.btnopen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnopen.Name = "btnopen";
-            this.btnopen.Size = new System.Drawing.Size(75, 36);
+            this.btnopen.Size = new System.Drawing.Size(112, 55);
             this.btnopen.TabIndex = 0;
             this.btnopen.Text = "Open";
             this.btnopen.UseVisualStyleBackColor = true;
@@ -92,18 +98,22 @@
             // lstProgramName
             // 
             this.lstProgramName.FormattingEnabled = true;
-            this.lstProgramName.Location = new System.Drawing.Point(12, 12);
+            this.lstProgramName.ItemHeight = 20;
+            this.lstProgramName.Location = new System.Drawing.Point(18, 18);
+            this.lstProgramName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lstProgramName.Name = "lstProgramName";
-            this.lstProgramName.Size = new System.Drawing.Size(257, 381);
+            this.lstProgramName.Size = new System.Drawing.Size(384, 584);
             this.lstProgramName.TabIndex = 2;
+            this.lstProgramName.SelectedIndexChanged += new System.EventHandler(this.lstProgramName_SelectedIndexChanged);
             // 
             // frmProgramListOpen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(378, 410);
+            this.ClientSize = new System.Drawing.Size(567, 631);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lstProgramName);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmProgramListOpen";

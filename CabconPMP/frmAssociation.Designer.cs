@@ -885,6 +885,7 @@
             // 
             // label45
             // 
+
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label45.Location = new System.Drawing.Point(36, 37);

@@ -147,14 +147,14 @@ namespace CabconPMPREJECTIONTOOL
 
             this.chkListMeterType.DataSource = new List<string>(){
                 ErrorUtility.MeterType_ALL,
-                StaticVariables.MeterType_1PH_E150_ES,
-                StaticVariables.MeterType_1PH_E150_MS,
+               // StaticVariables.MeterType_1PH_E150_ES,
+              //  StaticVariables.MeterType_1PH_E150_MS,
                 StaticVariables.MeterType_1PH_E150_MSD,
-                StaticVariables.MeterType_3PH_DLMS,
-                StaticVariables.MeterType_3PH_Sapphire,
+              //  StaticVariables.MeterType_3PH_DLMS,
+              //  StaticVariables.MeterType_3PH_Sapphire,
                 StaticVariables.MeterType_1PH_SM,
                 StaticVariables.MeterType_3PH_SM,
-                StaticVariables.MeterType_1PH_ZCE
+              //  StaticVariables.MeterType_1PH_ZCE
 
             };
 

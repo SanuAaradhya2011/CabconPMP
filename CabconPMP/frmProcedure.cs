@@ -39,7 +39,6 @@ namespace CabconPMP
 
              // --- Premium 2026 UI Modernization Overrides ---
              this.BackColor = Color.FromArgb(249, 250, 251); // Premium soft off-white background
-             this.Size = new Size(980, 580); // Spacious form layout
 
              // 1. ToolStrip Modernization (Header Nav Style)
              this.toolStrip1.BackColor = Color.White;
@@ -796,6 +795,26 @@ namespace CabconPMP
         }
 
         private void grpOtherSettings_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbMeterType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbProgramList_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

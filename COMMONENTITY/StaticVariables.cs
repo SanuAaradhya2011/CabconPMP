@@ -108,15 +108,23 @@ namespace COMMONENTITY
 
        public const string PublicKeyEncryption = "09080706050403020109080706050403";
 
-        public const string MeterType_1PH_E150_ES =  "E150-1PH-EcoStar";
+    /*    public const string MeterType_1PH_E150_ES =  "E150-1PH-EcoStar";
         public const string MeterType_1PH_E150_MS = "E150-1PH-MicroStar";
         public const string MeterType_1PH_E150_MSD = "E150-1PH-MicroStar-DLMS";
         public const string MeterType_3PH_DLMS = "DLMS-3PH-Ruby-Puma"; //---Back Slash cann't assigned as creating path error
         public const string MeterType_3PH_Sapphire ="DLMS-3PH-SAPPHIRE";
         public const string MeterType_1PH_SM ="SM110-1PH-Smart Meter";
         public const string MeterType_3PH_SM ="SM310-3PH-Smart Meter";
-        public const string MeterType_1PH_ZCE ="ZCE-1PH-Superstatic";  
-    
+        public const string MeterType_1PH_ZCE ="ZCE-1PH-Superstatic";  */
+    //public const string MeterType_1PH_E150_ES = "E150-1PH-EcoStar";
+        //public const string MeterType_1PH_E150_MS  = "E150-1PH-MicroStar";
+        public const string MeterType_1PH_E150_MSD = "Cabcon-DLMS";
+        //public const string MeterType_3PH_DLMS     = "DLMS-3PH-Ruby-Puma";
+        //public const string MeterType_3PH_Sapphire = "DLMS-3PH-SAPPHIRE";
+        public const string MeterType_1PH_SM = "Cabcon-1PH-Smart Meter";
+        public const string MeterType_3PH_SM = "Cabcon-3PH-Smart Meter";
+        //public const string MeterType_1PH_ZCE      = "ZCE-1PH-Superstatic";
+
 
         public const string TestType_FT = "Functional Test";
         public const string TestType_SR = "Serialization";
@@ -337,14 +345,14 @@ namespace COMMONENTITY
         public static List<string> GetMeterType()
         {
             List<string> mType = new List<string>();
-            mType.Add(MeterType_1PH_E150_ES);
-            mType.Add(MeterType_1PH_E150_MS);
+          //  mType.Add(MeterType_1PH_E150_ES);
+         //   mType.Add(MeterType_1PH_E150_MS);
             mType.Add(MeterType_1PH_E150_MSD);
-            mType.Add(MeterType_3PH_DLMS);            
-            mType.Add(MeterType_3PH_Sapphire);
+          //  mType.Add(MeterType_3PH_DLMS);            
+          //  mType.Add(MeterType_3PH_Sapphire);
             mType.Add(MeterType_1PH_SM);
             mType.Add(MeterType_3PH_SM);
-            mType.Add(MeterType_1PH_ZCE);
+          //  mType.Add(MeterType_1PH_ZCE);
             return mType;
 
         }
@@ -421,8 +429,8 @@ namespace COMMONENTITY
       private string lcdSegmentTestResponse;
       private string ledtestResponse;
       public string[] DayOfWeek = new string[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
-      public string[] ProgramNameList = new string[] { "E150ECOSTAR", "E150MICROSTAR","MICROSTARDLMS", "PMP3PHDLMS", "PMPSAPPHIRE", "PMPSM110", "PMPSM310", "ZCE",  };
-      
+        //   public string[] ProgramNameList = new string[] { "E150ECOSTAR", "E150MICROSTAR","MICROSTARDLMS", "PMP3PHDLMS", "PMPSAPPHIRE", "PMPSM110", "PMPSM310", "ZCE",  };
+        public string[] ProgramNameList = new string[] { "CabconDLMS","Cabcon1PHSMART" ,"Cabcon3PHSMART" };
       public string LEDTestResponse
       {
           get { return ledtestResponse; }

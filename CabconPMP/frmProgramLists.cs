@@ -209,5 +209,15 @@ namespace CabconPMP
         {
 
         }
+
+        private void txtProgramName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lstParameterLists_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -55,7 +55,9 @@ namespace PMPE150MICROSTARDLMS
         bool ExecutionWithOutTravellerStage = false;
         public frmActionMicroStarDLMS(string[] ipPara)
         {
-            InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
+            InitializeComponent(); 
+            COMMONENTITY.FormStyleHelper.Apply(this);
+            this.Size = new Size(900, 700); // Expanded size to fit modern font scaling
             testtype = ipPara[0];
             TestProcedureName = ipPara[1];
             logedUserID = ipPara[32];
@@ -171,6 +173,13 @@ namespace PMPE150MICROSTARDLMS
                 
                 //-----------------------Read PCBA ID-------------------------------------------
                 string getpcbaResponse = objccmdmethod.ReadPCBAID();
+                //if (objexeresult.ExecutionProcedureType.IndexOf(StaticVariables.TestType_EMS) < 0)
+                //{
+                //    //txtMeterPCBAID.Text = getpcbaResponse;
+                //    if (getpcbaResponse.IndexOf(StaticVariables.ERRORPreFix) >= 0 || getpcbaResponse.Trim().Length < 7) { MessageBox.Show("Invalid PCBA ID, Length Should be >= 7 " + "\n" + getpcbaResponse, "Cabcon PMP", MessageBoxButtons.OK, MessageBoxIcon.Stop); return false; }
+                //}
+                //-----------------------New Implementation for WO Scan-------------------
+                //   txtMeterPCBAID.Text = "12345678";// getpcbaResponse;
                 if (objexeresult.ExecutionProcedureType.IndexOf(StaticVariables.TestType_EMS) < 0)
                 {
                     //txtMeterPCBAID.Text = getpcbaResponse;
@@ -722,7 +731,8 @@ namespace PMPE150MICROSTARDLMS
                 Prduct_Version = Application.ProductName.ToString() + " Ver. " + Prduct_Version;
 
                 stsReady.Text = "Association : " + dlmscommmode;
-                lblversion.Text = Prduct_Version;// +" | " + strbuilton;
+                //   lblversion.Text = Prduct_Version;// +" | " + strbuilton;
+                lblversion.Text = "Cabcon Technologies Pvt Ltd.";
 
 
             }
@@ -979,6 +989,21 @@ namespace PMPE150MICROSTARDLMS
         private void FrmActionMicroStarDLMS_FormClosing(object sender, FormClosingEventArgs e)
         {
             objsysSetting.IS15959PART1Amendment5Clock = false; //restoring global setting to default
+        }
+
+        private void DGVParaLists_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void grpinputs_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DLMSStas_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

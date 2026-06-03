@@ -303,7 +303,7 @@ namespace CabconPMP
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1420, 38);
+            this.toolStrip1.Size = new System.Drawing.Size(1420, 37);
             this.toolStrip1.TabIndex = 17;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -406,6 +406,7 @@ namespace CabconPMP
             this.label1.Size = new System.Drawing.Size(88, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Meter Type";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label6
             // 
@@ -478,6 +479,7 @@ namespace CabconPMP
             this.cmbProgramList.Name = "cmbProgramList";
             this.cmbProgramList.Size = new System.Drawing.Size(184, 28);
             this.cmbProgramList.TabIndex = 23;
+            this.cmbProgramList.SelectedIndexChanged += new System.EventHandler(this.cmbProgramList_SelectedIndexChanged);
             this.cmbProgramList.SelectionChangeCommitted += new System.EventHandler(this.cmbProgramList_SelectionChangeCommitted);
             this.cmbProgramList.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbProgramList_KeyPress);
             // 
@@ -491,6 +493,7 @@ namespace CabconPMP
             this.cmbMeterType.Name = "cmbMeterType";
             this.cmbMeterType.Size = new System.Drawing.Size(241, 28);
             this.cmbMeterType.TabIndex = 22;
+            this.cmbMeterType.SelectedIndexChanged += new System.EventHandler(this.cmbMeterType_SelectedIndexChanged);
             this.cmbMeterType.SelectionChangeCommitted += new System.EventHandler(this.cmbMeterType_SelectionChangeCommitted);
             this.cmbMeterType.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbMeterType_KeyPress);
             // 
@@ -503,6 +506,7 @@ namespace CabconPMP
             this.label7.Size = new System.Drawing.Size(188, 20);
             this.label7.TabIndex = 21;
             this.label7.Text = "Program File List (*. EXE)";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // lblProcedureName
             // 

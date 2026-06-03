@@ -70,9 +70,9 @@ namespace CabconPMPREJECTIONTOOL
             rdbSealing.Text = "Sealing";
             //rdbFT.Checked = true;
 
-            rdbMSNDLMS.Text = StaticVariables.MeterType_1PH_E150_MS;
+         //   rdbMSNDLMS.Text = StaticVariables.MeterType_1PH_E150_MS;
             rdbMSDLMS.Text = StaticVariables.MeterType_1PH_E150_MSD;
-            rdbSAPPHIRE.Text = StaticVariables.MeterType_3PH_Sapphire;
+        //    rdbSAPPHIRE.Text = StaticVariables.MeterType_3PH_Sapphire;
             rdb1PHSMART.Text = StaticVariables.MeterType_1PH_SM;
             rdb3PHSMART.Text = StaticVariables.MeterType_3PH_SM;
             //rdbMSDLMS.Checked = true;   

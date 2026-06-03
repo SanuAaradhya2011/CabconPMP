@@ -67,9 +67,10 @@
             // 
             this.btnStart.BackColor = System.Drawing.SystemColors.Control;
             this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStart.Location = new System.Drawing.Point(19, 264);
+            this.btnStart.Location = new System.Drawing.Point(28, 406);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(93, 42);
+            this.btnStart.Size = new System.Drawing.Size(140, 65);
             this.btnStart.TabIndex = 11;
             this.btnStart.Text = "START TEST";
             this.btnStart.UseVisualStyleBackColor = false;
@@ -78,9 +79,11 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.DGVParaLists);
-            this.groupBox1.Location = new System.Drawing.Point(12, 1);
+            this.groupBox1.Location = new System.Drawing.Point(18, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(419, 549);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(628, 845);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             // 
@@ -100,17 +103,21 @@
             this.ColMaxValue,
             this.colRemarks});
             this.DGVParaLists.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DGVParaLists.Location = new System.Drawing.Point(3, 16);
+            this.DGVParaLists.Location = new System.Drawing.Point(4, 24);
+            this.DGVParaLists.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DGVParaLists.MultiSelect = false;
             this.DGVParaLists.Name = "DGVParaLists";
             this.DGVParaLists.ReadOnly = true;
+            this.DGVParaLists.RowHeadersWidth = 62;
             this.DGVParaLists.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVParaLists.Size = new System.Drawing.Size(413, 530);
+            this.DGVParaLists.Size = new System.Drawing.Size(620, 816);
             this.DGVParaLists.TabIndex = 0;
+            this.DGVParaLists.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVParaLists_CellContentClick);
             // 
             // colSNO
             // 
             this.colSNO.HeaderText = "S. No.";
+            this.colSNO.MinimumWidth = 8;
             this.colSNO.Name = "colSNO";
             this.colSNO.ReadOnly = true;
             this.colSNO.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -119,6 +126,7 @@
             // colParaName
             // 
             this.colParaName.HeaderText = "Test Parameters Name";
+            this.colParaName.MinimumWidth = 8;
             this.colParaName.Name = "colParaName";
             this.colParaName.ReadOnly = true;
             this.colParaName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -127,20 +135,25 @@
             // colStatus
             // 
             this.colStatus.HeaderText = "Status";
+            this.colStatus.MinimumWidth = 8;
             this.colStatus.Name = "colStatus";
             this.colStatus.ReadOnly = true;
             this.colStatus.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colStatus.Width = 150;
             // 
             // colDefaultValue
             // 
             this.colDefaultValue.HeaderText = "Default Value";
+            this.colDefaultValue.MinimumWidth = 8;
             this.colDefaultValue.Name = "colDefaultValue";
             this.colDefaultValue.ReadOnly = true;
             this.colDefaultValue.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colDefaultValue.Width = 150;
             // 
             // ColMinVal
             // 
             this.ColMinVal.HeaderText = "Min. Range";
+            this.ColMinVal.MinimumWidth = 8;
             this.ColMinVal.Name = "ColMinVal";
             this.ColMinVal.ReadOnly = true;
             this.ColMinVal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -149,6 +162,7 @@
             // ColMaxValue
             // 
             this.ColMaxValue.HeaderText = "Max. Range";
+            this.ColMaxValue.MinimumWidth = 8;
             this.ColMaxValue.Name = "ColMaxValue";
             this.ColMaxValue.ReadOnly = true;
             this.ColMaxValue.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -158,18 +172,20 @@
             // 
             this.colRemarks.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.colRemarks.HeaderText = "Execution Remarks";
+            this.colRemarks.MinimumWidth = 8;
             this.colRemarks.Name = "colRemarks";
             this.colRemarks.ReadOnly = true;
             this.colRemarks.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colRemarks.Width = 95;
+            this.colRemarks.Width = 138;
             // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.SystemColors.Control;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(118, 264);
+            this.btnClose.Location = new System.Drawing.Point(177, 406);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(93, 42);
+            this.btnClose.Size = new System.Drawing.Size(140, 65);
             this.btnClose.TabIndex = 17;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -178,22 +194,25 @@
             // DLMSStas
             // 
             this.DLMSStas.AutoSize = false;
+            this.DLMSStas.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.DLMSStas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.stsReady,
             this.dlmsCommStatusmsh,
             this.lblversion});
-            this.DLMSStas.Location = new System.Drawing.Point(0, 554);
+            this.DLMSStas.Location = new System.Drawing.Point(0, 831);
             this.DLMSStas.Name = "DLMSStas";
+            this.DLMSStas.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
             this.DLMSStas.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.DLMSStas.Size = new System.Drawing.Size(674, 22);
+            this.DLMSStas.Size = new System.Drawing.Size(1011, 55);
             this.DLMSStas.TabIndex = 20;
             this.DLMSStas.Text = "statusStrip1";
+            this.DLMSStas.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.DLMSStas_ItemClicked);
             // 
             // stsReady
             // 
             this.stsReady.BackColor = System.Drawing.SystemColors.Control;
             this.stsReady.Name = "stsReady";
-            this.stsReady.Size = new System.Drawing.Size(118, 17);
+            this.stsReady.Size = new System.Drawing.Size(179, 48);
             this.stsReady.Text = "toolStripStatusLabel1";
             // 
             // dlmsCommStatusmsh
@@ -203,14 +222,14 @@
             this.dlmsCommStatusmsh.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dlmsCommStatusmsh.ForeColor = System.Drawing.Color.Green;
             this.dlmsCommStatusmsh.Name = "dlmsCommStatusmsh";
-            this.dlmsCommStatusmsh.Size = new System.Drawing.Size(43, 17);
+            this.dlmsCommStatusmsh.Size = new System.Drawing.Size(43, 48);
             this.dlmsCommStatusmsh.Text = "Space";
             // 
             // lblversion
             // 
             this.lblversion.BackColor = System.Drawing.SystemColors.Control;
             this.lblversion.Name = "lblversion";
-            this.lblversion.Size = new System.Drawing.Size(118, 17);
+            this.lblversion.Size = new System.Drawing.Size(179, 48);
             this.lblversion.Text = "toolStripStatusLabel2";
             // 
             // grpinputs
@@ -227,108 +246,121 @@
             this.grpinputs.Controls.Add(this.txtPCBAID);
             this.grpinputs.Controls.Add(this.btnStart);
             this.grpinputs.Controls.Add(this.btnClose);
-            this.grpinputs.Location = new System.Drawing.Point(437, 1);
+            this.grpinputs.Location = new System.Drawing.Point(656, 2);
+            this.grpinputs.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpinputs.Name = "grpinputs";
-            this.grpinputs.Size = new System.Drawing.Size(223, 322);
+            this.grpinputs.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpinputs.Size = new System.Drawing.Size(334, 495);
             this.grpinputs.TabIndex = 21;
             this.grpinputs.TabStop = false;
+            this.grpinputs.Enter += new System.EventHandler(this.grpinputs_Enter);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 11);
+            this.label1.Location = new System.Drawing.Point(9, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 15);
+            this.label1.Size = new System.Drawing.Size(92, 22);
             this.label1.TabIndex = 62;
             this.label1.Text = "Test Type";
             // 
             // txtTestType
             // 
             this.txtTestType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTestType.Location = new System.Drawing.Point(6, 36);
+            this.txtTestType.Location = new System.Drawing.Point(9, 55);
+            this.txtTestType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTestType.MaxLength = 25;
             this.txtTestType.Name = "txtTestType";
             this.txtTestType.ReadOnly = true;
-            this.txtTestType.Size = new System.Drawing.Size(205, 21);
+            this.txtTestType.Size = new System.Drawing.Size(306, 28);
             this.txtTestType.TabIndex = 61;
             // 
             // lblLastScan
             // 
             this.lblLastScan.AutoSize = true;
             this.lblLastScan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastScan.Location = new System.Drawing.Point(9, 212);
+            this.lblLastScan.Location = new System.Drawing.Point(14, 326);
+            this.lblLastScan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLastScan.Name = "lblLastScan";
-            this.lblLastScan.Size = new System.Drawing.Size(110, 15);
+            this.lblLastScan.Size = new System.Drawing.Size(166, 22);
             this.lblLastScan.TabIndex = 60;
             this.lblLastScan.Text = "Last Scan PCBA ID";
             // 
             // txtLastScanID
             // 
             this.txtLastScanID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastScanID.Location = new System.Drawing.Point(6, 232);
+            this.txtLastScanID.Location = new System.Drawing.Point(9, 357);
+            this.txtLastScanID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtLastScanID.MaxLength = 16;
             this.txtLastScanID.Name = "txtLastScanID";
             this.txtLastScanID.ReadOnly = true;
-            this.txtLastScanID.Size = new System.Drawing.Size(205, 26);
+            this.txtLastScanID.Size = new System.Drawing.Size(306, 35);
             this.txtLastScanID.TabIndex = 59;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 60);
+            this.label3.Location = new System.Drawing.Point(14, 92);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 13);
+            this.label3.Size = new System.Drawing.Size(131, 20);
             this.label3.TabIndex = 56;
             this.label3.Text = "Customer Name";
             // 
             // txtCustomer
             // 
             this.txtCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomer.Location = new System.Drawing.Point(6, 79);
+            this.txtCustomer.Location = new System.Drawing.Point(9, 122);
+            this.txtCustomer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCustomer.MaxLength = 25;
             this.txtCustomer.Name = "txtCustomer";
-            this.txtCustomer.Size = new System.Drawing.Size(205, 20);
+            this.txtCustomer.Size = new System.Drawing.Size(306, 26);
             this.txtCustomer.TabIndex = 55;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 159);
+            this.label2.Location = new System.Drawing.Point(15, 245);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
+            this.label2.Size = new System.Drawing.Size(125, 20);
             this.label2.TabIndex = 22;
             this.label2.Text = "Meter PCBA ID";
             // 
             // txtMeterPCBAID
             // 
             this.txtMeterPCBAID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMeterPCBAID.Location = new System.Drawing.Point(6, 182);
+            this.txtMeterPCBAID.Location = new System.Drawing.Point(9, 280);
+            this.txtMeterPCBAID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMeterPCBAID.MaxLength = 16;
             this.txtMeterPCBAID.Name = "txtMeterPCBAID";
             this.txtMeterPCBAID.ReadOnly = true;
-            this.txtMeterPCBAID.Size = new System.Drawing.Size(205, 22);
+            this.txtMeterPCBAID.Size = new System.Drawing.Size(306, 30);
             this.txtMeterPCBAID.TabIndex = 21;
             // 
             // lblParaonTestType
             // 
             this.lblParaonTestType.AutoSize = true;
             this.lblParaonTestType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblParaonTestType.Location = new System.Drawing.Point(8, 104);
+            this.lblParaonTestType.Location = new System.Drawing.Point(12, 160);
+            this.lblParaonTestType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblParaonTestType.Name = "lblParaonTestType";
-            this.lblParaonTestType.Size = new System.Drawing.Size(126, 20);
+            this.lblParaonTestType.Size = new System.Drawing.Size(178, 29);
             this.lblParaonTestType.TabIndex = 20;
             this.lblParaonTestType.Text = "Scan PCBA ID";
             // 
             // txtPCBAID
             // 
             this.txtPCBAID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPCBAID.Location = new System.Drawing.Point(6, 127);
+            this.txtPCBAID.Location = new System.Drawing.Point(9, 195);
+            this.txtPCBAID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPCBAID.MaxLength = 13;
             this.txtPCBAID.Name = "txtPCBAID";
-            this.txtPCBAID.Size = new System.Drawing.Size(205, 29);
+            this.txtPCBAID.Size = new System.Drawing.Size(306, 40);
             this.txtPCBAID.TabIndex = 0;
             this.txtPCBAID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPCBAID_KeyPress);
             this.txtPCBAID.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtMeterID_KeyUp);
@@ -336,24 +368,26 @@
             // pbExecutionStatus
             // 
             this.pbExecutionStatus.Image = global::CabconDLMS.Properties.Resources.ExecutionWait;
-            this.pbExecutionStatus.Location = new System.Drawing.Point(491, 329);
+            this.pbExecutionStatus.Location = new System.Drawing.Point(736, 506);
+            this.pbExecutionStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pbExecutionStatus.Name = "pbExecutionStatus";
-            this.pbExecutionStatus.Size = new System.Drawing.Size(113, 115);
+            this.pbExecutionStatus.Size = new System.Drawing.Size(170, 177);
             this.pbExecutionStatus.TabIndex = 25;
             this.pbExecutionStatus.TabStop = false;
             // 
             // frmActionMicroStarDLMS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(674, 576);
+            this.ClientSize = new System.Drawing.Size(1011, 886);
             this.Controls.Add(this.pbExecutionStatus);
             this.Controls.Add(this.grpinputs);
             this.Controls.Add(this.DLMSStas);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmActionMicroStarDLMS";

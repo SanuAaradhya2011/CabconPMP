@@ -34,7 +34,7 @@ namespace CabconPMP
         SerialComm objSerialComm = new SerialComm();
         string existingconfblock = string.Empty;
         AppSettings objApps = new AppSettings();
-        
+
         public Association()
         {
             InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
@@ -43,14 +43,14 @@ namespace CabconPMP
         private void Association_Load(object sender, EventArgs e)
         {
             //-------------------Get Avilable COM Port---------------
-            string[] PortNames = objSerialComm.GetAvailablePorts();          
+            string[] PortNames = objSerialComm.GetAvailablePorts();
             Array.Reverse(PortNames);
             foreach (string Port in PortNames) cmbPort.Items.Add(Port);
-           //--------------------Set Default Settings-----------------
+            //--------------------Set Default Settings-----------------
             DefaultSettings();
             //-------------------Show Custom Setting-----------------------
             ShowDefaultSettings();
-            chlSelectAll.Checked = true;            
+            chlSelectAll.Checked = true;
             CheckAllAssociation();
 
         }
@@ -64,7 +64,7 @@ namespace CabconPMP
                 cmbPort.Text = valueList[valIDX++];// SerialPortSettings.Default.SerialPort;
                 cmbParity.Text = valueList[valIDX++];// SerialPortSettings.Default.Parity;
                 cmbDatabits.Text = valueList[valIDX++];// SerialPortSettings.Default.DataBits;
-                cmbStopBits.Text= valueList[valIDX++];//SerialPortSettings.Default.StopBits;
+                cmbStopBits.Text = valueList[valIDX++];//SerialPortSettings.Default.StopBits;
                 cmbBaudRate.Text = valueList[valIDX++];// SerialPortSettings.Default.CommandBaudRate;
                 txtInterFrameTimeout.Text = valueList[valIDX++];// SerialPortSettings.Default.IntercharacterDelay.ToString();
                 txtResponsTimeout.Text = valueList[valIDX++];// SerialPortSettings.Default.CommandTimeOut.ToString();
@@ -79,7 +79,7 @@ namespace CabconPMP
                 //----------------------------Association Settings----------------------------------------
                 valIDX++;//For baudrate Index
                 string CliientSAP = Convert.ToInt32(valueList[valIDX++]).ToString("X");
-               
+
                 txtServerUAddress.Text = valueList[valIDX++];// SerialPortSettings.Default.ServerSAP.ToString();
                 txtServerLAddress.Text = valueList[valIDX++];// SerialPortSettings.Default.ServerLowerMacAddress.ToString();
                 txtDLMSVersion.Text = valueList[valIDX++];// SerialPortSettings.Default.DLMSVersion.ToString();
@@ -108,22 +108,22 @@ namespace CabconPMP
                 if (cmbDatabits.SelectedIndex == 1) cmbSettingCategory.SelectedIndex = 1;
                 else cmbSettingCategory.SelectedIndex = 0;
                 //-----------------------------For Cyphering-------------------------------
-                
-             //  cmbCyphering.Text = valueList[valIDX++];//Non Cyphering
-               txtClientSystem.Text =valueList[valIDX++];
-               string securitysoot = Convert.ToInt32(valueList[valIDX++]).ToString("X");
-               if (securitysoot == "10") cmbSecuritysuit.SelectedIndex = 0;//Authentication
-               else if (securitysoot == "20") cmbSecuritysuit.SelectedIndex = 1;//Encryption
-               else if (securitysoot == "30") cmbSecuritysuit.SelectedIndex = 2;//Authentication+Encryption
+
+                //  cmbCyphering.Text = valueList[valIDX++];//Non Cyphering
+                txtClientSystem.Text = valueList[valIDX++];
+                string securitysoot = Convert.ToInt32(valueList[valIDX++]).ToString("X");
+                if (securitysoot == "10") cmbSecuritysuit.SelectedIndex = 0;//Authentication
+                else if (securitysoot == "20") cmbSecuritysuit.SelectedIndex = 1;//Encryption
+                else if (securitysoot == "30") cmbSecuritysuit.SelectedIndex = 2;//Authentication+Encryption
                 cmbSecuritysuit.Text = securitysoot;
-                   txtEncryKey.Text =valueList[valIDX++];
-                  // txtAAD.Text = valueList[valIDX++];
-                   string DedicaKey = Convert.ToInt32(valueList[valIDX++]).ToString("X");
-                   if (DedicaKey == "01") cmbDedicatedKey.SelectedIndex = 0;//Dedicated key
-                   else if (DedicaKey == "00") cmbDedicatedKey.SelectedIndex = 1;//Dedicated key
-                   cmbDedicatedKey.Text = DedicaKey;
-                 txtAuthentication.Text = valueList[valIDX++];
-               }
+                txtEncryKey.Text = valueList[valIDX++];
+                // txtAAD.Text = valueList[valIDX++];
+                string DedicaKey = Convert.ToInt32(valueList[valIDX++]).ToString("X");
+                if (DedicaKey == "01") cmbDedicatedKey.SelectedIndex = 0;//Dedicated key
+                else if (DedicaKey == "00") cmbDedicatedKey.SelectedIndex = 1;//Dedicated key
+                cmbDedicatedKey.Text = DedicaKey;
+                txtAuthentication.Text = valueList[valIDX++];
+            }
             catch (Exception)
             {
             }
@@ -145,19 +145,19 @@ namespace CabconPMP
                 cmbClientType.SelectedIndex = 0;
                 cmbApplicationContext.SelectedIndex = 1;
                 cmbSecuritysuit.SelectedIndex = 1;//Security soot
-                cmbDedicatedKey.SelectedIndex = 1; 
+                cmbDedicatedKey.SelectedIndex = 1;
             }
             catch (Exception)
             {
             }
         }
-      
+
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        
+
         private void btnOK_Click(object sender, EventArgs e)
         {
             try
@@ -185,10 +185,9 @@ namespace CabconPMP
                 if (cmbClientType.SelectedIndex == 0) DataValueList.Add(Convert.ToInt32("10", 16).ToString());//PC
                 else if (cmbClientType.SelectedIndex == 1) DataValueList.Add(Convert.ToInt32("20", 16).ToString());//MR
                 else if (cmbClientType.SelectedIndex == 2) DataValueList.Add(Convert.ToInt32("30", 16).ToString());//US
-                else if (cmbClientType.SelectedIndex == 3) DataValueList.Add(Convert.ToInt32("50", 16).ToString());//FU
-                else if (cmbClientType.SelectedIndex == 4 && cmbAuthenticationLevel.SelectedIndex <= 1) DataValueList.Add(Convert.ToInt32("40", 16).ToString());//FS
-                else if (cmbClientType.SelectedIndex == 4 && cmbAuthenticationLevel.SelectedIndex == 2) DataValueList.Add(Convert.ToInt32("7E", 16).ToString());//FS
-
+                else if (cmbClientType.SelectedIndex == 3 && cmbAuthenticationLevel.SelectedIndex <= 1) DataValueList.Add(Convert.ToInt32("40", 16).ToString());//FS
+                else if (cmbClientType.SelectedIndex == 3 && cmbAuthenticationLevel.SelectedIndex == 2) DataValueList.Add(Convert.ToInt32("7E", 16).ToString());//FS
+                else if (cmbClientType.SelectedIndex == 4) DataValueList.Add(Convert.ToInt32("50", 16).ToString());//FU
                 DataValueList.Add(txtServerUAddress.Text.Trim());
                 DataValueList.Add(txtServerLAddress.Text.Trim());
                 DataValueList.Add(txtDLMSVersion.Text.Trim());
@@ -217,73 +216,12 @@ namespace CabconPMP
                 DataValueList.Add(txtAuthentication.Text);     // Auth. Key
                 if (!objApps.SaveSettings(DataValueList))
                 {
-                    MessageBox.Show("Unable To saved Settings !", "PowerTool", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    MessageBox.Show("Unable To saved Settings !", "DLMS-PT", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     return;
                 }
-                //  objApps.SetAssociationAccess(cmbClientType.Items.);
-                objApps.SetAssociationAccess(cmbClientType.SelectedItem.ToString());
-                MessageBox.Show("Settings saved sucessfully !", "PowerTool", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                MessageBox.Show("Settings saved sucessfully !", "DLMS-PT", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
-
-                /*  if (!IsValidFields()) return;
-                  List<string> DataValueList = new List<string>();
-                  DataValueList.Add(cmbPort.Text.Trim());
-                  DataValueList.Add(cmbParity.Text.Trim());
-                  DataValueList.Add(cmbDatabits.Text.Trim());
-                  DataValueList.Add(cmbStopBits.Text.Trim());
-                  DataValueList.Add(cmbBaudRate.Text.Trim());
-                  DataValueList.Add(txtInterFrameTimeout.Text);
-                  DataValueList.Add(txtResponsTimeout.Text);
-
-                  DataValueList.Add(txtInformationSize.Text.Trim());
-                  DataValueList.Add(cmbWindowSize.Text.Trim());
-                  DataValueList.Add(cmbHDLCAddressing.SelectedIndex.ToString());
-                  DataValueList.Add(txtPhysicalID.Text.Trim());
-                  DataValueList.Add(txtCosemBufferSize.Text.Trim());
-                  DataValueList.Add(txtDLLBufferSize.Text.Trim());
-                  if (cmbBaudRate.SelectedIndex < 0) DataValueList.Add("0");
-                  else DataValueList.Add(cmbBaudRate.SelectedIndex.ToString());
-
-                  if (cmbClientType.SelectedIndex == 0) DataValueList.Add(Convert.ToInt32("10",16).ToString());//PC
-                  else if (cmbClientType.SelectedIndex == 1) DataValueList.Add(Convert.ToInt32("20", 16).ToString());//MR
-                  else if (cmbClientType.SelectedIndex == 2) DataValueList.Add(Convert.ToInt32("30", 16).ToString());//US
-                  else if (cmbClientType.SelectedIndex == 3 && cmbAuthenticationLevel.SelectedIndex <= 1) DataValueList.Add(Convert.ToInt32("40", 16).ToString());//FS
-                  else if (cmbClientType.SelectedIndex == 3 && cmbAuthenticationLevel.SelectedIndex == 2) DataValueList.Add(Convert.ToInt32("7E", 16).ToString());//FS
-                  else if (cmbClientType.SelectedIndex == 4) DataValueList.Add(Convert.ToInt32("50", 16).ToString());//FU
-                  DataValueList.Add(txtServerUAddress.Text.Trim());
-                  DataValueList.Add(txtServerLAddress.Text.Trim());
-                  DataValueList.Add(txtDLMSVersion.Text.Trim());
-                  if (cmbApplicationContext.SelectedIndex == 0) DataValueList.Add("02"); //Short Name
-                  else if (cmbApplicationContext.SelectedIndex == 2) DataValueList.Add("03"); //Logical Name with ciphering
-                  else DataValueList.Add("01"); //Logical Name without ciphering               
-                  if (cmbAuthenticationLevel.SelectedIndex == 0) DataValueList.Add("00");//No Security
-                  else if (cmbAuthenticationLevel.SelectedIndex == 1) DataValueList.Add("01");  //Low Level               
-                  else DataValueList.Add("02"); //High Level
-                  if (cmbAuthenticationLevel.SelectedIndex <= 1) { DataValueList.Add(txtPassword.Text.Trim()); DataValueList.Add(""); }
-                  else { DataValueList.Add(""); DataValueList.Add(txtPassword.Text.Trim()); }
-                  DataValueList.Add(txtMaxPDUSize.Text.Trim());
-                  string confblk = GetConformanceBlockConfig();
-                  DataValueList.Add(confblk.ToUpper());
-                  DataValueList.Add( Application.StartupPath + @"\Configuration"); //Set as App Default Path
-                  DataValueList.Add(cmbSignonBaudRate.Text);//------Signon Baudrate Applicable for IEC Communication
-                 // DataValueList.Add(cmbCyphering.Text);// Cypher/Non Cypher -- for smart meter
-                  DataValueList.Add(txtClientSystem.Text);// Client system title byte -- for smart meter
-                  if (cmbSecuritysuit.SelectedIndex == 0) DataValueList.Add(Convert.ToInt32("10", 16).ToString());//Authentication
-                  else if (cmbSecuritysuit.SelectedIndex == 1) DataValueList.Add(Convert.ToInt32("20", 16).ToString());//Encryption
-                  else if (cmbSecuritysuit.SelectedIndex == 2) DataValueList.Add(Convert.ToInt32("30", 16).ToString());//Authentication + Encryption
-                  DataValueList.Add(txtEncryKey.Text);// Global Encryption Key
-
-                 if (cmbDedicatedKey.SelectedIndex == 0) DataValueList.Add(Convert.ToInt16("01", 16).ToString());//Dedicated key true
-                  else if (cmbDedicatedKey.SelectedIndex == 1) DataValueList.Add(Convert.ToInt16("00", 16).ToString());//Dedicated key false
-                  DataValueList.Add(txtAuthentication.Text);     // Auth. Key
-                 if (!objApps.SaveSettings(DataValueList))
-                  {
-                      MessageBox.Show("Unable To saved Settings !", "DLMS-PT", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                      return;
-                  }
-
-                  MessageBox.Show("Settings saved sucessfully !", "DLMS-PT", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                  this.Close();*/
             }
             catch (Exception Ex)
             {
@@ -343,7 +281,7 @@ namespace CabconPMP
                 MessageBox.Show("Please Enter Data Link Layer Buffer Size.", "DLMS-PT", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                 txtDLLBufferSize.Focus();
                 return false;
-            }           
+            }
             if (txtServerUAddress.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Please Enter Server Upper Address.", "DLMS-PT", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
@@ -362,20 +300,20 @@ namespace CabconPMP
                 txtDLMSVersion.Focus();
                 return false;
             }
-          
-                if (cmbAuthenticationLevel.SelectedIndex==1 && txtPassword.Text.Trim().Length < 8)
-                {
-                    MessageBox.Show("Please Enter 8 Digit Password.", "DLMS-PT", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
-                    txtPassword.Focus();
-                    return false;
-                }
-                if (cmbAuthenticationLevel.SelectedIndex == 2 && txtPassword.Text.Trim().Length < 16)
-                {
-                    MessageBox.Show("Please Enter 16 Digit HLS Secret Key.", "DLMS-PT", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
-                    txtPassword.Focus();
-                    return false;
-                }
-            
+
+            if (cmbAuthenticationLevel.SelectedIndex == 1 && txtPassword.Text.Trim().Length < 8)
+            {
+                MessageBox.Show("Please Enter 8 Digit Password.", "DLMS-PT", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                txtPassword.Focus();
+                return false;
+            }
+            if (cmbAuthenticationLevel.SelectedIndex == 2 && txtPassword.Text.Trim().Length < 16)
+            {
+                MessageBox.Show("Please Enter 16 Digit HLS Secret Key.", "DLMS-PT", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                txtPassword.Focus();
+                return false;
+            }
+
 
             if (txtMaxPDUSize.Text.Trim().Length == 0)
             {
@@ -396,7 +334,7 @@ namespace CabconPMP
 
         }
 
-        
+
         private void cmbHDLCAddressing_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbHDLCAddressing.SelectedIndex == 0) txtPhysicalID.Enabled = false;
@@ -407,9 +345,9 @@ namespace CabconPMP
         private void cmbClientType_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbClientType.SelectedIndex == 0)
-            { 
+            {
                 cmbAuthenticationLevel.SelectedIndex = 0;
-                
+
             }
             else if (cmbClientType.SelectedIndex == 1)
             {
@@ -439,24 +377,24 @@ namespace CabconPMP
 
         private void cmbAuthenticationLevel_SelectedIndexChanged(object sender, EventArgs e)
         {
-             if (cmbAuthenticationLevel.SelectedIndex == 0){ txtPassword.Enabled = false;/*txtPassword.Text = "";*/}
-             else txtPassword.Enabled = true;
+            if (cmbAuthenticationLevel.SelectedIndex == 0) { txtPassword.Enabled = false;/*txtPassword.Text = "";*/}
+            else txtPassword.Enabled = true;
             //{
 
-             if (cmbAuthenticationLevel.SelectedIndex <= 1)
-             {
-                 txtPassword.MaxLength = 8;
-                 txtPassword.Text = objApps.GetLLSPassword();// SerialPortSettings.Default.Password;
-             }
-             else
-             {
-                 txtPassword.MaxLength = 32;//16 for value in hex for cyphering
-                 txtPassword.Text = objApps.GetHLSPassword();//SerialPortSettings.Default.HLSPWD;
-             }
+            if (cmbAuthenticationLevel.SelectedIndex <= 1)
+            {
+                txtPassword.MaxLength = 8;
+                txtPassword.Text = objApps.GetLLSPassword();// SerialPortSettings.Default.Password;
+            }
+            else
+            {
+                txtPassword.MaxLength = 32;//16 for value in hex for cyphering
+                txtPassword.Text = objApps.GetHLSPassword();//SerialPortSettings.Default.HLSPWD;
+            }
             //}
         }
 
-        
+
 
         /// <summary>
         /// return the reverse of input string
@@ -476,12 +414,12 @@ namespace CabconPMP
         {
             try
             {
-                                                   
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "DLMS-PT", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            }                              
+            }
         }
 
         private void cmbApplicationContext_SelectedIndexChanged(object sender, EventArgs e)
@@ -496,7 +434,7 @@ namespace CabconPMP
                 chkGet.Checked = true;
                 chkSet.Checked = true;
                 chkSelectiveAccess.Checked = true;
-                chkAction.Checked = true;                
+                chkAction.Checked = true;
             }
             else if (cmbApplicationContext.SelectedIndex == 2)//Logical Name with Ciphering
             {
@@ -509,7 +447,7 @@ namespace CabconPMP
             }
 
             else
-            {                
+            {
                 chkread.Checked = true;
                 chkWrite.Checked = true;
                 chkParameterizedAccess.Checked = true;
@@ -520,7 +458,7 @@ namespace CabconPMP
         {
             try
             {
-                string confblk = string.Empty;                 
+                string confblk = string.Empty;
                 string confbyte1 = string.Empty;
                 string confbyte2 = string.Empty;
                 string confbyte3 = string.Empty;
@@ -575,7 +513,7 @@ namespace CabconPMP
                 else confbyte3 += "0";
                 if (chkAction.Checked) confbyte3 += "1";
                 else confbyte3 += "0";
-                
+
                 confbyte1 = Convert.ToString(Convert.ToInt32(confbyte1, 2), 16);
                 confbyte2 = Convert.ToString(Convert.ToInt32(confbyte2, 2), 16);
                 confbyte3 = Convert.ToString(Convert.ToInt32(confbyte3, 2), 16);
@@ -583,7 +521,7 @@ namespace CabconPMP
                 while (confbyte2.Length < 2) confbyte2 = "0" + confbyte2;
                 while (confbyte3.Length < 2) confbyte3 = "0" + confbyte3;
                 confblk += (confbyte1 + confbyte2 + confbyte3);
-                return confblk;               
+                return confblk;
             }
             catch (Exception)
             {
@@ -656,16 +594,16 @@ namespace CabconPMP
                 if (arr3[6] == '1') chkEventNotification.Checked = true;
                 else chkEventNotification.Checked = false;
                 if (arr3[7] == '1') chkAction.Checked = true;
-                else chkAction.Checked = false;               
-            
-             }
+                else chkAction.Checked = false;
+
+            }
             catch (Exception)
             {
                 MessageBox.Show("Unable To Display Conformance Block Services.", "DLMS-PT", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
-               
+
             }
         }
- 
+
         private void chlSelectAll_CheckedChanged(object sender, EventArgs e)
         {
             CheckAllAssociation();
@@ -719,15 +657,15 @@ namespace CabconPMP
             }
             catch (Exception)
             {
-                 
+
             }
-            
-            
+
+
         }
 
-       
 
-       
-        
+
+
+
     }
 }
