@@ -100,6 +100,7 @@
             this.cms_CreateProgram = new System.Windows.Forms.ToolStripMenuItem();
             this.lblMainScreenMsg = new System.Windows.Forms.Label();
             this.pcbBackgroundImage = new System.Windows.Forms.PictureBox();
+            this.toolRetry = new System.Windows.Forms.ToolStripLabel();
             this.menuStrip1.SuspendLayout();
             this.DLMSStas.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -121,7 +122,7 @@
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1678, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1678, 36);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -135,7 +136,7 @@
             this.tsm_export,
             this.exitToolStripMenuItem1});
             this.ts_file.Name = "ts_file";
-            this.ts_file.Size = new System.Drawing.Size(54, 29);
+            this.ts_file.Size = new System.Drawing.Size(54, 32);
             this.ts_file.Text = "File";
             // 
             // tsm_New
@@ -261,7 +262,7 @@
             this.tsm_changePassword,
             this.tsm_ServerSettings});
             this.ts_configuration.Name = "ts_configuration";
-            this.ts_configuration.Size = new System.Drawing.Size(92, 29);
+            this.ts_configuration.Size = new System.Drawing.Size(92, 32);
             this.ts_configuration.Text = "Settings";
             // 
             // tsm_Association
@@ -303,7 +304,7 @@
             this.backupDataReportToolStripMenuItem,
             this.tsm_rejectlist});
             this.ts_report.Name = "ts_report";
-            this.ts_report.Size = new System.Drawing.Size(89, 29);
+            this.ts_report.Size = new System.Drawing.Size(89, 32);
             this.ts_report.Text = "Reports";
             // 
             // tsm_executionReports
@@ -361,20 +362,20 @@
             this.aboutToolStripMenuItem,
             this.contentsToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 32);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(185, 34);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // contentsToolStripMenuItem
             // 
             this.contentsToolStripMenuItem.Name = "contentsToolStripMenuItem";
-            this.contentsToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.contentsToolStripMenuItem.Size = new System.Drawing.Size(185, 34);
             this.contentsToolStripMenuItem.Text = "Contents";
             this.contentsToolStripMenuItem.Visible = false;
             this.contentsToolStripMenuItem.Click += new System.EventHandler(this.contentsToolStripMenuItem_Click);
@@ -383,7 +384,7 @@
             // 
             this.exitToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(55, 29);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(55, 32);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -465,8 +466,9 @@
             this.ts_Help,
             this.toolStripSeparator4,
             this.ts_Exit,
-            this.toolStripSeparator3});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 33);
+            this.toolStripSeparator3,
+            this.toolRetry});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 36);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.toolStrip1.Size = new System.Drawing.Size(1678, 60);
@@ -688,13 +690,22 @@
             this.pcbBackgroundImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pcbBackgroundImage.BackgroundImage")));
             this.pcbBackgroundImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pcbBackgroundImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pcbBackgroundImage.Location = new System.Drawing.Point(0, 93);
+            this.pcbBackgroundImage.Location = new System.Drawing.Point(0, 96);
             this.pcbBackgroundImage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pcbBackgroundImage.Name = "pcbBackgroundImage";
-            this.pcbBackgroundImage.Size = new System.Drawing.Size(1678, 879);
+            this.pcbBackgroundImage.Size = new System.Drawing.Size(1678, 876);
             this.pcbBackgroundImage.TabIndex = 19;
             this.pcbBackgroundImage.TabStop = false;
             this.pcbBackgroundImage.Click += new System.EventHandler(this.pcbBackgroundImage_Click);
+            // 
+            // toolRetry
+            // 
+            this.toolRetry.Image = ((System.Drawing.Image)(resources.GetObject("toolRetry.Image")));
+            this.toolRetry.Name = "toolRetry";
+            this.toolRetry.Size = new System.Drawing.Size(106, 55);
+            this.toolRetry.Text = "     Calibrate";
+            this.toolRetry.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolRetry.Click += new System.EventHandler(this.toolRetry_Click);
             // 
             // frmMain
             // 
@@ -801,6 +812,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsm_newrejection;
         private System.Windows.Forms.ToolStripMenuItem tsm_rejectlist;
         private System.Windows.Forms.ToolStripMenuItem tsm_newrejectioncompact;
+        private System.Windows.Forms.ToolStripLabel toolRetry;
     }
 }
 

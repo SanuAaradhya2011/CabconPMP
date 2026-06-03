@@ -163,11 +163,11 @@ namespace ApplicationInterface
                 IsMeterConnected = false;
                 MeterInfoValue = string.Empty;
                 AppSettings objappSettings = new AppSettings();
-                DisplayStatusMsg("  Physical Layer Communication...", false);
+                //DisplayStatusMsg("  Physical Layer Communication...", false);
                 if (!PhysicalLayerConnect()) { DisplayStatusMsg("Physical Layer Connection Failed!", true); return false; }
-                DisplayStatusMsg("HDLC Layer Communication...", false);
+                //DisplayStatusMsg("HDLC Layer Communication...", false);
                 if (!HDLCLayerConnect()) { DisplayStatusMsg("HDLC Layer Connection Failed/ Busy !", true); return false; }
-                DisplayStatusMsg("Establishing Association...", false);
+                //DisplayStatusMsg("Establishing Association...", false);
                 IsMeterConnected = true;
                 // MohsinRaza: Add Logic For Dual Key
                 if (!AssociationStablish())
@@ -193,13 +193,17 @@ namespace ApplicationInterface
                 {
                     GlobalObjects.objHDLCLIB.InitializationCounter = 0;
                 }
-                DisplayStatusMsg("Checking Meter Type Info...", false);
+                //DisplayStatusMsg("Checking Meter Type Info...", false);
                 string ClientSAP = Convert.ToInt32(objappSettings.GetClientSAP(), 10).ToString("X");
-                if (ClientSAP != "10") if (!ValidMeterTypeInfo()) { DisplayStatusMsg("Invalid Meter Detected, Check Meter Variant !", true); return false; }//--If Not is PC Mode
-                DisplayStatusMsg("Data Transferring Please Wait...", false);
+               // if (ClientSAP != "10") if (!ValidMeterTypeInfo()) { DisplayStatusMsg("Invalid Meter Detected, Check Meter Variant !", true); return false; }//--If Not is PC Mode
+                //DisplayStatusMsg("Data Transferring Please Wait...", false);
                 return true;
               }
-
+        public bool ConnectToMeter(string serialPortName)
+        {
+            SerialPortSettings.Default.SerialPort = serialPortName;
+            return ConnectToMeter();
+        }
         public bool ReadAssociationForInvocationCounter()
         {
             byte oldSecurityMechanism = objappsettings.GetSecurityMachanism();
@@ -214,7 +218,7 @@ namespace ApplicationInterface
                 objappsettings.SetSecurityMachanism(0x00);//---PC Mode
                 objappsettings.SetClientSAP(0x10);       //---HLS for PC Mode 
                 objappsettings.SetApplicationContext(0x01);       //---Set Application Context logical name wo ciphering
-                DisplayStatusMsg("Physical Layer Communication...", false);
+                //DisplayStatusMsg("Physical Layer Communication...", false);
                 if (!PhysicalLayerConnect()) { DisplayStatusMsg("Physical Layer Connection Failed!", true); return false; }
                 DisplayStatusMsg("HDLC Layer Communication...", false);
                 if (!HDLCLayerConnect()) { DisplayStatusMsg("HDLC Layer Connection Failed/ Busy !", true); return false; }

@@ -149,6 +149,52 @@
     <Compile Include="AboutCabconPMP.designer.cs">
       <DependentUpon>AboutCabconPMP.cs</DependentUpon>
     </Compile>
+    <Compile Include="actions\GenericAction.cs" />
+    <Compile Include="actions\MeterAction.cs" />
+    <Compile Include="actions\NonAMI1PAction.cs" />
+    <Compile Include="actions\NonAMI3PAction.cs" />
+    <Compile Include="actions\SM110Action.cs" />
+    <Compile Include="actions\SM310Action.cs" />
+    <Compile Include="actions\SPS2Action.cs" />
+    <Compile Include="actions\UpdateEventArgs.cs" />
+    <Compile Include="communication\AARQ.cs" />
+    <Compile Include="communication\basecosem.cs" />
+    <Compile Include="communication\basehdlc.cs" />
+    <Compile Include="communication\crc32.cs" />
+    <Compile Include="communication\DLMSFactory.cs" />
+    <Compile Include="communication\DLMSManager.cs" />
+    <Compile Include="communication\HDLC.cs" />
+    <Compile Include="communication\HighLevelSecurityPass.cs" />
+    <Compile Include="communication\NonAMI1PAARQ.cs" />
+    <Compile Include="communication\NonDLMSManager.cs" />
+    <Compile Include="communication\NonDLMSSerialComm.cs" />
+    <Compile Include="communication\NormalGet.cs" />
+    <Compile Include="communication\NormalSet.cs" />
+    <Compile Include="communication\OTAImageEntity.cs" />
+    <Compile Include="communication\SerialComm.cs" />
+    <Compile Include="communication\SPS2BootMot.cs" />
+    <Compile Include="communication\WriteFirstBlock.cs" />
+    <Compile Include="communication\WriteLastBlock.cs" />
+    <Compile Include="communication\WriteNextBlock.cs" />
+    <Compile Include="communication\WriteSetData.cs" />
+    <Compile Include="constants\DLMSConstants.cs" />
+    <Compile Include="constants\GenericMethods.cs" />
+    <Compile Include="constants\GlobalConstants.cs" />
+    <Compile Include="datalayer\AMITraveller.cs" />
+    <Compile Include="datalayer\basetraveller.cs" />
+    <Compile Include="datalayer\BenchData.cs" />
+    <Compile Include="datalayer\BSLCommandPacketList.cs" />
+    <Compile Include="datalayer\ConfigHandler.cs" />
+    <Compile Include="datalayer\ConnectedMeterCollector.cs" />
+    <Compile Include="datalayer\FactoryBenchSample.cs" />
+    <Compile Include="datalayer\IBenchSampleHandler.cs" />
+    <Compile Include="datalayer\Meter.cs" />
+    <Compile Include="datalayer\SM110BenchSample.cs" />
+    <Compile Include="datalayer\SM310BenchSample.cs" />
+    <Compile Include="error\factoryErrorCode.cs" />
+    <Compile Include="error\IErrorCode.cs" />
+    <Compile Include="error\SM110Error.cs" />
+    <Compile Include="error\SM310Error.cs" />
     <Compile Include="frmAccessPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +225,9 @@
     <Compile Include="FrmSyncLogList.Designer.cs">
       <DependentUpon>FrmSyncLogList.cs</DependentUpon>
     </Compile>
+    <Compile Include="logger\AMITraveller.cs" />
+    <Compile Include="logger\basetraveller.cs" />
+    <Compile Include="logger\Logger.cs" />
     <Compile Include="Report\frmBackupDataResultsReport.cs">
       <SubType>Form</SubType>
     </Compile>

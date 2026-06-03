@@ -1,21 +1,24 @@
+using ApplicationInterface;
+using BALLAYER;
+using CabconPMPREJECTIONTOOL;
+using CabconPMPSYNCSERVICE;
+using COMMONENTITY;
+using DataLayer;
+using SmartCalibration.DataLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
-using System.IO;
-using Utilities;
-using System.Diagnostics;
-using ApplicationInterface;
-using COMMONENTITY;
-using System.Globalization;
-using BALLAYER;
 using SystemSecurityLibrary;
-using CabconPMPREJECTIONTOOL;
-using CabconPMPSYNCSERVICE;
+using Utilities;
 namespace CabconPMP
 {
     public partial class frmMain : Form
@@ -633,6 +636,19 @@ namespace CabconPMP
         private void pcbBackgroundImage_Click(object sender, EventArgs e)
         {
 
+        }
+        List<Meter> m_meterlist = new List<Meter>();
+
+        private void toolRetry_Click(object sender, EventArgs e)
+        {
+            ConnectedMeterCollector meterCollector = new ConnectedMeterCollector();
+            m_meterlist = meterCollector.CollectConnectedMeters();
+
+            if (m_meterlist == null || m_meterlist.Count == 0)
+            {
+                MessageBox.Show("Attention\n\nNo connected meters were found on the configured COM ports.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
         }
     }
 }
