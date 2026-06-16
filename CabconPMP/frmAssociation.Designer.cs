@@ -56,6 +56,8 @@
             this.cmbBaudRate = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
             this.cmbPort = new System.Windows.Forms.ComboBox();
+            this.clbPorts = new System.Windows.Forms.CheckedListBox();
+            this.chkPortSelectAll = new System.Windows.Forms.CheckBox();
             this.label22 = new System.Windows.Forms.Label();
             this.tabHDLC = new System.Windows.Forms.TabPage();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
@@ -312,6 +314,8 @@
             this.groupBox10.Controls.Add(this.label29);
             this.groupBox10.Controls.Add(this.cmbBaudRate);
             this.groupBox10.Controls.Add(this.label25);
+            this.groupBox10.Controls.Add(this.clbPorts);
+            this.groupBox10.Controls.Add(this.chkPortSelectAll);
             this.groupBox10.Controls.Add(this.cmbPort);
             this.groupBox10.Controls.Add(this.label22);
             this.groupBox10.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -505,15 +509,38 @@
             // 
             // cmbPort
             // 
+            this.clbPorts.CheckOnClick = true;
+            this.clbPorts.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.clbPorts.FormattingEnabled = true;
+            this.clbPorts.Location = new System.Drawing.Point(297, 29);
+            this.clbPorts.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.clbPorts.Name = "clbPorts";
+            this.clbPorts.Size = new System.Drawing.Size(180, 106);
+            this.clbPorts.TabIndex = 1;
+            this.clbPorts.Click += new System.EventHandler(this.cmbPort_Click);
+            // 
+            // cmbPort (legacy, kept for compatibility)
+            // 
             this.cmbPort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPort.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbPort.FormattingEnabled = true;
-            this.cmbPort.Location = new System.Drawing.Point(297, 29);
+            this.cmbPort.Location = new System.Drawing.Point(485, 29);
             this.cmbPort.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbPort.Name = "cmbPort";
-            this.cmbPort.Size = new System.Drawing.Size(180, 28);
-            this.cmbPort.TabIndex = 1;
-            this.cmbPort.Click += new System.EventHandler(this.cmbPort_Click);
+            this.cmbPort.Size = new System.Drawing.Size(0, 28);
+            this.cmbPort.TabIndex = 99;
+            // 
+            // chkPortSelectAll
+            // 
+            this.chkPortSelectAll.AutoSize = true;
+            this.chkPortSelectAll.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.chkPortSelectAll.Location = new System.Drawing.Point(297, 137);
+            this.chkPortSelectAll.Name = "chkPortSelectAll";
+            this.chkPortSelectAll.Size = new System.Drawing.Size(82, 24);
+            this.chkPortSelectAll.TabIndex = 2;
+            this.chkPortSelectAll.Text = "Select All";
+            this.chkPortSelectAll.UseVisualStyleBackColor = true;
+            this.chkPortSelectAll.CheckedChanged += new System.EventHandler(this.chkPortSelectAll_CheckedChanged);
             // 
             // label22
             // 
@@ -1451,7 +1478,9 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ComboBox cmbParity;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.CheckedListBox clbPorts;
         private System.Windows.Forms.ComboBox cmbPort;
+        private System.Windows.Forms.CheckBox chkPortSelectAll;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label26;

@@ -116,6 +116,7 @@
       <HintPath>..\CabconPMPREJECTIONTOOL\Dependencies\System.Threading.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
@@ -177,15 +178,16 @@
     <Compile Include="communication\WriteLastBlock.cs" />
     <Compile Include="communication\WriteNextBlock.cs" />
     <Compile Include="communication\WriteSetData.cs" />
+    <Compile Include="ConnectionRegistry.cs" />
     <Compile Include="constants\DLMSConstants.cs" />
     <Compile Include="constants\GenericMethods.cs" />
     <Compile Include="constants\GlobalConstants.cs" />
     <Compile Include="datalayer\AMITraveller.cs" />
     <Compile Include="datalayer\basetraveller.cs" />
+    <Compile Include="datalayer\Bench.cs" />
     <Compile Include="datalayer\BenchData.cs" />
     <Compile Include="datalayer\BSLCommandPacketList.cs" />
     <Compile Include="datalayer\ConfigHandler.cs" />
-    <Compile Include="datalayer\ConnectedMeterCollector.cs" />
     <Compile Include="datalayer\FactoryBenchSample.cs" />
     <Compile Include="datalayer\IBenchSampleHandler.cs" />
     <Compile Include="datalayer\Meter.cs" />
@@ -213,11 +215,29 @@
     <Compile Include="frmImportRTRFormat.designer.cs">
       <DependentUpon>frmImportRTRFormat.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMeterExecutionState.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMeterExecutionState.Designer.cs">
       <DependentUpon>frmMeterExecutionState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRetryLiveTracking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRetryLiveTracking.Designer.cs">
+      <DependentUpon>frmRetryLiveTracking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRetryRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRetryRecords.Designer.cs">
+      <DependentUpon>frmRetryRecords.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmSyncLogList.cs">
       <SubType>Form</SubType>
@@ -293,6 +313,13 @@
     <Compile Include="frmLoginMain.Designer.cs">
       <DependentUpon>frmLoginMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="RetryPortExecutionRunner.cs" />
+    <Compile Include="RetryRecordCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RetryRecordCard.Designer.cs">
+      <DependentUpon>RetryRecordCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="TransparentTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -321,8 +348,17 @@
     <EmbeddedResource Include="frmLoginMain.resx">
       <DependentUpon>frmLoginMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMeterExecutionState.resx">
       <DependentUpon>frmMeterExecutionState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRetryLiveTracking.resx">
+      <DependentUpon>frmRetryLiveTracking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRetryRecords.resx">
+      <DependentUpon>frmRetryRecords.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSyncLogList.resx">
       <DependentUpon>FrmSyncLogList.cs</DependentUpon>
@@ -359,9 +395,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmProcedure.resx">
       <DependentUpon>frmProcedure.cs</DependentUpon>
     </EmbeddedResource>
@@ -382,6 +415,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RetryRecordCard.resx">
+      <DependentUpon>RetryRecordCard.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Images\DefaultSettingsMain.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -396,12 +432,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="frmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="frmProcedure.cs">
       <SubType>Form</SubType>
@@ -526,6 +556,7 @@
     <None Include="Resource\bakgroundmain.png" />
     <None Include="Resource\mainpage.png" />
     <None Include="Resource\mainpagetheme.png" />
+    <Content Include="ProcedureDetails.txt" />
     <Content Include="SecurityLibrary.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

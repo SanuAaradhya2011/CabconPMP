@@ -84,13 +84,13 @@
             this.toolStripLabelSync = new System.Windows.Forms.ToolStripLabel();
             this.tss_Sync = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabelReject = new System.Windows.Forms.ToolStripLabel();
-            this.tss_Reject = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripLabelError = new System.Windows.Forms.ToolStripLabel();
-            this.tss_Error = new System.Windows.Forms.ToolStripSeparator();
             this.ts_Help = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolRetry = new System.Windows.Forms.ToolStripLabel();
             this.ts_Exit = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolConnect = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripVerify = new System.Windows.Forms.ToolStripLabel();
             this.cms_Open = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cms_openProcedure = new System.Windows.Forms.ToolStripMenuItem();
             this.cms_OpenProgram = new System.Windows.Forms.ToolStripMenuItem();
@@ -100,7 +100,6 @@
             this.cms_CreateProgram = new System.Windows.Forms.ToolStripMenuItem();
             this.lblMainScreenMsg = new System.Windows.Forms.Label();
             this.pcbBackgroundImage = new System.Windows.Forms.PictureBox();
-            this.toolRetry = new System.Windows.Forms.ToolStripLabel();
             this.menuStrip1.SuspendLayout();
             this.DLMSStas.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -122,7 +121,7 @@
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1678, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(1678, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -136,7 +135,7 @@
             this.tsm_export,
             this.exitToolStripMenuItem1});
             this.ts_file.Name = "ts_file";
-            this.ts_file.Size = new System.Drawing.Size(54, 32);
+            this.ts_file.Size = new System.Drawing.Size(54, 29);
             this.ts_file.Text = "File";
             // 
             // tsm_New
@@ -262,7 +261,7 @@
             this.tsm_changePassword,
             this.tsm_ServerSettings});
             this.ts_configuration.Name = "ts_configuration";
-            this.ts_configuration.Size = new System.Drawing.Size(92, 32);
+            this.ts_configuration.Size = new System.Drawing.Size(92, 29);
             this.ts_configuration.Text = "Settings";
             // 
             // tsm_Association
@@ -304,7 +303,7 @@
             this.backupDataReportToolStripMenuItem,
             this.tsm_rejectlist});
             this.ts_report.Name = "ts_report";
-            this.ts_report.Size = new System.Drawing.Size(89, 32);
+            this.ts_report.Size = new System.Drawing.Size(89, 29);
             this.ts_report.Text = "Reports";
             // 
             // tsm_executionReports
@@ -362,7 +361,7 @@
             this.aboutToolStripMenuItem,
             this.contentsToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 32);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
@@ -384,7 +383,7 @@
             // 
             this.exitToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(55, 32);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(55, 29);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -460,15 +459,14 @@
             this.toolStripLabelSync,
             this.tss_Sync,
             this.toolStripLabelReject,
-            this.tss_Reject,
-            this.toolStripLabelError,
-            this.tss_Error,
             this.ts_Help,
             this.toolStripSeparator4,
+            this.toolRetry,
             this.ts_Exit,
             this.toolStripSeparator3,
-            this.toolRetry});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 36);
+            this.toolConnect,
+            this.toolStripVerify});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 33);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.toolStrip1.Size = new System.Drawing.Size(1678, 60);
@@ -570,25 +568,6 @@
             this.toolStripLabelReject.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripLabelReject.Click += new System.EventHandler(this.toolStripLabelReject_Click);
             // 
-            // tss_Reject
-            // 
-            this.tss_Reject.Name = "tss_Reject";
-            this.tss_Reject.Size = new System.Drawing.Size(6, 60);
-            // 
-            // toolStripLabelError
-            // 
-            this.toolStripLabelError.Image = ((System.Drawing.Image)(resources.GetObject("toolStripLabelError.Image")));
-            this.toolStripLabelError.Name = "toolStripLabelError";
-            this.toolStripLabelError.Size = new System.Drawing.Size(195, 55);
-            this.toolStripLabelError.Text = "     New Rework Entry   ";
-            this.toolStripLabelError.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripLabelError.Click += new System.EventHandler(this.toolStripLabelError_Click);
-            // 
-            // tss_Error
-            // 
-            this.tss_Error.Name = "tss_Error";
-            this.tss_Error.Size = new System.Drawing.Size(6, 60);
-            // 
             // ts_Help
             // 
             this.ts_Help.Image = ((System.Drawing.Image)(resources.GetObject("ts_Help.Image")));
@@ -604,6 +583,15 @@
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 60);
             // 
+            // toolRetry
+            // 
+            this.toolRetry.Image = ((System.Drawing.Image)(resources.GetObject("toolRetry.Image")));
+            this.toolRetry.Name = "toolRetry";
+            this.toolRetry.Size = new System.Drawing.Size(106, 55);
+            this.toolRetry.Text = "     Calibrate";
+            this.toolRetry.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolRetry.Click += new System.EventHandler(this.toolRetry_Click);
+            // 
             // ts_Exit
             // 
             this.ts_Exit.Image = ((System.Drawing.Image)(resources.GetObject("ts_Exit.Image")));
@@ -617,6 +605,24 @@
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 60);
+            // 
+            // toolConnect
+            // 
+            this.toolConnect.Image = ((System.Drawing.Image)(resources.GetObject("toolConnect.Image")));
+            this.toolConnect.Margin = new System.Windows.Forms.Padding(8, 2, 0, 3);
+            this.toolConnect.Name = "toolConnect";
+            this.toolConnect.Size = new System.Drawing.Size(77, 55);
+            this.toolConnect.Text = "Connect";
+            this.toolConnect.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolConnect.Click += new System.EventHandler(this.toolConnect_Click);
+            // 
+            // toolStripVerify
+            // 
+            this.toolStripVerify.Image = ((System.Drawing.Image)(resources.GetObject("toolStripVerify.Image")));
+            this.toolStripVerify.Name = "toolStripVerify";
+            this.toolStripVerify.Size = new System.Drawing.Size(66, 55);
+            this.toolStripVerify.Text = "  Verify";
+            this.toolStripVerify.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // cms_Open
             // 
@@ -690,22 +696,13 @@
             this.pcbBackgroundImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pcbBackgroundImage.BackgroundImage")));
             this.pcbBackgroundImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pcbBackgroundImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pcbBackgroundImage.Location = new System.Drawing.Point(0, 96);
+            this.pcbBackgroundImage.Location = new System.Drawing.Point(0, 93);
             this.pcbBackgroundImage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pcbBackgroundImage.Name = "pcbBackgroundImage";
-            this.pcbBackgroundImage.Size = new System.Drawing.Size(1678, 876);
+            this.pcbBackgroundImage.Size = new System.Drawing.Size(1678, 879);
             this.pcbBackgroundImage.TabIndex = 19;
             this.pcbBackgroundImage.TabStop = false;
             this.pcbBackgroundImage.Click += new System.EventHandler(this.pcbBackgroundImage_Click);
-            // 
-            // toolRetry
-            // 
-            this.toolRetry.Image = ((System.Drawing.Image)(resources.GetObject("toolRetry.Image")));
-            this.toolRetry.Name = "toolRetry";
-            this.toolRetry.Size = new System.Drawing.Size(106, 55);
-            this.toolRetry.Text = "     Calibrate";
-            this.toolRetry.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolRetry.Click += new System.EventHandler(this.toolRetry_Click);
             // 
             // frmMain
             // 
@@ -776,7 +773,6 @@
         private System.Windows.Forms.ToolStripSeparator tss_open;
         private System.Windows.Forms.ToolStripLabel ts_ico_report;
         private System.Windows.Forms.ToolStripSeparator tss_Report;
-        private System.Windows.Forms.ToolStripSeparator tss_Error;
         private System.Windows.Forms.ContextMenuStrip cms_Open;
         private System.Windows.Forms.ToolStripMenuItem cms_openProcedure;
         private System.Windows.Forms.ToolStripMenuItem cms_OpenProgram;
@@ -806,13 +802,13 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabelSync;
         private System.Windows.Forms.ToolStripSeparator tss_Sync;
         private System.Windows.Forms.ToolStripLabel toolStripLabelReject;
-        private System.Windows.Forms.ToolStripLabel toolStripLabelError;
-        private System.Windows.Forms.ToolStripSeparator tss_Reject;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem tsm_newrejection;
         private System.Windows.Forms.ToolStripMenuItem tsm_rejectlist;
         private System.Windows.Forms.ToolStripMenuItem tsm_newrejectioncompact;
         private System.Windows.Forms.ToolStripLabel toolRetry;
+        private System.Windows.Forms.ToolStripLabel toolConnect;
+        private System.Windows.Forms.ToolStripLabel toolStripVerify;
     }
 }
 

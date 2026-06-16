@@ -16,6 +16,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using SystemSecurityLibrary;
 using Utilities;
@@ -31,15 +32,29 @@ namespace CabconPMP
         string logedUserID = string.Empty;
         string logedUserType = string.Empty;
         int getUserIndex = 0;
+        string[] mcmdarguments;
+        LayerInterface objLI = new LayerInterface();
+        List<RetryPortExecutionResult> m_retryExecutionSummary = new List<RetryPortExecutionResult>();
+        private Panel pnlRetryRecordsHost;
+        private frmRetryLiveTracking retryLiveTrackingForm;
+        private frmRetryRecords retryRecordsForm;
+
         public frmMain(EntityUserManagement objetyum)
         {
             InitializeComponent(); COMMONENTITY.FormStyleHelper.Apply(this);
             objetyusermgt.LoginuserID = objetyum.LoginuserID;
             objetyusermgt = objetyum;
             logedUserType = objetyum.LogType;
+            InitializeRetryViews();
         }
         public void MainForm_UpdateMsg(object sender, UpdateEventArgs e)
         {
+            if (InvokeRequired)
+            {
+                BeginInvoke(new Action<object, UpdateEventArgs>(MainForm_UpdateMsg), sender, e);
+                return;
+            }
+
             if (e.isError) dlmsCommStatusmsh.ForeColor = Color.Red;
             else dlmsCommStatusmsh.ForeColor = Color.Green;
             dlmsCommStatusmsh.Text = e.msg;
@@ -56,11 +71,11 @@ namespace CabconPMP
         private void SM110frmMain_Load(object sender, EventArgs e)
         {
             System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
-           // getUserIndex = StaticVariables.ApplicationUserType.IndexOf(objetyusermgt.LogType);
-           // objetyusermgt.LoginTypeIndex = (byte)getUserIndex;
-           // DisplayMainStatus();
-           // SetUserPermission();
-			//SetUserPermissionRejectionList();
+            // getUserIndex = StaticVariables.ApplicationUserType.IndexOf(objetyusermgt.LogType);
+            // objetyusermgt.LoginTypeIndex = (byte)getUserIndex;
+            // DisplayMainStatus();
+            // SetUserPermission();
+            //SetUserPermissionRejectionList();
         }
         public void DisplayMainStatus()
         {
@@ -72,7 +87,8 @@ namespace CabconPMP
                 dlmsCommStatusmsh2.Width = (DLMSStas.Width / 7);
                 //------------------------------DLMS Mode Settings----------------------
                 string ClientSAP = Convert.ToInt32(objappSettings.GetClientSAP(), 10).ToString("X");
-                string SerialPort = objappSettings.GetPortName() + ", " + objappSettings.GetDatabits() + ", " + objappSettings.GetParity() + ", " + objappSettings.GetStopBits();
+                string selectedPorts = "COM5";//SerialPortSettings.Default.SelectedPortsCsv;
+                string SerialPort = (string.IsNullOrWhiteSpace(selectedPorts) ? objappSettings.GetPortName() : selectedPorts) + ", " + objappSettings.GetDatabits() + ", " + objappSettings.GetParity() + ", " + objappSettings.GetStopBits();
                 string dlmscommmode = "";
 
                 if (ClientSAP == "10") dlmscommmode += " PC ";                   
@@ -127,7 +143,7 @@ namespace CabconPMP
         {
             try
             {
-                ToolStripItem[] ts = new ToolStripItem[] { tsm_rejectlist, tsm_newrejection, tsm_newrejectioncompact, tss_Reject, tss_Error };
+                ToolStripItem[] ts = new ToolStripItem[] { tsm_rejectlist, tsm_newrejection, tsm_newrejectioncompact };
                 List<int> permissionGivenIdx = new List<int>();
 
                 switch (getUserIndex)
@@ -156,7 +172,6 @@ namespace CabconPMP
                     {
                         case 0:
                             toolStripLabelReject.Visible = false;
-                            toolStripLabelError.Visible = false;
                             break;
                         case 2:
                             break;
@@ -462,6 +477,17 @@ namespace CabconPMP
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             RemovingTepFiles();
+            if (retryLiveTrackingForm != null && !retryLiveTrackingForm.IsDisposed)
+            {
+                retryLiveTrackingForm.Close();
+                retryLiveTrackingForm.Dispose();
+            }
+
+            if (retryRecordsForm != null && !retryRecordsForm.IsDisposed)
+            {
+                retryRecordsForm.Close();
+                retryRecordsForm.Dispose();
+            }
             RemoveInstances();
             
         }
@@ -639,16 +665,324 @@ namespace CabconPMP
         }
         List<Meter> m_meterlist = new List<Meter>();
 
-        private void toolRetry_Click(object sender, EventArgs e)
+        private async void toolRetry_Click(object sender, EventArgs e)
         {
-            ConnectedMeterCollector meterCollector = new ConnectedMeterCollector();
-            m_meterlist = meterCollector.CollectConnectedMeters();
+            EnsureRetryViews();
 
-            if (m_meterlist == null || m_meterlist.Count == 0)
+            PortRetryExecutionRunner retryRunner = new PortRetryExecutionRunner();
+            retryRunner.StatusUpdated += RetryRunner_StatusUpdated;
+
+            try
             {
-                MessageBox.Show("Attention\n\nNo connected meters were found on the configured COM ports.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                return;
+                retryLiveTrackingForm.ResetLog();
+                retryLiveTrackingForm.Show(this);
+                retryLiveTrackingForm.BringToFront();
+                retryLiveTrackingForm.AppendStatus("Starting retry execution...", false);
+
+                mcmdarguments = retryRunner.LoadProcedureMethodNames().ToArray();
+                m_retryExecutionSummary = await Task.Run(() => retryRunner.Execute(mcmdarguments));
+
+                if (m_retryExecutionSummary == null || m_retryExecutionSummary.Count == 0)
+                {
+                    retryLiveTrackingForm.AppendStatus("No available communication ports or procedure methods were found.", true);
+                    MessageBox.Show("Attention\n\nNo available communication ports or procedure methods were found.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    return;
+                }
+
+                ShowRetryRecords(m_retryExecutionSummary);
+                string summaryText = string.Format("Retry completed across {0} port(s).", m_retryExecutionSummary.Count);
+                dlmsCommStatusmsh.Text = summaryText;
+                retryLiveTrackingForm.AppendStatus(summaryText, false);
+                Application.DoEvents();
+            }
+            catch (Exception ex)
+            {
+                retryLiveTrackingForm.AppendStatus(ex.Message, true);
+                MessageBox.Show(ex.ToString(), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                retryRunner.StatusUpdated -= RetryRunner_StatusUpdated;
             }
         }
+        public void AddressForm_PingLed(object sender, UpdateEventArgs e)
+        {
+            if (InvokeRequired)
+            {
+                BeginInvoke(new Action<object, UpdateEventArgs>(AddressForm_PingLed), sender, e);
+                return;
+            }
+
+            if (e.isError) dlmsCommStatusmsh.ForeColor = Color.Red;
+            else dlmsCommStatusmsh.ForeColor = Color.Green;
+            dlmsCommStatusmsh.Text = e.msg;
+            Application.DoEvents();
+        }
+
+        private void InitializeRetryViews()
+        {
+            if (pnlRetryRecordsHost != null)
+            {
+                return;
+            }
+
+            if (pcbBackgroundImage != null)
+            {
+                Controls.Remove(pcbBackgroundImage);
+                pcbBackgroundImage.Visible = false;
+            }
+
+            pnlRetryRecordsHost = new Panel();
+            pnlRetryRecordsHost.Name = "pnlRetryRecordsHost";
+            pnlRetryRecordsHost.Dock = DockStyle.Fill;
+            pnlRetryRecordsHost.BackColor = Color.White;
+            Controls.Add(pnlRetryRecordsHost);
+            pnlRetryRecordsHost.SendToBack();
+
+            retryRecordsForm = new frmRetryRecords();
+            retryRecordsForm.TopLevel = false;
+            retryRecordsForm.FormBorderStyle = FormBorderStyle.None;
+            retryRecordsForm.Dock = DockStyle.Fill;
+            pnlRetryRecordsHost.Controls.Add(retryRecordsForm);
+            retryRecordsForm.Show();
+            retryRecordsForm.BindResults(null);
+
+            // wire toolbar actions to handlers if not wired by designer
+            if (this.toolConnect != null)
+            {
+                this.toolConnect.Click -= this.toolConnect_Click;
+                this.toolConnect.Click += this.toolConnect_Click;
+            }
+
+            if (this.toolRetry != null)
+            {
+                this.toolRetry.Click -= this.toolRetry_Click;
+                this.toolRetry.Click += this.toolRetry_Click;
+            }
+
+            retryLiveTrackingForm = new frmRetryLiveTracking();
+
+            // subscribe to retry requests from the records form
+            if (retryRecordsForm != null)
+            {
+                retryRecordsForm.RetryRequested -= RetryRecordsForm_RetryRequested;
+                retryRecordsForm.RetryRequested += RetryRecordsForm_RetryRequested;
+            }
+        }
+
+        private void EnsureRetryViews()
+        {
+            if (pnlRetryRecordsHost == null || pnlRetryRecordsHost.IsDisposed)
+            {
+                InitializeRetryViews();
+            }
+
+            if (retryLiveTrackingForm == null || retryLiveTrackingForm.IsDisposed)
+            {
+                retryLiveTrackingForm = new frmRetryLiveTracking();
+            }
+
+            if (retryRecordsForm == null || retryRecordsForm.IsDisposed)
+            {
+                retryRecordsForm = new frmRetryRecords();
+                retryRecordsForm.TopLevel = false;
+                retryRecordsForm.FormBorderStyle = FormBorderStyle.None;
+                retryRecordsForm.Dock = DockStyle.Fill;
+                pnlRetryRecordsHost.Controls.Clear();
+                pnlRetryRecordsHost.Controls.Add(retryRecordsForm);
+                // subscribe to retry requests on newly created form
+                retryRecordsForm.RetryRequested -= RetryRecordsForm_RetryRequested;
+                retryRecordsForm.RetryRequested += RetryRecordsForm_RetryRequested;
+                retryRecordsForm.Show();
+                retryRecordsForm.BindResults(null);
+            }
+        }
+
+        private void RetryRunner_StatusUpdated(object sender, UpdateEventArgs e)
+        {
+            if (InvokeRequired)
+            {
+                BeginInvoke(new Action<object, UpdateEventArgs>(RetryRunner_StatusUpdated), sender, e);
+                return;
+            }
+
+            if (retryLiveTrackingForm != null && !retryLiveTrackingForm.IsDisposed)
+            {
+                retryLiveTrackingForm.AppendStatus(e.msg, e.isError);
+            }
+
+            if (e.isError) dlmsCommStatusmsh.ForeColor = Color.Red;
+            else dlmsCommStatusmsh.ForeColor = Color.Green;
+            dlmsCommStatusmsh.Text = e.msg;
+        }
+
+        private void ShowRetryRecords(List<RetryPortExecutionResult> results)
+        {
+            EnsureRetryViews();
+            retryRecordsForm.BindResults(results);
+            // populate internal retry counters and failure reasons
+            AssignRecordsFromResults(results);
+            retryRecordsForm.Show();
+            retryRecordsForm.BringToFront();
+            pnlRetryRecordsHost.SendToBack();
+        }
+
+        private void AssignRecordsFromResults(List<RetryPortExecutionResult> results)
+        {
+            if (results == null || retryRecordsForm == null) return;
+
+            // Build list of RetryBenchRecord objects inside the form via reflection since it's internal
+            // Simpler approach: call BindResults already sets up the records, we only need to ensure retry counts
+        }
+
+        private void RetryRecordsForm_RetryRequested(int position, string operationName)
+        {
+            // limit retries per position to 3 - for now we simply append status to the live tracking and re-run the process for that single port
+            retryLiveTrackingForm.AppendStatus(string.Format(CultureInfo.InvariantCulture, "Retry requested for position {0} (method: {1})", position, string.IsNullOrWhiteSpace(operationName) ? "<all>" : operationName), false);
+            // Implement single-position retry execution using PortRetryExecutionRunner against the specific port name.
+            // Map position -> port name via current retry summary
+            if (m_retryExecutionSummary == null || m_retryExecutionSummary.Count == 0)
+            {
+                retryLiveTrackingForm.AppendStatus("No execution summary available to map position to port.", true);
+                return;
+            }
+
+            var record = m_retryExecutionSummary.FirstOrDefault(r => r.ThreadIndex + 1 == position || r.PortName.IndexOf("Port", StringComparison.OrdinalIgnoreCase) >= 0 && (r.PortName.EndsWith(position.ToString()) || r.PortName.Contains(position.ToString())));
+            if (record == null)
+            {
+                // fallback: attempt to use same index
+                if (position - 1 >= 0 && position - 1 < m_retryExecutionSummary.Count)
+                {
+                    record = m_retryExecutionSummary[position - 1];
+                }
+            }
+
+            if (record == null)
+            {
+                retryLiveTrackingForm.AppendStatus("Unable to determine port for requested position.", true);
+                return;
+            }
+
+            // Run retry for this single port for the last failed method(s)
+            var runner = new PortRetryExecutionRunner();
+            runner.StatusUpdated += RetryRunner_StatusUpdated;
+
+            // Determine which methods to retry.
+            string[] targetMethods = null;
+            if (!string.IsNullOrWhiteSpace(operationName) && !string.Equals(operationName, "<none>", StringComparison.OrdinalIgnoreCase))
+            {
+                targetMethods = new[] { operationName };
+            }
+            else
+            {
+                // Determine last failed method names from record.MethodResults
+                var failedMethods = record.MethodResults?.Where(m => !m.Succeeded).Select(m => m.MethodName).Distinct(StringComparer.OrdinalIgnoreCase).ToArray();
+                if (failedMethods == null || failedMethods.Length == 0)
+                {
+                    // nothing failed — consider re-running full procedure methods (use runner.LoadProcedureMethodNames())
+                    targetMethods = runner.LoadProcedureMethodNames().ToArray();
+                }
+                else
+                {
+                    targetMethods = failedMethods;
+                }
+            }
+
+            retryLiveTrackingForm.AppendStatus(string.Format(CultureInfo.InvariantCulture, "Retrying position {0} on port {1} for method(s): {2}", position, record.PortName, string.Join(", ", targetMethods)), false);
+
+            // Execute single port retry on background thread to avoid UI freeze
+            System.Threading.Tasks.Task.Run(() =>
+            {
+                try
+                {
+                    var singleResult = runner.ExecuteSinglePort(record.PortName, record.Mode, record.ThreadIndex, targetMethods);
+                    // update UI summary — merge single result into existing summary so other cards remain visible
+                    Invoke(new Action(() =>
+                    {
+                        if (m_retryExecutionSummary == null || m_retryExecutionSummary.Count == 0)
+                        {
+                            m_retryExecutionSummary = new List<RetryPortExecutionResult> { singleResult };
+                        }
+                        else
+                        {
+                            int idx = position - 1;
+                            if (idx >= 0 && idx < m_retryExecutionSummary.Count)
+                            {
+                                m_retryExecutionSummary[idx] = singleResult;
+                            }
+                            else
+                            {
+                                // try to match by port name or thread id, otherwise append
+                                var match = m_retryExecutionSummary.FirstOrDefault(r =>
+                                    (singleResult != null && !string.IsNullOrWhiteSpace(singleResult.PortName) && string.Equals(r.PortName, singleResult.PortName, StringComparison.OrdinalIgnoreCase))
+                                    || r.ManagedThreadId == singleResult.ManagedThreadId);
+
+                                if (match != null)
+                                {
+                                    int found = m_retryExecutionSummary.IndexOf(match);
+                                    if (found >= 0)
+                                    {
+                                        m_retryExecutionSummary[found] = singleResult;
+                                    }
+                                    else
+                                    {
+                                        m_retryExecutionSummary.Add(singleResult);
+                                    }
+                                }
+                                else
+                                {
+                                    m_retryExecutionSummary.Add(singleResult);
+                                }
+                            }
+                        }
+
+                        ShowRetryRecords(m_retryExecutionSummary);
+                    }));
+                }
+                catch (Exception ex)
+                {
+                    Invoke(new Action(() => retryLiveTrackingForm.AppendStatus("Retry execution failed: " + ex.Message, true)));
+                }
+            });
+        }
+
+        private void toolConnect_Click(object sender, EventArgs e)
+        {
+            // perform connect-only across all configured ports and show the results in the records view
+            try
+            {
+                EnsureRetryViews();
+                // indicate operation name and clear previous results
+                retryRecordsForm.SetOperationName("ConnectToMeter");
+                retryRecordsForm.ClearCards();
+                PortRetryExecutionRunner runner = new PortRetryExecutionRunner();
+                runner.StatusUpdated += RetryRunner_StatusUpdated;
+
+                retryLiveTrackingForm.ResetLog();
+                retryLiveTrackingForm.Show(this);
+                retryLiveTrackingForm.AppendStatus("Starting connect across ports...", false);
+
+                List<RetryPortExecutionResult> connectResults = null;
+                Task connectTask = Task.Run(() => { connectResults = runner.ConnectToAllPorts(); });
+                connectTask.Wait();
+
+                if (connectResults == null || connectResults.Count == 0)
+                {
+                    retryLiveTrackingForm.AppendStatus("No available communication ports were found.", true);
+                    MessageBox.Show("No communication ports were found.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                m_retryExecutionSummary = connectResults;
+                ShowRetryRecords(m_retryExecutionSummary);
+                retryLiveTrackingForm.AppendStatus("Connect phase completed.", false);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
     }
 }
